@@ -14,16 +14,16 @@ export async function generateMetadata() {
 
 const faqs = [
     {
-      question: "How long is the drive from the airport to Kandy?",
-      answer: "The transfer to Kandy usually takes around 3 to 3.5 hours, depending on traffic. The route is scenic, especially as you approach the hill country."
+      q: "How long is the drive from the airport to Kandy?",
+      a: "The transfer to Kandy usually takes around 3 to 3.5 hours, depending on traffic. The route is scenic, especially as you approach the hill country."
     },
     {
-      question: "Is the price all-inclusive?",
-      answer: "Yes, the price we quote is a fixed, all-inclusive rate. It covers the vehicle, driver, fuel, and all highway tolls. There are no hidden charges."
+      q: "Is the price all-inclusive?",
+      a: "Yes, the price we quote is a fixed, all-inclusive rate. It covers the vehicle, driver, fuel, and all highway tolls. There are no hidden charges."
     },
     {
-        question: "My flight arrives late at night. Can I still get a transfer?",
-        answer: "Absolutely. Our service operates 24/7. We monitor your flight and your driver will be there to meet you, no matter what time you arrive."
+        q: "My flight arrives late at night. Can I still get a transfer?",
+        a: "Absolutely. Our service operates 24/7. We monitor your flight and your driver will be there to meet you, no matter what time you arrive."
     },
 ];
 
