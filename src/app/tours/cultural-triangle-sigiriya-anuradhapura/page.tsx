@@ -14,16 +14,16 @@ export async function generateMetadata() {
 
 const faqs = [
     {
-      question: "How many days are needed for the Cultural Triangle?",
-      answer: "We recommend at least 3 to 4 days to comfortably explore the main sites like Sigiriya, Polonnaruwa, and Dambulla without rushing. A longer tour can include Anuradhapura and other smaller sites."
+      q: "How many days are needed for the Cultural Triangle?",
+      a: "We recommend at least 3 to 4 days to comfortably explore the main sites like Sigiriya, Polonnaruwa, and Dambulla without rushing. A longer tour can include Anuradhapura and other smaller sites."
     },
     {
-      question: "Is it a lot of climbing and walking?",
-      answer: "Some sites, like Sigiriya Rock Fortress and the Dambulla Cave Temples, require climbing stairs. We can tailor the itinerary to your fitness level, focusing on more accessible sites if preferred."
+      q: "Is it a lot of climbing and walking?",
+      a: "Some sites, like Sigiriya Rock Fortress and the Dambulla Cave Temples, require climbing stairs. We can tailor the itinerary to your fitness level, focusing on more accessible sites if preferred."
     },
     {
-        question: "What is the best base location for exploring the area?",
-        answer: "Towns like Dambulla and Habarana are excellent bases for exploring the Cultural Triangle, as they are centrally located to most of the major attractions like Sigiriya, Polonnaruwa, and the cave temples."
+        q: "What is the best base location for exploring the area?",
+        a: "Towns like Dambulla and Habarana are excellent bases for exploring the Cultural Triangle, as they are centrally located to most of the major attractions like Sigiriya, Polonnaruwa, and the cave temples."
     },
 ];
 

@@ -14,16 +14,16 @@ export async function generateMetadata() {
 
 const faqs = [
     {
-      question: "Is Sri Lanka safe for solo female travelers?",
-      answer: "Yes, many solo females travel through Sri Lanka safely. Standard precautions are advised, such as dressing modestly, especially when visiting temples, avoiding walking alone at night in isolated areas, and using reputable transport like a pre-booked private driver."
+      q: "Is Sri Lanka safe for solo female travelers?",
+      a: "Yes, many solo females travel through Sri Lanka safely. Standard precautions are advised, such as dressing modestly, especially when visiting temples, avoiding walking alone at night in isolated areas, and using reputable transport like a pre-booked private driver."
     },
     {
-      question: "What about health and vaccinations?",
-      answer: "Consult your doctor for recommended vaccinations. It's advisable to drink bottled water, eat from reputable restaurants, and protect yourself from mosquitoes to prevent dengue fever."
+      q: "What about health and vaccinations?",
+      a: "Consult your doctor for recommended vaccinations. It's advisable to drink bottled water, eat from reputable restaurants, and protect yourself from mosquitoes to prevent dengue fever."
     },
     {
-        question: "Are there any common scams to be aware of?",
-        answer: "Like in many tourist destinations, be cautious of overly friendly strangers offering unsolicited help or gem/spice garden tours that may be overpriced. Using a trusted private driver helps you avoid these situations entirely."
+        q: "Are there any common scams to be aware of?",
+        a: "Like in many tourist destinations, be cautious of overly friendly strangers offering unsolicited help or gem/spice garden tours that may be overpriced. Using a trusted private driver helps you avoid these situations entirely."
     },
 ];
 

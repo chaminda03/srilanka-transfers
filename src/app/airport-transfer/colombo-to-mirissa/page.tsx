@@ -14,16 +14,16 @@ export async function generateMetadata() {
 
 const faqs = [
     {
-      question: "How long is the transfer from Colombo airport to Mirissa?",
-      answer: "The journey from CMB Airport to Mirissa takes approximately 3 to 3.5 hours, primarily using the Southern Expressway for a smooth and quick trip."
+      q: "How long is the transfer from Colombo airport to Mirissa?",
+      a: "The journey from CMB Airport to Mirissa takes approximately 3 to 3.5 hours, primarily using the Southern Expressway for a smooth and quick trip."
     },
     {
-      question: "Is Mirissa a good place for whale watching?",
-      answer: "Yes, Mirissa is considered the whale watching capital of Sri Lanka. The peak season is from November to April. We can help you arrange a reputable whale watching tour as part of your itinerary."
+      q: "Is Mirissa a good place for whale watching?",
+      a: "Yes, Mirissa is considered the whale watching capital of Sri Lanka. The peak season is from November to April. We can help you arrange a reputable whale watching tour as part of your itinerary."
     },
     {
-        question: "Our flight is delayed. Will the driver wait?",
-        answer: "Of course. We track your flight's arrival time, so your driver will be there to meet you whenever you land, at no extra charge for the waiting time."
+        q: "Our flight is delayed. Will the driver wait?",
+        a: "Of course. We track your flight's arrival time, so your driver will be there to meet you whenever you land, at no extra charge for the waiting time."
     },
 ];
 

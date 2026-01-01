@@ -14,16 +14,16 @@ export async function generateMetadata() {
 
 const faqs = [
     {
-      question: "Which is the best beach for surfing?",
-      answer: "Hikkaduwa and Weligama are fantastic for beginner and intermediate surfers. For more advanced waves, Arugam Bay on the east coast is legendary, particularly from April to October."
+      q: "Which is the best beach for surfing?",
+      a: "Hikkaduwa and Weligama are fantastic for beginner and intermediate surfers. For more advanced waves, Arugam Bay on the east coast is legendary, particularly from April to October."
     },
     {
-      question: "Can I go whale watching from the south coast?",
-      answer: "Absolutely. Mirissa is the whale watching capital of Sri Lanka. The best season is from November to April when blue whales, sperm whales, and dolphins are frequently spotted."
+      q: "Can I go whale watching from the south coast?",
+      a: "Absolutely. Mirissa is the whale watching capital of Sri Lanka. The best season is from November to April when blue whales, sperm whales, and dolphins are frequently spotted."
     },
     {
-        question: "Is it better to stay in one beach town or move around?",
-        answer: "With a private driver, it's easy to do both! You can base yourself in one town like Unawatuna or Mirissa and take day trips to nearby beaches. Or, we can design a tour that has you staying in a few different coastal towns to experience their unique vibes."
+        q: "Is it better to stay in one beach town or move around?",
+        a: "With a private driver, it's easy to do both! You can base yourself in one town like Unawatuna or Mirissa and take day trips to nearby beaches. Or, we can design a tour that has you staying in a few different coastal towns to experience their unique vibes."
     },
 ];
 

@@ -14,16 +14,16 @@ export async function generateMetadata() {
 
 const faqs = [
     {
-      question: "Is it safe to drive in Sri Lanka as a tourist?",
-      answer: "While possible, driving in Sri Lanka can be challenging due to different road conditions, traffic patterns, and local driving styles. For a stress-free holiday, a private driver is highly recommended as they are accustomed to navigating the country safely and efficiently."
+      q: "Is it safe to drive in Sri Lanka as a tourist?",
+      a: "While possible, driving in Sri Lanka can be challenging due to different road conditions, traffic patterns, and local driving styles. For a stress-free holiday, a private driver is highly recommended as they are accustomed to navigating the country safely and efficiently."
     },
     {
-      question: "Can I rent a car and drive it myself?",
-      answer: "Yes, car rentals are available, but they often come with complexities such as requiring an international driving permit, dealing with local insurance, and the risk of navigating unfamiliar roads. A private driver handles all of this for you."
+      q: "Can I rent a car and drive it myself?",
+      a: "Yes, car rentals are available, but they often come with complexities such as requiring an international driving permit, dealing with local insurance, and the risk of navigating unfamiliar roads. A private driver handles all of this for you."
     },
     {
-      question: "Will I lose flexibility if I hire a driver?",
-      answer: "Not at all. In fact, you gain flexibility. Our drivers are at your service. You can change your plans on the fly, stop for photos whenever you wish, and discover hidden gems only a local would know, all without the stress of driving and navigation."
+      q: "Will I lose flexibility if I hire a driver?",
+      a: "Not at all. In fact, you gain flexibility. Our drivers are at your service. You can change your plans on the fly, stop for photos whenever you wish, and discover hidden gems only a local would know, all without the stress of driving and navigation."
     },
 ];
 

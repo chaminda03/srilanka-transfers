@@ -15,16 +15,16 @@ export async function generateMetadata() {
 
 const faqs = [
     {
-      question: "Can you guarantee reserved seats?",
-      answer: "Train tickets in Sri Lanka, especially for reserved seats on the Kandy-Ella route, sell out very quickly. While we do our best to secure them, we recommend booking your tour as far in advance as possible. If reserved seats are unavailable, we can arrange general admission tickets."
+      q: "Can you guarantee reserved seats?",
+      a: "Train tickets in Sri Lanka, especially for reserved seats on the Kandy-Ella route, sell out very quickly. While we do our best to secure them, we recommend booking your tour as far in advance as possible. If reserved seats are unavailable, we can arrange general admission tickets."
     },
     {
-      question: "What happens to our luggage?",
-      answer: "This is the main benefit of our service. Your private driver will take care of all your luggage and meet you at your destination station (e.g., Ella). You get to enjoy the scenic train ride with just a small daypack, completely stress-free."
+      q: "What happens to our luggage?",
+      a: "This is the main benefit of our service. Your private driver will take care of all your luggage and meet you at your destination station (e.g., Ella). You get to enjoy the scenic train ride with just a small daypack, completely stress-free."
     },
     {
-        question: "Which side of the train has the best views?",
-        answer: "For the Kandy to Ella journey, the right side of the train generally offers the most spectacular views of the tea plantations and valleys."
+        q: "Which side of the train has the best views?",
+        a: "For the Kandy to Ella journey, the right side of the train generally offers the most spectacular views of the tea plantations and valleys."
     },
 ];
 

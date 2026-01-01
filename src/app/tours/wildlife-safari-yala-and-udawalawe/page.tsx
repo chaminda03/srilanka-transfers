@@ -14,16 +14,16 @@ export async function generateMetadata() {
 
 const faqs = [
     {
-      question: "What is the best time of year for a wildlife safari?",
-      answer: "The dry season, from May to September, is generally the best time for wildlife viewing in parks like Yala and Udawalawe, as animals congregate around water sources."
+      q: "What is the best time of year for a wildlife safari?",
+      a: "The dry season, from May to September, is generally the best time for wildlife viewing in parks like Yala and Udawalawe, as animals congregate around water sources."
     },
     {
-      question: "Are safari jeep tours included in the price?",
-      answer: "We arrange the safari jeep and a knowledgeable guide for you. The cost of the jeep is included in our tour packages. Park entrance fees are typically paid separately upon arrival."
+      q: "Are safari jeep tours included in the price?",
+      a: "We arrange the safari jeep and a knowledgeable guide for you. The cost of the jeep is included in our tour packages. Park entrance fees are typically paid separately upon arrival."
     },
     {
-        question: "Is a leopard sighting guaranteed in Yala?",
-        answer: "Yala National Park has one of the highest densities of leopards in the world, so chances are high. However, these are wild animals in their natural habitat, so sightings can never be 100% guaranteed."
+        q: "Is a leopard sighting guaranteed in Yala?",
+        a: "Yala National Park has one of the highest densities of leopards in the world, so chances are high. However, these are wild animals in their natural habitat, so sightings can never be 100% guaranteed."
     },
 ];
 

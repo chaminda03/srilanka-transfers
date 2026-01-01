@@ -14,16 +14,16 @@ export async function generateMetadata() {
 
 const faqs = [
     {
-      question: "What is the difficulty level of the hikes?",
-      answer: "We offer a range of hikes suitable for various fitness levels. Hikes like Little Adam's Peak are relatively easy, while trails in the Knuckles Mountain Range can be more challenging. We will tailor the adventure to your preference."
+      q: "What is the difficulty level of the hikes?",
+      a: "We offer a range of hikes suitable for various fitness levels. Hikes like Little Adam's Peak are relatively easy, while trails in the Knuckles Mountain Range can be more challenging. We will tailor the adventure to your preference."
     },
     {
-      question: "What should I wear for hiking in Sri Lanka?",
-      answer: "Lightweight, moisture-wicking clothing is recommended. A good pair of walking shoes or hiking boots is essential. For higher altitudes like Horton Plains, a light jacket is also a good idea as it can get chilly."
+      q: "What should I wear for hiking in Sri Lanka?",
+      a: "Lightweight, moisture-wicking clothing is recommended. A good pair of walking shoes or hiking boots is essential. For higher altitudes like Horton Plains, a light jacket is also a good idea as it can get chilly."
     },
     {
-        question: "Is white water rafting safe for beginners?",
-        answer: "Yes, the rafting in Kitulgala is suitable for beginners and is managed by experienced, certified guides who prioritize your safety. They provide all necessary equipment and a safety briefing beforehand."
+        q: "Is white water rafting safe for beginners?",
+        a: "Yes, the rafting in Kitulgala is suitable for beginners and is managed by experienced, certified guides who prioritize your safety. They provide all necessary equipment and a safety briefing beforehand."
     },
 ];
 

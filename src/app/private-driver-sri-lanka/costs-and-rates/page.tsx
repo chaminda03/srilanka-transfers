@@ -14,16 +14,16 @@ export async function generateMetadata() {
 
 const faqs = [
     {
-      question: "Is the price per person or per vehicle?",
-      answer: "All our prices are per vehicle for the entire service, not per person. The daily rate covers the driver, the vehicle, and all related expenses for your group."
+      q: "Is the price per person or per vehicle?",
+      a: "All our prices are per vehicle for the entire service, not per person. The daily rate covers the driver, the vehicle, and all related expenses for your group."
     },
     {
-      question: "Are there any hidden fees I should know about?",
-      answer: "No, our pricing is all-inclusive and transparent. The daily rate covers the driver's accommodation, meals, highway tolls, and parking fees. You only need to cover your own accommodation, meals, and entrance fees to attractions."
+      q: "Are there any hidden fees I should know about?",
+      a: "No, our pricing is all-inclusive and transparent. The daily rate covers the driver's accommodation, meals, highway tolls, and parking fees. You only need to cover your own accommodation, meals, and entrance fees to attractions."
     },
     {
-      question: "How do I pay for the service?",
-      answer: "We typically require a small advance payment to confirm your booking, with the balance payable to the driver during your tour. We accept various payment methods for your convenience."
+      q: "How do I pay for the service?",
+      a: "We typically require a small advance payment to confirm your booking, with the balance payable to the driver during your tour. We accept various payment methods for your convenience."
     },
 ];
 
