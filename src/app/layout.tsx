@@ -73,20 +73,49 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
 
         {/* --- MOBILE MENU OVERLAY --- */}
-        <div 
-          className={`fixed inset-0 z-[105] bg-slate-950 transition-transform duration-500 ease-in-out md:hidden ${
-            isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
-          }`}
-        >
-          <nav className="flex flex-col items-center justify-center h-full gap-8 text-2xl font-black uppercase tracking-widest text-white">
-            <Link href="/colombo-airport-transfer/" onClick={() => setIsMobileMenuOpen(false)}>Airport Taxi</Link>
-            <Link href="/private-driver-sri-lanka/" onClick={() => setIsMobileMenuOpen(false)}>Private Driver</Link>
-            <Link href="/sri-lanka-tours/" onClick={() => setIsMobileMenuOpen(false)}>Tours</Link>
-            <Link href="/travel-guide/" onClick={() => setIsMobileMenuOpen(false)}>Travel Guide</Link>
-            <Link href="/contact/" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
-            <Link href="/contact/" onClick={() => setIsMobileMenuOpen(false)} className="mt-4 bg-amber-500 text-slate-950 px-10 py-4 rounded-full text-sm">BOOK NOW</Link>
-          </nav>
-        </div>
+<div 
+  className={`fixed inset-0 z-[105] bg-slate-950 transition-transform duration-500 ease-in-out md:hidden ${
+    isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
+  }`}
+>
+  {/* Header inside Menu for Home Link & Close Button */}
+  <div className="flex items-center justify-between px-4 py-3 border-b border-white/10">
+    <Link 
+      href="/" 
+      className="text-xl font-black tracking-tighter text-white"
+      onClick={() => setIsMobileMenuOpen(false)}
+    >
+      SRI LANKA <span className="text-amber-500">TRANSFERS</span>
+    </Link>
+
+    <button
+      onClick={() => setIsMobileMenuOpen(false)}
+      className="p-2 text-white hover:text-amber-500 transition-colors"
+      aria-label="Close menu"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  {/* Navigation Links */}
+  <nav className="flex flex-col items-center justify-center h-[calc(100%-80px)] gap-8 text-2xl font-black uppercase tracking-widest text-white">
+    <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-amber-500">Home</Link>
+    <Link href="/colombo-airport-transfer/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-amber-500">Airport Taxi</Link>
+    <Link href="/private-driver-sri-lanka/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-amber-500">Private Driver</Link>
+    <Link href="/sri-lanka-tours/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-amber-500">Tours</Link>
+    <Link href="/travel-guide/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-amber-500">Travel Guide</Link>
+    
+    <Link 
+      href="/contact/" 
+      onClick={() => setIsMobileMenuOpen(false)} 
+      className="mt-4 bg-amber-500 text-slate-950 px-10 py-4 rounded-full text-sm tracking-tighter"
+    >
+      BOOK NOW
+    </Link>
+  </nav>
+</div>
 
         {/* --- MAIN CONTENT --- */}
         <main className="relative w-full m-0 p-0 pt-20">
