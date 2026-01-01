@@ -264,7 +264,7 @@ export const pages: PageSpec[] = [
     title: "Sri Lanka Travel Guide | Tips for First-Time Visitors",
     description: "Your essential guide to traveling in Sri Lanka. Find tips on safety, when to visit, visas, what to pack, local food, and staying connected.",
     linksTo: ["guide_colombo", "guide_safety", "guide_best_time", "guide_visa", "guide_connectivity", "guide_packing", "guide_food", "private_driver"],
-    heroImage: "/images/Happy Family in private driver sri lanka.webp",
+    heroImage: "/images/sri-lanka-scenic-train-ride-kandy-to-ella-couple.webp",
   },
   {
     id: "guide_colombo",

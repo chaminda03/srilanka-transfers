@@ -14,16 +14,16 @@ export async function generateMetadata() {
 
 const faqs = [
     {
-      question: "How long does the transfer from Colombo airport to Galle take?",
-      answer: "The journey typically takes around 2.5 to 3 hours via the Southern Expressway. Your driver will choose the fastest route based on traffic conditions."
+      q: "How long does the transfer from Colombo airport to Galle take?",
+      a: "The journey typically takes around 2.5 to 3 hours via the Southern Expressway. Your driver will choose the fastest route based on traffic conditions."
     },
     {
-      question: "Will the driver meet me inside the airport?",
-      answer: "Yes, our driver will be waiting for you in the arrivals hall, holding a sign with your name on it for easy identification. It's a seamless meet-and-greet service."
+      q: "Will the driver meet me inside the airport?",
+      a: "Yes, our driver will be waiting for you in the arrivals hall, holding a sign with your name on it for easy identification. It's a seamless meet-and-greet service."
     },
     {
-        question: "Can we make a stop along the way?",
-        answer: "Yes, you can make brief stops for refreshments or to use facilities. If you plan a longer stop or a detour, please let us know in advance so we can accommodate it in your travel plan."
+        q: "Can we make a stop along the way?",
+        a: "Yes, you can make brief stops for refreshments or to use facilities. If you plan a longer stop or a detour, please let us know in advance so we can accommodate it in your travel plan."
     },
 ];
 
