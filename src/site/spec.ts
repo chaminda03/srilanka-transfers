@@ -67,6 +67,15 @@ export const pages: PageSpec[] = [
     showHeader: false, // Use luxury hero
   },
 
+  {
+    id: "routes_index",
+    type: "hub",
+    path: "/airport-transfer-routes/",
+    title: "Airport Transfer Routes",
+    description: "Select a route below to see transfer details and request a fixed, all-inclusive quote.",
+    linksTo: ["hub_airport", "contact", "prices"],
+  },
+
   // =====================
   // AIRPORT TRANSFER CLUSTER
   // =====================
@@ -340,7 +349,7 @@ export const pages: PageSpec[] = [
     path: "/airport-to-kandy-taxi/",
     title: "Airport to Kandy Taxi | Private Transfer with Driver",
     description: "Pre-book a private taxi from Colombo Airport to Kandy with fixed pricing and professional drivers.",
-    linksTo: ["hub_airport", "prices", "vehicles", "route_ella", "route_dambulla"],
+    linksTo: ["hub_airport", "prices", "vehicles", "route_ella"],
     startPrice: "$45",
   },
 
@@ -350,7 +359,7 @@ export const pages: PageSpec[] = [
     path: "/airport-to-galle-taxi/",
     title: "Airport to Galle Taxi | Private Transfer Service",
     description: "Book a private airport taxi from Colombo Airport to Galle with all-inclusive pricing.",
-    linksTo: ["hub_airport", "prices", "vehicles", "route_unawatuna"],
+    linksTo: ["hub_airport", "prices", "vehicles"],
     startPrice: "$50",
   },
 
@@ -370,7 +379,7 @@ export const pages: PageSpec[] = [
     path: "/airport-to-sigiriya-taxi/",
     title: "Airport to Sigiriya Taxi | Private Transfer Service",
     description: "Book a private taxi from Colombo Airport to Sigiriya with fixed pricing.",
-    linksTo: ["hub_airport", "prices", "vehicles", "route_dambulla"],
+    linksTo: ["hub_airport", "prices", "vehicles"],
     startPrice: "$55",
   },
 

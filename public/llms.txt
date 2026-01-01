@@ -9,6 +9,7 @@
 # Key Service Pages
 /colombo-airport-transfer/
 /private-driver-sri-lanka/
+/airport-transfer-routes/
 
 # Popular Itinerary Pages
 /private-driver-sri-lanka/8-day-itinerary/
