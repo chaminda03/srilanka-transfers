@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import CustomItineraryInternalLink from "@/components/CustomItineraryInternalLink";
+import ItineraryCTA from "@/components/ItineraryCTA";
 import { CheckCircle2, MapPin, Calendar } from "lucide-react";
 
 export const metadata = buildMetadata({
@@ -171,6 +172,10 @@ export default function EightDayItineraryPage() {
               </div>
 
             </div>
+          </div>
+          {/* ITINERARY CTA */}
+          <div className="pt-6">
+            <ItineraryCTA whatsappNumber="17038554561" />
           </div>
 
           {/* REVIEW CARD: TripAdvisor Style */}

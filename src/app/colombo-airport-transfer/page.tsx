@@ -91,15 +91,17 @@ export default function ColomboAirportTransferPage() {
       {/* ROUTES - Big Finger-Friendly Buttons */}
       <section className="space-y-6 pt-2 mb-12">
         <h2 className="text-2xl font-black tracking-tight text-slate-900">
-          Popular Colombo Airport Transfer Routes
+          Explore Our Transfer Services
         </h2>
 
         <div className="grid gap-4 sm:grid-cols-2">
           {[
-             { label: "Airport → Colombo City", href: "/airport-to-colombo-taxi/" },
-             { label: "Airport → Negombo", href: "/airport-to-negombo-taxi/" },
-             { label: "Airport → Kandy", href: "/airport-to-kandy-taxi/" },
-             { label: "Airport → Galle", href: "/airport-to-galle-taxi/" }
+             { label: "Airport → Galle", href: "/airport-transfer/colombo-to-galle/" },
+             { label: "Airport → Kandy", href: "/airport-transfer/colombo-to-kandy/" },
+             { label: "Airport → Mirissa", href: "/airport-transfer/colombo-to-mirissa/" },
+             { label: "Our Vehicle Options", href: "/airport-transfer/vehicle-options/" },
+             { label: "How to Book", href: "/airport-transfer/booking-process/" },
+             { label: "All Prices", href: "/prices/" },
           ].map((route) => (
              <Button key={route.href} asChild variant="outline" className="h-14 justify-between px-6 border-slate-200 hover:border-amber-500 hover:text-amber-600 text-base font-bold text-slate-800 group bg-white shadow-sm">
                 <Link href={route.href}>

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { PageSpec } from "@/site/spec";
 
 // Added a default empty object check to prevent the 'undefined' error
-export function Breadcrumbs({ page, className }: { page: PageSpec; className?: string }) {
+export function Breadcrumbs({ page, className }: { page?: PageSpec; className?: string }) {
   if (!page) return null; // Safety check
 
   return (

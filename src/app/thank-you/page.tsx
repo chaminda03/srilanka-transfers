@@ -36,14 +36,25 @@ export default function ThankYouPage() {
           way to reach us. Just mention that you’ve already submitted the form.
         </p>
 
-        <a
-          href="https://wa.me/17038554561"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex w-full items-center justify-center rounded-md bg-foreground px-6 py-3 text-background font-medium hover:opacity-90"
-        >
-          Chat on WhatsApp
-        </a>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a
+            href="https://wa.me/17038554561"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-full items-center justify-center rounded-md bg-amber-500 px-6 py-3 text-black font-medium hover:opacity-90"
+            aria-label="Chat on WhatsApp"
+          >
+            Chat on WhatsApp
+          </a>
+
+          <a
+            href="tel:+17038554561"
+            className="inline-flex w-full items-center justify-center rounded-md border px-6 py-3 text-sm font-medium"
+            aria-label="Call us"
+          >
+            Call Us
+          </a>
+        </div>
       </section>
 
       {/* NAVIGATION */}

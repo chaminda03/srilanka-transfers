@@ -7,7 +7,7 @@ export const metadata = buildMetadata({
     "Plan a custom Sri Lanka itinerary with a private driver. Choose your travel dates, interests, and trip length. Get a personalized route via WhatsApp.",
   path: "/private-driver-sri-lanka/custom-sri-lanka-itinerary/",
   robots: {
-    index: false,
+    index: true,
     follow: true,
   },
 });

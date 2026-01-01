@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/site/config";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, buildLocalBusinessSchema } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Private Driver Sri Lanka | Safe Airport Transfers & Local Guides",
@@ -23,8 +23,16 @@ const routes = [
 ];
 
 export default function Home() {
+  const localBusinessSchema = buildLocalBusinessSchema();
+
   return (
     <main className="w-full bg-white">
+      {localBusinessSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+      )}
       
       {/* ================= HERO SECTION ================= */}
       {/* MOBILE FIX: 'min-h-[100dvh]' handles mobile address bars better than h-screen */}
@@ -92,6 +100,44 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ================= NEW: WHY PRIVATE DRIVER SECTION ================= */}
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            <div className="md:w-1/2 space-y-6">
+              <h2 className="text-3xl md:text-4xl font-black tracking-tighter text-slate-900">
+                Your Stress-Free Sri Lanka Tour Starts Here
+              </h2>
+              <p className="text-lg text-slate-700 leading-relaxed">
+                Planning a trip to Sri Lanka can be exciting, but getting around shouldn't be a worry.
+                Imagine exploring ancient temples, misty tea plantations, and stunning beaches
+                without the hassle of navigating busy roads or finding parking. That's what a
+                <strong>private driver in Sri Lanka</strong> offers – pure relaxation and adventure.
+              </p>
+              <ul className="list-disc list-inside text-slate-600 text-base space-y-2">
+                <li><strong className="text-slate-900">Expert Local Guides:</strong> Our drivers are your personal local experts, ready to share hidden gems and stories.</li>
+                <li><strong className="text-slate-900">Ultimate Comfort:</strong> Travel in modern, air-conditioned cars or vans, always clean and well-maintained.</li>
+                <li><strong className="text-slate-900">Flexible Itineraries:</strong> Stop whenever you want for photos, snacks, or just to soak in the view. Your trip, your pace!</li>
+                <li><strong className="text-slate-900">Fixed Prices, No Surprises:</strong> Know your costs upfront with clear, all-inclusive rates for your Sri Lanka travel.</li>
+              </ul>
+              <Button asChild size="lg" className="h-12 md:h-14 bg-amber-500 text-slate-950 hover:bg-white font-black uppercase tracking-widest rounded-xl md:rounded-2xl transition-all shadow-xl border-none text-xs md:text-base">
+                <Link href="/private-driver-sri-lanka/custom-sri-lanka-itinerary/">
+                  Design Your Dream Sri Lanka Tour
+                </Link>
+              </Button>
+            </div>
+            <div className="md:w-1/2 relative h-80 w-full rounded-3xl overflow-hidden shadow-2xl">
+              <Image
+                src="/images/sri-lanka-scenic-train-ride-kandy-to-ella-couple.webp"
+                alt="Couple enjoying a scenic train ride in Sri Lanka during their private tour"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ================= POPULAR ROUTES ================= */}
       <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
         <div className="mx-auto max-w-7xl">
@@ -126,6 +172,102 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ================= NEW: SRI LANKA TRAVEL TIPS & FAQs ================= */}
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-slate-50">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-slate-900 text-center mb-10 md:mb-16">
+            Your Questions Answered: Easy Sri Lanka Travel Tips
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <Card className="shadow-lg border-slate-100 bg-white">
+              <CardContent className="p-6 md:p-8 space-y-4">
+                <h3 className="text-xl font-bold text-slate-900">Getting Connected: Your Sri Lanka SIM Card</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  For your 3-week <strong>Sri Lanka tour</strong>, staying connected is easy. You can pick up a local SIM card
+                  right at the airport's arrival lounge. Most travelers choose <Link href="https://www.dialog.lk" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:underline">Dialog</Link> or <Link href="https://www.mobitel.lk" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:underline">Mobitel</Link> – they offer great coverage
+                  across the island, perfect for keeping in touch and navigating your <strong>Sri Lanka travel</strong>.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg border-slate-100 bg-white">
+              <CardContent className="p-6 md:p-8 space-y-4">
+                <h3 className="text-xl font-bold text-slate-900">Booking Excursions: Plan Ahead or Decide Later?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  Both options work! But for a truly <strong>hassle-free Sri Lanka tour</strong>, booking your excursions and activities
+                  before you arrive often saves time and lets you choose from the best options. This also helps you
+                  avoid last-minute rushes or price surprises. Our <strong>private driver Sri Lanka</strong> team can even recommend
+                  top experiences for free, helping you steer clear of scams.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg border-slate-100 bg-white">
+              <CardContent className="p-6 md:p-8 space-y-4">
+                <h3 className="text-xl font-bold text-slate-900">Extending Your Stay: Sri Lanka Visa Extension Online</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  Good news! Extending your tourist visa for <strong>Sri Lanka travel</strong> can be done completely online.
+                  Simply visit the official immigration e-services website, register, and follow the steps to apply.
+                  You'll need digital copies of your passport and a photo. Once approved, pay online, and your
+                  extension arrives via email. Easy peasy!
+                </p>
+                <Link href="https://immigration.gov.lk/index_e.php" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:underline text-sm font-bold">
+                  Visit Immigration e-services →
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg border-slate-100 bg-white">
+              <CardContent className="p-6 md:p-8 space-y-4">
+                <h3 className="text-xl font-bold text-slate-900">Getting Around: Why a Private Driver is Best</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  While public transport is super affordable, for peace of mind and comfort on your <strong>Sri Lanka tour</strong>,
+                  we highly recommend a <strong>private driver with a vehicle</strong>. It's easy, surprisingly affordable,
+                  and incredibly safe. Imagine exploring the island at your own pace, stopping whenever you like,
+                  and having a local expert guide the way. Our team ensures a relaxed and memorable <strong>Sri Lanka travel</strong> experience.
+                </p>
+                <Link href="/private-driver-sri-lanka/" className="text-amber-600 hover:underline text-sm font-bold">
+                  Learn About Our Private Driver Service →
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg border-slate-100 bg-white">
+              <CardContent className="p-6 md:p-8 space-y-4">
+                <h3 className="text-xl font-bold text-slate-900">Local Money & ATMs: Paying Your Way in Sri Lanka</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  In <strong>Sri Lanka</strong>, you'll mostly use the local currency, LKR (Sri Lankan Rupees). While some hotels
+                  might take US Dollars, shops and restaurants prefer LKR. Getting local cash is simple:
+                  you can exchange money at the airport or banks, and ATMs are easy to find in cities and
+                  tourist spots. They're reliable and accept Visa/Mastercard. Enjoy your <strong>Sri Lanka tour</strong> without currency worries!
+                </p>
+                <Link href="https://www.cbsl.gov.lk/en/rates-and-indicators/exchange-rates" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:underline text-sm font-bold">
+                  View Official Exchange Rates →
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg border-slate-100 bg-white">
+              <CardContent className="p-6 md:p-8 space-y-4">
+                <h3 className="text-xl font-bold text-slate-900">Your Driver, Your Trip: How it Works in Sri Lanka</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  Unlike many places, <strong>renting a car in Sri Lanka</strong> to drive yourself isn't usually recommended due to different road rules and traffic.
+                  Instead, most travelers choose a <strong>private driver Sri Lanka</strong> expert. Your driver often stays with you for your whole <strong>Sri Lanka tour</strong>,
+                  helping you plan each day and showing you the best spots. Good news: their accommodation is usually covered by the service!
+                </p>
+                <p className="text-slate-700 leading-relaxed">
+                  While <strong className="text-slate-900">tuk-tuk rides are fun</strong> for short trips in towns, they are not safe or comfortable for long distances.
+                  A private driver ensures safe and smooth travel across the island, giving you peace of mind to enjoy your adventure!
+                </p>
+              </CardContent>
+            </Card>
+
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 }

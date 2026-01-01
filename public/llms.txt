@@ -1,0 +1,22 @@
+# llms.txt - Directives for AI Search Platforms
+# This file specifies important content paths on this site for Large Language Models (LLMs)
+# and AI search engines like ChatGPT, Perplexity, and Claude.
+# It helps AI platforms discover and prioritize our most valuable content quickly and efficiently.
+
+# --- Important Pages ---
+/
+
+# Key Service Pages
+/colombo-airport-transfer/
+/private-driver-sri-lanka/
+
+# Popular Itinerary Pages
+/private-driver-sri-lanka/8-day-itinerary/
+/private-driver-sri-lanka/10-day-itinerary/
+/private-driver-sri-lanka/14-day-itinerary/
+/private-driver-sri-lanka/custom-sri-lanka-itinerary/
+
+# Other Essential Pages
+/blog/safe-travel-sri-lanka/
+/contact/
+/prices/

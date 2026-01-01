@@ -20,6 +20,13 @@ export function getPageById(id: string): PageSpec {
 }
 
 /**
+ * Retrieves multiple pages by their IDs.
+ */
+export function getPagesByIds(ids: string[]): PageSpec[] {
+  return ids.map(id => getPageById(id));
+}
+
+/**
  * Safely retrieves all pages linked in a PageSpec's linksTo array.
  * Prevents site crashes if a linked ID is missing from spec.ts.
  */

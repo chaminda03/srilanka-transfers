@@ -25,21 +25,21 @@ export default function PrivateDriverSriLankaPage() {
       text: "Explore Sigiriya, Kandy, and the stunning tea country.",
       href: "/private-driver-sri-lanka/8-day-itinerary",
       img: "/images/sigiriya-lion-rock-fortress-tourist-view-sri-lanka.webp",
-      alt:"Traveler enjoying the majestic front view of Sigiriya Lion Rock Fortress during a Sri Lanka private driver tour",
+      alt: "Tourist looking up at the majestic Sigiriya Lion Rock Fortress, a key part of a 7-day Sri Lanka private driver tour.",
     },
     {
       title: "10-Day Culture & Coast",
       text: "From ancient ruins to the pristine southern beaches.",
       href: "/private-driver-sri-lanka/10-day-itinerary/",
       img: "/images/sri-lanka-beach-traditional-fishing-boats-aerial-view.webp",
-      alt:"Aerial view of a turquoise beach in Sri Lanka with traditional colorful fishing boats lined up on the shore",
+      alt: "Aerial view of colorful fishing boats on a turquoise beach, featured in the 10-day Sri Lanka culture and coast tour.",
     },
     {
       title: "14-Day Grand Exploration",
       text: "The complete journey covering the north and east.",
       href: "/private-driver-sri-lanka/14-day-itinerary/",
       img: "/images/sri-lanka-scenic-train-ride-kandy-to-ella-couple.webp",
-      alt:"Tourists enjoying the famous scenic train ride from Kandy to Ella, Sri Lanka",
+      alt: "A couple enjoying the view from the famous blue train during a 14-day grand exploration tour of Sri Lanka.",
     },
 
   ];
@@ -79,7 +79,7 @@ export default function PrivateDriverSriLankaPage() {
                 src={item.img} 
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" 
-                alt={item.title} 
+                alt={item.alt} 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
               
@@ -93,7 +93,29 @@ export default function PrivateDriverSriLankaPage() {
         </div>
       </section>
 
-      {/* SECTION 3: THE PLANNER (High Contrast) */}
+      {/* SECTION 3: PLANNING CLUSTER (New) */}
+      <section className="mb-32">
+        <div className="flex items-center gap-4 mb-12">
+          <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Plan Your Trip</span>
+          <div className="h-px flex-1 bg-slate-100" />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Link href="/private-driver-sri-lanka/costs-and-rates/" className="block p-8 rounded-[32px] bg-slate-50 border border-slate-100/80 shadow-sm hover:bg-white hover:border-slate-200/60 hover:-translate-y-1 transition-all">
+            <h3 className="text-xl font-bold text-slate-800 mb-2">Costs & Rates</h3>
+            <p className="text-slate-500">Understand our simple, all-inclusive daily pricing.</p>
+          </Link>
+          <Link href="/private-driver-sri-lanka/benefits-vs-self-drive/" className="block p-8 rounded-[32px] bg-slate-50 border border-slate-100/80 shadow-sm hover:bg-white hover:border-slate-200/60 hover:-translate-y-1 transition-all">
+            <h3 className="text-xl font-bold text-slate-800 mb-2">Benefits vs Self-Drive</h3>
+            <p className="text-slate-500">Why a private driver is the best way to experience Sri Lanka.</p>
+          </Link>
+          <Link href="/private-driver-sri-lanka/meet-our-drivers/" className="block p-8 rounded-[32px] bg-slate-50 border border-slate-100/80 shadow-sm hover:bg-white hover:border-slate-200/60 hover:-translate-y-1 transition-all">
+            <h3 className="text-xl font-bold text-slate-800 mb-2">Meet Our Drivers</h3>
+            <p className="text-slate-500">Get to know our friendly and professional local experts.</p>
+          </Link>
+        </div>
+      </section>
+
+      {/* SECTION 4: THE PLANNER (High Contrast) */}
       <section className="bg-slate-900 rounded-[60px] p-8 md:p-20 text-white relative overflow-hidden">
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
