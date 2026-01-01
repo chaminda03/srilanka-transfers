@@ -26,8 +26,8 @@ export function SpecPage({ page, children }: { page: PageSpec; children?: React.
       </div>
 
       {/* 2. MAIN CONTENT: Ultra-wide 1440px layout */}
-      <div className={page.id === 'contact' ? "relative z-30 mx-auto max-w-[1600px] px-10" : "relative z-30 mx-auto max-w-[1440px] px-8"}>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
+      <div className={page.id === 'contact' ? "relative z-30 mx-auto max-w-[1600px] px-4 sm:px-10" : "relative z-30 mx-auto max-w-[1440px] px-4 sm:px-8"}>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20">
           <main className={page.id === 'contact' ? "lg:col-span-12 py-24" : "lg:col-span-8 py-24"}>
             {/* max-w-none removes the 'messy' narrow constraints */}
             <div className="max-w-none space-y-24">
@@ -36,17 +36,17 @@ export function SpecPage({ page, children }: { page: PageSpec; children?: React.
           </main>
 
           {page.id !== 'contact' && (
-            <aside className="hidden lg:block lg:col-span-4 pt-24">
-              <div className="sticky top-32 space-y-12">
-                <div className="rounded-[40px] border border-slate-100 bg-slate-50/50 p-10 shadow-sm">
-                  <h3 className="mb-8 text-xs font-bold uppercase tracking-[0.3em] text-slate-400">Navigation</h3>
+            <aside className="block lg:col-span-4 pt-12 lg:pt-24">
+              <div className="lg:sticky lg:top-32 space-y-8 lg:space-y-12">
+                <div className="rounded-3xl lg:rounded-[40px] border border-slate-100 bg-slate-50/50 p-6 lg:p-10 shadow-sm">
+                  <h3 className="mb-6 lg:mb-8 text-xs font-bold uppercase tracking-[0.3em] text-slate-400">Navigation</h3>
                   <HelpfulLinks page={page} />
                 </div>
 
-                <div className="rounded-[40px] bg-slate-900 p-10 text-white shadow-2xl">
-                  <p className="text-primary font-bold text-xs uppercase tracking-widest">Expert Help</p>
+                <div className="rounded-3xl lg:rounded-[40px] bg-slate-900 p-6 lg:p-10 text-white shadow-2xl">
+                  <p className="text-primary font-bold text-xs uppercase tracking-widest">Ask a Local Expert</p>
                   <h3 className="text-2xl font-bold mt-4 leading-tight">Need a custom plan?</h3>
-                  <Link href="http://localhost:3000/private-driver-sri-lanka/custom-sri-lanka-itinerary" className="mt-8 w-full rounded-lg bg-foreground py-3 text-background font-bold hover:bg-primary transition-colors text-center block">Book 15-min Video Call</Link>
+                  <Link href="/private-driver-sri-lanka/custom-sri-lanka-itinerary/" className="mt-8 w-full rounded-lg bg-foreground py-3 text-background font-bold hover:bg-primary transition-colors text-center block">Book Custom Itinerary Call</Link>
                 </div>
               </div>
             </aside>

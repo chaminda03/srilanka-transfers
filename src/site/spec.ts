@@ -73,7 +73,7 @@ export const pages: PageSpec[] = [
     path: "/airport-transfer-routes/",
     title: "Airport Transfer Routes",
     description: "Select a route below to see transfer details and request a fixed, all-inclusive quote.",
-    linksTo: ["hub_airport", "contact", "prices"],
+    linksTo: ["hub_airport", "prices", "vehicles", "private_driver", "contact"],
   },
 
   // =====================
