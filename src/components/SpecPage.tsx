@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import type { PageSpec } from "@/site/spec";
 import { HelpfulLinks } from "@/components/HelpfulLinks";
 import { BookingStickyBar } from "@/components/BookingStickyBar";
@@ -14,10 +15,13 @@ export function SpecPage({ page, children }: { page: PageSpec; children?: React.
     <article className="relative bg-white">
       {/* 1. CINEMATIC HERO: Expanded height and deep contrast */}
       <div className="relative h-[75vh] min-h-[600px] w-full overflow-hidden bg-slate-950">
-        <img
+        <Image
           src={page.heroImage || "/images/sigiriya-rock-fortress-sri-lanka-private-driver.webp"}
-          className="absolute inset-0 h-full w-full object-cover opacity-90 transition-transform duration-[15s] hover:scale-110"
+          className="object-cover opacity-90 transition-transform duration-[15s] hover:scale-110"
           alt={page.title}
+          fill
+          priority
+          sizes="100vw"
         />
         {/* Scrim: Essential for white text legibility */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent z-10" />
@@ -35,7 +39,7 @@ export function SpecPage({ page, children }: { page: PageSpec; children?: React.
         <>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="fixed top-6 right-6 z-50 rounded-full bg-white/90 p-3 text-slate-900 shadow-lg backdrop-blur-sm transition-all hover:bg-white lg:hidden"
+            className="fixed top-6 right-6 z-[100] rounded-full bg-white/90 p-3 text-slate-900 shadow-lg backdrop-blur-sm transition-all hover:bg-white lg:hidden"
             aria-label="Toggle navigation"
           >
             {isMobileMenuOpen ? (
@@ -46,7 +50,7 @@ export function SpecPage({ page, children }: { page: PageSpec; children?: React.
           </button>
 
           {isMobileMenuOpen && (
-            <div className="fixed inset-0 z-40 flex flex-col bg-white pt-24 px-6 lg:hidden overflow-y-auto">
+            <div className="fixed inset-0 z-[90] flex flex-col bg-white pt-24 px-6 lg:hidden overflow-y-auto">
               <div className="space-y-8 pb-10">
                 <div>
                   <h3 className="mb-6 text-xs font-bold uppercase tracking-[0.3em] text-slate-400">Navigation</h3>
@@ -74,7 +78,7 @@ export function SpecPage({ page, children }: { page: PageSpec; children?: React.
           </main>
 
           {page.id !== 'contact' && (
-            <aside className="block lg:col-span-4 pt-12 lg:pt-24">
+            <aside className="hidden lg:block lg:col-span-4 pt-12 lg:pt-24">
               <div className="lg:sticky lg:top-32 space-y-8 lg:space-y-12">
                 <div className="rounded-3xl lg:rounded-[40px] border border-slate-100 bg-slate-50/50 p-6 lg:p-10 shadow-sm">
                   <h3 className="mb-6 lg:mb-8 text-xs font-bold uppercase tracking-[0.3em] text-slate-400">Navigation</h3>

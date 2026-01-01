@@ -344,6 +344,16 @@ export const pages: PageSpec[] = [
   // =====================
 
   {
+    id: "route_colombo",
+    type: "route",
+    path: "/airport-to-colombo-taxi/",
+    title: "Airport to Colombo Taxi | Private Transfer Service",
+    description: "Book a private taxi from Colombo Airport to Colombo city hotels. Fixed pricing and professional drivers.",
+    linksTo: ["hub_airport", "prices", "vehicles"],
+    startPrice: "$30",
+  },
+
+  {
     id: "route_kandy",
     type: "route",
     path: "/airport-to-kandy-taxi/",
