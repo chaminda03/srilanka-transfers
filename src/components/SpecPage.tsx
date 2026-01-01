@@ -35,7 +35,7 @@ export function SpecPage({ page, children }: { page: PageSpec; children?: React.
         <>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="fixed top-6 right-6 z-50 rounded-full bg-white/90 p-3 shadow-lg backdrop-blur-sm transition-all hover:bg-white lg:hidden"
+            className="fixed top-6 right-6 z-50 rounded-full bg-white/90 p-3 text-slate-900 shadow-lg backdrop-blur-sm transition-all hover:bg-white lg:hidden"
             aria-label="Toggle navigation"
           >
             {isMobileMenuOpen ? (
@@ -74,7 +74,7 @@ export function SpecPage({ page, children }: { page: PageSpec; children?: React.
           </main>
 
           {page.id !== 'contact' && (
-            <aside className="hidden lg:block lg:col-span-4 pt-12 lg:pt-24">
+            <aside className="block lg:col-span-4 pt-12 lg:pt-24">
               <div className="lg:sticky lg:top-32 space-y-8 lg:space-y-12">
                 <div className="rounded-3xl lg:rounded-[40px] border border-slate-100 bg-slate-50/50 p-6 lg:p-10 shadow-sm">
                   <h3 className="mb-6 lg:mb-8 text-xs font-bold uppercase tracking-[0.3em] text-slate-400">Navigation</h3>
