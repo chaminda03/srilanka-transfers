@@ -6,12 +6,31 @@ import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/site/config";
 import { buildMetadata, buildLocalBusinessSchema } from "@/lib/seo";
 
-export const metadata = buildMetadata({
-  title: "Private Driver Sri Lanka | Safe Airport Transfers & Local Guides",
-  description:
-    "Experience Sri Lanka safely with a professional private driver. Avoid chaotic traffic and narrow roads. Get a licensed driver, fixed prices, and a local guide service for free.",
-  path: "/",
-});
+export const metadata = {
+  ...buildMetadata({
+    title: "Private Driver Sri Lanka | Safe Airport Transfers & Local Guides",
+    description:
+      "#1 Private Driver in Sri Lanka: Safe, stress-free travel with a licensed local guide. Fixed prices, no hidden costs & expert advice. Book your tour today!",
+    path: "/",
+  }),
+  metadataBase: new URL(`https://${siteConfig.domain}`),
+  openGraph: {
+    title: "Private Driver Sri Lanka | Safe Airport Transfers & Local Guides",
+    description: "#1 Private Driver in Sri Lanka: Safe, stress-free travel with a licensed local guide. Fixed prices, no hidden costs & expert advice. Book your tour today!",
+    url: "/",
+    siteName: siteConfig.brand,
+    images: [
+      {
+        url: "/images/sri-lanka-best_private-airport-transfer-driver.webp",
+        width: 1200,
+        height: 630,
+        alt: "Private Driver Sri Lanka",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
 
 const routes = [
   { label: "Airport → Colombo", href: "/airport-to-colombo-taxi/" },

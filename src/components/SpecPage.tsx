@@ -33,7 +33,11 @@ export function SpecPage({ page, children }: { page: PageSpec; children?: React.
         <div className={page.id === 'contact' ? "absolute bottom-0 left-0 right-0 mx-auto max-w-[1600px] px-10 pb-24 z-20" : "absolute bottom-0 left-0 right-0 mx-auto max-w-[1440px] px-8 pb-24 z-20"}>
           <Breadcrumbs page={page} className="mb-6 text-white/70 tracking-widest uppercase text-xs" />
           <h1 className="max-w-4xl text-6xl font-black tracking-tighter text-white drop-shadow-2xl sm:text-8xl leading-[0.9]">
-            {page.title.split('|')[0]}
+            {page.id === 'private_driver' ? (
+              <>#1 Private Driver in Sri Lanka: <span className="text-amber-500">Safe, Licensed & Fixed Prices</span></>
+            ) : (
+              page.title.split('|')[0]
+            )}
           </h1>
         </div>
       </div>

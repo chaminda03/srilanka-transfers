@@ -1,17 +1,37 @@
 import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
 import { getPageById, getAllPages } from "@/lib/site";
+import { siteConfig } from "@/site/config";
 import { SpecPage } from "@/components/SpecPage";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const page = getPageById("routes_index");
 
-export const metadata = buildMetadata({
-  title: page.title,
-  description: page.description,
-  path: page.path,
-});
+export const metadata = {
+  ...buildMetadata({
+    title: page.title,
+    description: page.description,
+    path: page.path,
+  }),
+  metadataBase: new URL(`https://${siteConfig.domain}`),
+  openGraph: {
+    title: page.title,
+    description: page.description,
+    url: page.path,
+    siteName: siteConfig.brand,
+    images: [
+      {
+        url: "/images/sigiriya-rock-fortress-sri-lanka-private-driver.webp",
+        width: 1200,
+        height: 630,
+        alt: page.title,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
 
 export default function RoutesIndexPage() {
   const routes = getAllPages().filter((p) => p.type === "route");
