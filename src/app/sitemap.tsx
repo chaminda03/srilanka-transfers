@@ -1,44 +1,54 @@
 import { MetadataRoute } from 'next'
 
+// 1. Define your base URL
 const baseUrl = 'https://www.srilankaairporttransfer.com'
 
-// Mocking your data source - In production, fetch this from your DB/CMS
-function getDestinations() {
+// 2. This function should represent ALL your dynamic routes 
+// (In a real app, you'd fetch these from your 'getDestinations' data file or DB)
+async function getDynamicRoutes() {
+  // This is a placeholder for your 40+ destinations like 'colombo-to-mirissa'
+  // Make sure this list matches the 51 pages in your build logs
   return [
-    { slug: 'colombo-airport-to-kandy', image: '/images/kandy-transfer.jpg' },
-    { slug: 'airport-to-galle-fort', image: '/images/galle-transfer.jpg' },
-    { slug: 'colombo-to-ella-chauffeur', image: '/images/ella-transfer.jpg' },
+    { slug: 'colombo-airport-to-kandy', img: 'kandy.jpg' },
+    { slug: 'airport-to-galle-fort', img: 'galle.jpg' },
+    { slug: 'colombo-to-ella-chauffeur', img: 'ella.jpg' },
+    { slug: 'colombo-to-mirissa', img: 'mirissa.jpg' },
+    // ... add all other 40+ slugs here or fetch them dynamically
   ];
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const destinations = getDestinations();
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const dynamicRoutes = await getDynamicRoutes();
 
-  // 1. Core Service Pages
-  const corePages: MetadataRoute.Sitemap = [
+  // Mapping dynamic routes to the sitemap format
+  const transferPages = dynamicRoutes.map((route) => ({
+    url: `${baseUrl}/${route.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+    images: [`${baseUrl}/images/${route.img}`],
+  }));
+
+  // Combine with your static pages (Home, Fleet, Contact, etc.)
+  return [
     {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: 'daily',
-      priority: 1.0,
+      priority: 1,
     },
     {
-      url: `${baseUrl}/booking`,
+      url: `${baseUrl}/fleet`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.9, // High priority because this is the conversion goal
-    }
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    ...transferPages, // This spreads all your 40+ dynamic pages into the XML
   ];
-
-  // 2. High-Value Route Pages (The "Money" Pages)
-  const routePages: MetadataRoute.Sitemap = destinations.map((dest) => ({
-    url: `${baseUrl}/${dest.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 0.8,
-    // Technical SEO Secret: Images in sitemaps help AI "visualize" your service
-    images: [dest.image], 
-  }));
-
-  return [...corePages, ...routePages];
 }
