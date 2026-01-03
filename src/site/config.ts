@@ -1,6 +1,6 @@
 export const siteConfig = {
   brand: "Sri Lanka Airport Transfer",
-  domain: "your-actual-domain.com", // CRITICAL: Change this to your actual production domain (e.g., "srilankatransfers.com")
+  domain: "www.srilankaairporttransfer.com",
 
   locale: "en",
   market: "Global",
@@ -29,4 +29,3 @@ export const siteConfig = {
       "Pre-book private Sri Lanka airport transfers with fixed, all-inclusive pricing, comfortable vehicles, and professional English-speaking drivers for a smooth arrival.",
   },
 };
-

@@ -42,7 +42,7 @@ export const pages: PageSpec[] = [
     id: "home",
     type: "home",
     path: "/",
-    title: "Sri Lanka Airport Transfer | Private Pickup & Fixed Prices",
+    title: "Sri Lanka Airport Transfer | Reliable Private Chauffeur Services",
     description: "#1 Private Driver in Sri Lanka: Safe, stress-free travel with a licensed local guide. Fixed prices, no hidden costs & expert advice. Book your tour today!",
     linksTo: ["hub_airport", "private_driver", "prices", "vehicles", "contact"],
     heroImage: "/images/sigiriya-rock-fortress-sri-lanka-private-driver.webp",

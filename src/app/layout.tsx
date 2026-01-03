@@ -25,6 +25,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/images/sri-lanka-private-airport-transfer-driver-logo.webp" />
+      </head>
       <body className="antialiased bg-white m-0 p-0 w-full overflow-x-hidden">
 
         {/* --- HEADER --- */}

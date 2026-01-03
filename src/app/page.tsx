@@ -8,7 +8,7 @@ import { buildMetadata, buildLocalBusinessSchema } from "@/lib/seo";
 
 export const metadata = {
   ...buildMetadata({
-    title: "Private Driver Sri Lanka | Safe Airport Transfers & Local Guides",
+    title: "Sri Lanka Airport Transfer | Reliable Private Chauffeur Services",
     description:
       "#1 Private Driver in Sri Lanka: Safe, stress-free travel with a licensed local guide. Fixed prices, no hidden costs & expert advice. Book your tour today!",
     path: "/",
@@ -44,6 +44,13 @@ const routes = [
 export default function Home() {
   const localBusinessSchema = buildLocalBusinessSchema();
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Airport Shuttle",
+    "areaServed": "Sri Lanka"
+  };
+
   return (
     <main className="w-full bg-white">
       {localBusinessSchema && (
@@ -52,6 +59,10 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       
       {/* ================= HERO SECTION ================= */}
       {/* MOBILE FIX: 'min-h-[100dvh]' handles mobile address bars better than h-screen */}
@@ -95,9 +106,13 @@ export default function Home() {
             </div>
 
             {/* RESPONSIVE TEXT: text-4xl on mobile, text-6xl on desktop */}
-            <h1 className="text-4xl md:text-6xl font-black tracking-tighter leading-[1.0] text-white mb-4 md:mb-6">
-              Experience Sri Lanka with a <span className="text-amber-500">Friend at the Wheel</span>
+            <h1 className="text-4xl md:text-6xl font-black tracking-tighter leading-[1.0] text-white mb-2 md:mb-3">
+              Reliable Sri Lanka Airport Transfers & <span className="text-amber-500">Private Chauffeur Services</span>
             </h1>
+
+            <h2 className="text-xl md:text-2xl font-bold text-slate-200 mb-4 md:mb-6">
+              Experience Sri Lanka with a Friend at the Wheel
+            </h2>
 
             <p className="text-sm md:text-lg text-slate-200 leading-relaxed font-medium mb-6 md:mb-8">
               Don&apos;t just hire a car; gain a local partner. Skip the stress of chaotic traffic and narrow roads. 
