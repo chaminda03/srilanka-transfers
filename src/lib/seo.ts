@@ -7,7 +7,7 @@ type SeoInput = {
   path?: string;
   noIndex?: boolean;
   image?: string | { url: string } | Array<string | { url: string }>;
-  robots?: Metadata["robots"] | any;
+  robots?: Metadata["robots"];
 };
 
 export function buildMetadata(input: SeoInput = {}): Metadata {
@@ -37,7 +37,7 @@ export function buildMetadata(input: SeoInput = {}): Metadata {
       url: canonical,
       type: "website",
       locale: siteConfig.locale,
-      images: images as any,
+      images: images,
     },
     twitter: {
       card: "summary_large_image", // Can be "summary", "summary_large_image", "app", or "player"
@@ -45,7 +45,7 @@ export function buildMetadata(input: SeoInput = {}): Metadata {
       description,
       // creator: "@yourTwitterHandle", // Optional: if you have a specific Twitter handle for the site/author
       // site: "@yourTwitterHandle",    // Optional: if you have a specific Twitter handle for the site
-      images: images as any,
+      images: images,
     },
   };
 }
@@ -86,4 +86,3 @@ export function buildLocalBusinessSchema() {
     // ]
   };
 }
-

@@ -35,7 +35,7 @@ export function getLinkedPages(page: PageSpec): PageSpec[] {
     .map((id) => {
       try {
         return getPageById(id);
-      } catch (e) {
+      } catch {
         console.warn(`Link Warning: ID "${id}" referenced by "${page.id}" was not found in spec.ts`);
         return null;
       }

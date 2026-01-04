@@ -116,7 +116,7 @@ export default function TenDayItineraryPage() {
                 <h3 className="text-xl font-bold text-slate-900">Day 3: Into the Misty Mountains</h3>
                 <p className="text-slate-500 text-sm mb-2 font-medium">Route: Kandy → Nuwara Eliya</p>
                 <p className="text-slate-600 leading-relaxed">
-                  A scenic ascent into "Little England." We wind through endless green tea plantations, visit a working Tea Factory to taste pure Ceylon tea, and see the majestic Ramboda Falls. Enjoy the cool climate and colonial architecture.
+                  A scenic ascent into &quot;Little England.&quot; We wind through endless green tea plantations, visit a working Tea Factory to taste pure Ceylon tea, and see the majestic Ramboda Falls. Enjoy the cool climate and colonial architecture.
                 </p>
               </div>
 
@@ -136,7 +136,7 @@ export default function TenDayItineraryPage() {
                 <h3 className="text-xl font-bold text-slate-900">Day 5: Ella's Peaks & Bridges</h3>
                 <p className="text-slate-500 text-sm mb-2 font-medium">Activity: Hiking & Sightseeing</p>
                 <p className="text-slate-600 leading-relaxed">
-                  Start with a photo op at the famous <strong>Nine Arch Bridge</strong>. Then, an easy hike up Little Adam’s Peak for panoramic views. Optional: Visit the Ravana Pool Club or try the Flying Ravana zipline if you're feeling adventurous.
+                  Start with a photo op at the famous <strong>Nine Arch Bridge</strong>. Then, an easy hike up Little Adam’s Peak for panoramic views. Optional: Visit the Ravana Pool Club or try the Flying Ravana zipline if you&apos;re feeling adventurous.
                 </p>
               </div>
 
@@ -146,7 +146,7 @@ export default function TenDayItineraryPage() {
                 <h3 className="text-xl font-bold text-slate-900">Day 6: Wildlife Safari</h3>
                 <p className="text-slate-500 text-sm mb-2 font-medium">Route: Ella → Yala / Udawalawe</p>
                 <p className="text-slate-600 leading-relaxed">
-                  We descend from the hills to the dry zone. Check into your safari hotel and head out for an evening 4x4 Jeep Safari. Whether it's the leopards of Yala or the elephant herds of Udawalawe, this is a highlight of the trip.
+                  We descend from the hills to the dry zone. Check into your safari hotel and head out for an evening 4x4 Jeep Safari. Whether it&apos;s the leopards of Yala or the elephant herds of Udawalawe, this is a highlight of the trip.
                 </p>
               </div>
 
@@ -233,13 +233,13 @@ export default function TenDayItineraryPage() {
              {/* Review Body */}
              <div className="text-slate-700 leading-relaxed space-y-4 text-[15px]">
                 <p>
-                  “I just did a 10-day solo trip with a Tour guide. His name is Cham from Sri Lankkan Private driver team, and it was one of the best & unique experiences I had in Sri Lanka. That's why I want to warmly recommend him to you.
+                  “I just did a 10-day solo trip with a Tour guide. His name is Cham from Sri Lankkan Private driver team, and it was one of the best & unique experiences I had in Sri Lanka. That&apos;s why I want to warmly recommend him to you.
                 </p>
                 <p>
                   Let me tell you, <strong>Cham is a master at uncovering hidden gems and secret waterfalls</strong> that only a local like him could know... it was the little details that made this trip special.
                 </p>
                 <p>
-                  The tour included visiting his parent's home where <strong>his mom cooked delicious food</strong>—since that day I eat rice & curry only with my hands! I even spontaneously got invited to a wedding in Kandy and we organized a traditional Sari!”
+                  The tour included visiting his parent&apos;s home where <strong>his mom cooked delicious food</strong>—since that day I eat rice & curry only with my hands! I even spontaneously got invited to a wedding in Kandy and we organized a traditional Sari!”
                 </p>
              </div>
 

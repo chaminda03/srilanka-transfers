@@ -70,7 +70,7 @@ export default function EightDayItineraryPage() {
 
               <h2 className="text-2xl font-bold mb-4">Why choose this route?</h2>
               <p className="text-slate-600 leading-relaxed mb-6">
-                This is the "Golden Loop" of Sri Lanka. It perfectly balances history, nature, and relaxation without rushing. You will climb the 5th-century <strong className="text-slate-900">Sigiriya Rock Fortress</strong>, walk through the cool misty tea plantations of <strong className="text-slate-900">Nuwara Eliya</strong>, take the world-famous <strong className="text-slate-900">blue train to Ella</strong>, and spot leopards or elephants on a private <strong className="text-slate-900">Yala Safari</strong>.
+                This is the &quot;Golden Loop&quot; of Sri Lanka. It perfectly balances history, nature, and relaxation without rushing. You will climb the 5th-century <strong className="text-slate-900">Sigiriya Rock Fortress</strong>, walk through the cool misty tea plantations of <strong className="text-slate-900">Nuwara Eliya</strong>, take the world-famous <strong className="text-slate-900">blue train to Ella</strong>, and spot leopards or elephants on a private <strong className="text-slate-900">Yala Safari</strong>.
               </p>
               
               <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
@@ -127,7 +127,7 @@ export default function EightDayItineraryPage() {
                 <h3 className="text-xl font-bold text-slate-900">Day 4: Little England</h3>
                 <p className="text-slate-500 text-sm mb-2 font-medium">Route: Kandy → Nuwara Eliya</p>
                 <p className="text-slate-600 leading-relaxed">
-                  A scenic drive up into the cool highlands. We stop at tea plantations and magnificent waterfalls (Ramboda Falls). Explore the colonial charm of Nuwara Eliya, often called "Little England" for its architecture and rose gardens.
+                  A scenic drive up into the cool highlands. We stop at tea plantations and magnificent waterfalls (Ramboda Falls). Explore the colonial charm of Nuwara Eliya, often called &quot;Little England&quot; for its architecture and rose gardens.
                 </p>
               </div>
 
@@ -137,7 +137,7 @@ export default function EightDayItineraryPage() {
                 <h3 className="text-xl font-bold text-slate-900">Day 5: The Most Beautiful Train Ride</h3>
                 <p className="text-slate-500 text-sm mb-2 font-medium">Activity: Scenic Train to Ella</p>
                 <p className="text-slate-600 leading-relaxed">
-                  Board the famous blue train for one of the world's most scenic rail journeys. Your driver will take your heavy bags and meet you at the Ella station. Spend the evening soaking in the chill backpacker vibe of Ella town.
+                  Board the famous blue train for one of the world&apos;s most scenic rail journeys. Your driver will take your heavy bags and meet you at the Ella station. Spend the evening soaking in the chill backpacker vibe of Ella town.
                 </p>
               </div>
 
@@ -147,7 +147,7 @@ export default function EightDayItineraryPage() {
                 <h3 className="text-xl font-bold text-slate-900">Day 6: Ella's Natural Wonders</h3>
                 <p className="text-slate-500 text-sm mb-2 font-medium">Activity: Nine Arch Bridge & Little Adam's Peak</p>
                 <p className="text-slate-600 leading-relaxed">
-                  An active day exploring the Instagram-famous <strong>Nine Arch Bridge</strong> and an easy hike up Little Adam's Peak for stunning panoramic views. Cool off with a visit to the majestic Ravana Falls.
+                  An active day exploring the Instagram-famous <strong>Nine Arch Bridge</strong> and an easy hike up Little Adam&apos;s Peak for stunning panoramic views. Cool off with a visit to the majestic Ravana Falls.
                 </p>
               </div>
 
@@ -217,7 +217,7 @@ export default function EightDayItineraryPage() {
                   “Excellent tour! It was far more than just a day excursion. My guide was really helpful, explaining the deep history of the <strong>Temple of the Tooth</strong>, <strong>Sigiriya Lion Rock</strong>, and other cultural sites with his immense knowledge.”
                 </p>
                 <p>
-                  “He made our trip a wonderful experience. Truly an amazing country. The <strong>Sri Lanka Private Driver</strong> team operates a business far beyond expectations—I can't recommend them enough!”
+                  “He made our trip a wonderful experience. Truly an amazing country. The <strong>Sri Lanka Private Driver</strong> team operates a business far beyond expectations—I can&apos;t recommend them enough!”
                 </p>
              </div>
 

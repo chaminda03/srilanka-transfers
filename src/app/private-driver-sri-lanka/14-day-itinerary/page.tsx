@@ -106,7 +106,7 @@ export default function FourteenDayItineraryPage() {
                 <h3 className="text-xl font-bold text-slate-900">Days 2-3: The Cultural Triangle</h3>
                 <p className="text-slate-500 text-sm mb-2 font-medium">Activity: Sigiriya, Dambulla & Minneriya Safari</p>
                 <p className="text-slate-600 leading-relaxed">
-                  We head inland to the ancient heart of the island. Over two days, you will climb the majestic <strong>Sigiriya Lion Rock</strong>, explore the Dambulla Cave Temples, and take an evening jeep safari to see the famous "Gathering" of elephants at Minneriya National Park.
+                  We head inland to the ancient heart of the island. Over two days, you will climb the majestic <strong>Sigiriya Lion Rock</strong>, explore the Dambulla Cave Temples, and take an evening jeep safari to see the famous &quot;Gathering&quot; of elephants at Minneriya National Park.
                 </p>
               </div>
 

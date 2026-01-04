@@ -145,7 +145,7 @@ export default function Home() {
               <p className="text-lg text-slate-700 leading-relaxed">
                 Planning a trip to Sri Lanka can be exciting, but getting around shouldn't be a worry.
                 Imagine exploring ancient temples, misty tea plantations, and stunning beaches
-                without the hassle of navigating busy roads or finding parking. That's what a
+                without the hassle of navigating busy roads or finding parking. That&apos;s what a
                 <strong>private driver in Sri Lanka</strong> offers – pure relaxation and adventure.
               </p>
               <ul className="list-disc list-inside text-slate-600 text-base space-y-2">
@@ -220,7 +220,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-slate-900">Getting Connected: Your Sri Lanka SIM Card</h3>
                 <p className="text-slate-700 leading-relaxed">
                   For your 3-week <strong>Sri Lanka tour</strong>, staying connected is easy. You can pick up a local SIM card
-                  right at the airport's arrival lounge. Most travelers choose <Link href="https://www.dialog.lk" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:underline">Dialog</Link> or <Link href="https://www.mobitel.lk" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:underline">Mobitel</Link> – they offer great coverage
+                  right at the airport&apos;s arrival lounge. Most travelers choose <Link href="https://www.dialog.lk" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:underline">Dialog</Link> or <Link href="https://www.mobitel.lk" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:underline">Mobitel</Link> – they offer great coverage
                   across the island, perfect for keeping in touch and navigating your <strong>Sri Lanka travel</strong>.
                 </p>
               </CardContent>
@@ -244,7 +244,7 @@ export default function Home() {
                 <p className="text-slate-700 leading-relaxed">
                   Good news! Extending your tourist visa for <strong>Sri Lanka travel</strong> can be done completely online.
                   Simply visit the official immigration e-services website, register, and follow the steps to apply.
-                  You'll need digital copies of your passport and a photo. Once approved, pay online, and your
+                  You&apos;ll need digital copies of your passport and a photo. Once approved, pay online, and your
                   extension arrives via email. Easy peasy!
                 </p>
                 <Link href="https://immigration.gov.lk/index_e.php" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:underline text-sm font-bold">
@@ -258,7 +258,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-slate-900">Getting Around: Why a Private Driver is Best</h3>
                 <p className="text-slate-700 leading-relaxed">
                   While public transport is super affordable, for peace of mind and comfort on your <strong>Sri Lanka tour</strong>,
-                  we highly recommend a <strong>private driver with a vehicle</strong>. It's easy, surprisingly affordable,
+                  we highly recommend a <strong>private driver with a vehicle</strong>. It&apos;s easy, surprisingly affordable,
                   and incredibly safe. Imagine exploring the island at your own pace, stopping whenever you like,
                   and having a local expert guide the way. Our team ensures a relaxed and memorable <strong>Sri Lanka travel</strong> experience.
                 </p>
@@ -272,10 +272,10 @@ export default function Home() {
               <CardContent className="p-6 md:p-8 space-y-4">
                 <h3 className="text-xl font-bold text-slate-900">Local Money & ATMs: Paying Your Way in Sri Lanka</h3>
                 <p className="text-slate-700 leading-relaxed">
-                  In <strong>Sri Lanka</strong>, you'll mostly use the local currency, LKR (Sri Lankan Rupees). While some hotels
+                  In <strong>Sri Lanka</strong>, you&apos;ll mostly use the local currency, LKR (Sri Lankan Rupees). While some hotels
                   might take US Dollars, shops and restaurants prefer LKR. Getting local cash is simple:
                   you can exchange money at the airport or banks, and ATMs are easy to find in cities and
-                  tourist spots. They're reliable and accept Visa/Mastercard. Enjoy your <strong>Sri Lanka tour</strong> without currency worries!
+                  tourist spots. They&apos;re reliable and accept Visa/Mastercard. Enjoy your <strong>Sri Lanka tour</strong> without currency worries!
                 </p>
                 <Link href="https://www.cbsl.gov.lk/en/rates-and-indicators/exchange-rates" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:underline text-sm font-bold">
                   View Official Exchange Rates →
@@ -287,7 +287,7 @@ export default function Home() {
               <CardContent className="p-6 md:p-8 space-y-4">
                 <h3 className="text-xl font-bold text-slate-900">Your Driver, Your Trip: How it Works in Sri Lanka</h3>
                 <p className="text-slate-700 leading-relaxed">
-                  Unlike many places, <strong>renting a car in Sri Lanka</strong> to drive yourself isn't usually recommended due to different road rules and traffic.
+                  Unlike many places, <strong>renting a car in Sri Lanka</strong> to drive yourself isn&apos;t usually recommended due to different road rules and traffic.
                   Instead, most travelers choose a <strong>private driver Sri Lanka</strong> expert. Your driver often stays with you for your whole <strong>Sri Lanka tour</strong>,
                   helping you plan each day and showing you the best spots. Good news: their accommodation is usually covered by the service!
                 </p>

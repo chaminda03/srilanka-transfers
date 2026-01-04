@@ -4,7 +4,7 @@ import { getPageById } from "@/lib/site";
 import { siteConfig } from "@/site/config";
 import { SpecPage } from "@/components/SpecPage";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import Image from "next/image";
 import Script from "next/script";
 
 // Fetch page data
@@ -29,7 +29,7 @@ type Props = {
 
 export default async function ContactPage({ searchParams }: Props) {
   // MUST await searchParams to avoid the "source map / internal error"
-  const params = await searchParams;
+  await searchParams;
 
   const wa = whatsappLink(
     "Hi! I’d like to book a Sri Lanka airport transfer or private driver."
@@ -147,7 +147,7 @@ export default async function ContactPage({ searchParams }: Props) {
       }))
     } as const;
 
-    jsonLd.push(faqSchema as any);
+    jsonLd.push(faqSchema);
   }
 
 
@@ -292,8 +292,8 @@ export default async function ContactPage({ searchParams }: Props) {
       <div className="mt-12">
         <h3 className="text-2xl font-bold mb-6 text-center">Trusted by Travellers</h3>
         <div className="flex justify-center items-center gap-8">
-          <img src="/images/Trip_advisor.webp" alt="TripAdvisor Logo" className="h-20" />
-          <img src="/images/tour_radar_logo.webp" alt="TourRadar Logo" className="h-20" />
+          <Image src="/images/Trip_advisor.webp" alt="TripAdvisor Logo" className="h-20 w-auto" width={150} height={80} />
+          <Image src="/images/tour_radar_logo.webp" alt="TourRadar Logo" className="h-20 w-auto" width={150} height={80} />
         </div>
       </div>
 
