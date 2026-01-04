@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
+import Link from 'next/link';
 const INTERESTS = [
   "Culture and temples",
   "Hill country and tea",

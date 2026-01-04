@@ -1,5 +1,6 @@
 import { buildMetadata } from "@/lib/seo";
 import CustomItineraryForm from "./CustomItineraryForm";
+import Link from 'next/link';
 
 export const metadata = buildMetadata({
   title: "Custom Sri Lanka Itinerary with Private Driver",
