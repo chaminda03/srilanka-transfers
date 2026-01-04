@@ -117,7 +117,7 @@ export default function PricesPage() {
     Get Your Exact Price on WhatsApp
   </h2>
 
-  <a
+  <Link
     href="https://wa.me/17038554561?text=Hi%2C%20I%E2%80%99d%20like%20to%20get%20a%20price%20quote%20for%20a%20Sri%20Lanka%20airport%20transfer%20or%20private%20driver."
     target="_blank"
     rel="noopener noreferrer"

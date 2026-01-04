@@ -1,110 +1,73 @@
 import Link from 'next/link';
-import Link from "next/link";
+import { Metadata } from 'next';
+
+// SEO Architect Note: We "noindex" this page so it doesn't appear in search results,
+// preserving your conversion data integrity.
+export const metadata: Metadata = {
+  title: 'Thank You | Sri Lanka Airport Transfer',
+  description: 'Your booking request has been received.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function ThankYouPage() {
   return (
-    <main className="mx-auto max-w-xl px-4 py-20 space-y-8">
-      {/* CONFIRMATION */}
-      <section className="space-y-4">
-        <h1 className="text-2xl font-semibold tracking-tight">
-          Thank You — Your Sri Lanka Travel Request Is Confirmed ✅
-        </h1>
+    <main className="min-h-[70vh] flex items-center justify-center p-6 bg-background">
+      <section className="max-w-md w-full text-center space-y-8 py-12 border rounded-xl shadow-sm bg-card">
+        {/* Success Icon */}
+        <div className="mx-auto w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center">
+          <svg
+            className="w-8 h-8 text-amber-600"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M5 13l4 4L19 7"
+            ></path>
+          </svg>
+        </div>
 
-        <p className="text-muted-foreground leading-relaxed">
-          Your request has been successfully received by our local team in Sri
-          Lanka. We are now reviewing your travel details and will get back to
-          you shortly with availability and a clear, fixed price.
-        </p>
-      </section>
+        <div className="space-y-3">
+          <h1 className="text-3xl font-bold tracking-tight text-foreground">
+            Request Received!
+          </h1>
+          <p className="text-muted-foreground text-lg">
+            Thank you for choosing us. We&apos;ve received your details and our team will contact you on WhatsApp or Email within 15 minutes to confirm your driver.
+          </p>
+        </div>
 
-      {/* TRUST BLOCK */}
-      <section className="rounded-lg border bg-muted/30 p-6 space-y-3">
-        <h2 className="font-semibold">What happens next?</h2>
-        <ul className="text-sm text-muted-foreground space-y-1">
-          <li>📩 Your inquiry is delivered directly to our operations team</li>
-          <li>🚗 A licensed, English-speaking driver is assigned based on your route</li>
-          <li>💬 You’ll receive a personal reply — no automated messages</li>
-          <li>💰 Pricing will be transparent and all-inclusive</li>
-        </ul>
-      </section>
-
-      {/* WHATSAPP FAST TRACK */}
-      <section className="rounded-lg border p-6 space-y-4">
-        <h2 className="font-semibold">Need a faster response?</h2>
-
-        <p className="text-sm text-muted-foreground">
-          For urgent arrivals or last-minute changes, WhatsApp is the quickest
-          way to reach us. Just mention that you’ve already submitted the form.
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <a
+        <div className="flex flex-col gap-3 px-6">
+          <Link
             href="https://wa.me/17038554561"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center rounded-md bg-amber-500 px-6 py-3 text-black font-medium hover:opacity-90"
+            className="inline-flex w-full items-center justify-center rounded-md bg-amber-500 px-6 py-4 text-black font-semibold hover:bg-amber-400 transition-colors"
             aria-label="Chat on WhatsApp"
           >
-            Chat on WhatsApp
+            Message us on WhatsApp
           </Link>
 
-          <a
-            href="tel:+17038554561"
-            className="inline-flex w-full items-center justify-center rounded-md border px-6 py-3 text-sm font-medium"
-            aria-label="Call us"
+          <Link
+            href="/"
+            className="inline-flex w-full items-center justify-center rounded-md border border-input bg-background px-6 py-3 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
           >
-            Call Us
+            Back to Homepage
           </Link>
         </div>
+
+        <div className="pt-4">
+          <p className="text-xs text-muted-foreground px-8">
+            Need immediate help? Call us directly at <Link href="tel:+17038554561" className="underline font-medium">+1 703 855 4561</Link>
+          </p>
+        </div>
       </section>
-
-      {/* NAVIGATION */}
-      <div className="flex flex-col sm:flex-row gap-3">
-        <Link
-          href="/private-driver-sri-lanka/"
-          className="inline-flex w-full items-center justify-center rounded-md border px-6 py-3 text-sm font-medium"
-        >
-          View Private Driver Services
-        </Link>
-
-        <Link
-          href="/"
-          className="inline-flex w-full items-center justify-center rounded-md border px-6 py-3 text-sm font-medium"
-        >
-          Back to Home
-        </Link>
-      </div>
-
-      {/* SCHEMA */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: "Sri Lanka Airport Transfers & Private Driver Service",
-            provider: {
-              "@type": "LocalBusiness",
-              name: "Sri Lanka Airport Transfer",
-              contactPoint: {
-                "@type": "ContactPoint",
-                contactType: "customer support",
-                telephone: "+1-703-855-4561",
-                availableLanguage: ["English"],
-              },
-            },
-            areaServed: {
-              "@type": "Country",
-              name: "Sri Lanka",
-            },
-            serviceType: [
-              "Airport Transfer",
-              "Private Driver",
-              "Custom Sri Lanka Tours",
-            ],
-          }),
-        }}
-      />
     </main>
   );
 }

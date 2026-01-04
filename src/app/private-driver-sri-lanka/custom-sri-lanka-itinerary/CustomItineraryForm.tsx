@@ -1,4 +1,3 @@
-import Link from 'next/link';
 "use client";
 
 import { useState } from "react";
@@ -177,7 +176,7 @@ Looking forward to your suggestions. Thank you!
 
       {/* CTA */}
       <section className="space-y-3 mt-8">
-        <a
+        <Link
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"

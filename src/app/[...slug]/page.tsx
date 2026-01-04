@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
 import { getAllPages, getPageByPath, normalizePath } from "@/lib/site";
 import { SpecPage } from "@/components/SpecPage";
@@ -171,7 +171,7 @@ export default async function DynamicSpecPage({
               </div>
             </div>
 
-            {/* What&apos;s included */}
+            {/* What's included */}
             <div className="rounded-lg border p-5 space-y-3">
               <h2 className="text-xl font-semibold">What’s included</h2>
               <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
@@ -181,7 +181,7 @@ export default async function DynamicSpecPage({
               </ul>
 
               <div className="pt-2">
-                <a
+                <Link
                   href="/contact/"
                   className="inline-flex items-center justify-center rounded-md bg-foreground px-5 py-2 text-background text-sm font-medium hover:opacity-90"
                 >
@@ -205,14 +205,14 @@ export default async function DynamicSpecPage({
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                  <a
+                  <Link
                     href="/colombo-airport-transfer/"
                     className="inline-flex items-center justify-center rounded-md bg-foreground px-5 py-2 text-background text-sm font-medium hover:opacity-90"
                   >
                     Continue to Kandy / Sigiriya
                   </Link>
 
-                  <a
+                  <Link
                     href="/contact/"
                     className="inline-flex items-center justify-center rounded-md border px-5 py-2 text-sm font-medium hover:bg-muted"
                   >

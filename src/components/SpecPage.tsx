@@ -30,13 +30,13 @@ export function SpecPage({ page, children }: { page: PageSpec; children?: React.
         {/* Scrim: Essential for white text legibility */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent z-10" />
 
-        <div className={page.id === &apos;contact&apos; ? "absolute bottom-0 left-0 right-0 mx-auto max-w-[1600px] px-10 pb-24 z-20" : "absolute bottom-0 left-0 right-0 mx-auto max-w-[1440px] px-8 pb-24 z-20"}>
+        <div className={page.id === 'contact' ? "absolute bottom-0 left-0 right-0 mx-auto max-w-[1600px] px-10 pb-24 z-20" : "absolute bottom-0 left-0 right-0 mx-auto max-w-[1440px] px-8 pb-24 z-20"}>
           <Breadcrumbs page={page} className="mb-6 text-white/70 tracking-widest uppercase text-xs" />
           <h1 className="max-w-4xl text-6xl font-black tracking-tighter text-white drop-shadow-2xl sm:text-8xl leading-[0.9]">
-            {page.id === &apos;private_driver&apos; ? (
+            {page.id === 'private_driver' ? (
               <>#1 Private Driver in Sri Lanka: <span className="text-amber-500">Safe, Licensed & Fixed Prices</span></>
             ) : (
-              page.title.split(&apos;|&apos;)[0]
+              page.title.split('|')[0]
             )}
           </h1>
         </div>
@@ -47,18 +47,18 @@ export function SpecPage({ page, children }: { page: PageSpec; children?: React.
       */}
 
       {/* 2. MAIN CONTENT: Ultra-wide layout */}
-      <div className={page.id === &apos;contact&apos; ? "relative z-30 mx-auto max-w-[1600px] px-4 sm:px-10" : "relative z-30 mx-auto max-w-[1440px] px-4 sm:px-8"}>
+      <div className={page.id === 'contact' ? "relative z-30 mx-auto max-w-[1600px] px-4 sm:px-10" : "relative z-30 mx-auto max-w-[1440px] px-4 sm:px-8"}>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20">
           
-          <main className={page.id === &apos;contact&apos; ? "lg:col-span-12 py-24" : "lg:col-span-8 py-24"}>
-            {/* max-w-none removes the &apos;messy&apos; narrow constraints */}
+          <main className={page.id === 'contact' ? "lg:col-span-12 py-24" : "lg:col-span-8 py-24"}>
+            {/* max-w-none removes the 'messy' narrow constraints */}
             <div className="max-w-none space-y-24">
               {children}
             </div>
           </main>
 
           {/* SIDEBAR: Visible only on Desktop (lg and up) */}
-          {page.id !== &apos;contact&apos; && (
+          {page.id !== 'contact' && (
             <aside className="hidden lg:block lg:col-span-4 pt-12 lg:pt-24">
               <div className="lg:sticky lg:top-32 space-y-8 lg:space-y-12">
                 
@@ -89,7 +89,7 @@ export function SpecPage({ page, children }: { page: PageSpec; children?: React.
       </div>
 
       {/* 3. STICKY FOOTER BAR */}
-      {page.id !== &apos;contact&apos; && (
+      {page.id !== 'contact' && (
         <BookingStickyBar price={page.startPrice} label="Private Service from" />
       )}
     </article>
