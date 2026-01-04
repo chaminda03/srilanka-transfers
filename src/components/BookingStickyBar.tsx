@@ -1,6 +1,5 @@
-import Link from 'next/link';
 import Link from "next/link";
-import React from &apos;react&apos;;
+import React from 'react';
 
 interface BookingStickyBarProps {
   price?: string;

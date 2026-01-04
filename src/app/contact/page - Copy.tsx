@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { buildMetadata } from "@/lib/seo";
 import { getPageById } from "@/lib/site";
 import { siteConfig } from "@/site/config";

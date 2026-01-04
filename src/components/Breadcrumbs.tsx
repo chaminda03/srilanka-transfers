@@ -1,4 +1,4 @@
-import Link from &apos;next/link&apos;;
+import Link from 'next/link';
 import { PageSpec } from "@/site/spec";
 
 // Added a default empty object check to prevent the &apos;undefined&apos; error

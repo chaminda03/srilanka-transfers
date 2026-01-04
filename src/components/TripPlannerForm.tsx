@@ -120,7 +120,7 @@ Please send me a customized itinerary with a private driver and vehicle.`;
               value={arrival}
               onChange={(e) => setArrival(e.target.value)}
               className="w-full bg-white/5 border border-white/10 rounded-2xl pl-12 pr-6 py-4 outline-none focus:border-amber-500 transition-all text-sm appearance-none"
-              style={{ colorScheme: &apos;dark&apos; }}
+              style={{ colorScheme: 'dark' }}
             />
           </div>
           <p className="text-[10px] text-slate-500 italic">Approximate date is perfectly fine</p>

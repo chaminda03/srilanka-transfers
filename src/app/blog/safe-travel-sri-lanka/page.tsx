@@ -79,7 +79,7 @@ export default function SafeTravelBlog() {
           </section>
 
           <section>
-            <h2 className="text-3xl font-black text-slate-950 tracking-tight">3. Protection from &quot;Price Hijacking&quot;</h2>
+            <h2 className="text-3xl font-black text-slate-950 tracking-tight">3. Protection from "Price Hijacking"</h2>
             <p>
               Sri Lanka is safe, but travelers can sometimes be overcharged. Having a local driver acts as a &quot;Free Guide&quot; service. 
             </p>

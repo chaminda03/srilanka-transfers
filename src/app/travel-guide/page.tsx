@@ -47,7 +47,7 @@ export default function TravelGuidePage() {
               href={item.path} 
               className="block p-8 rounded-[32px] bg-slate-50 border border-slate-100/80 shadow-sm hover:bg-white hover:border-slate-200/60 hover:-translate-y-1 transition-all"
             >
-              <h3 className="text-xl font-bold text-slate-800 mb-2">{item.title.split(&apos;|&apos;)[0]}</h3>
+              <h3 className="text-xl font-bold text-slate-800 mb-2">{item.title.split('|')[0]}</h3>
               <p className="text-slate-500 text-sm">{item.description}</p>
               <span className="mt-4 block text-xs font-bold uppercase tracking-widest text-primary">Read Guide →</span>
             </Link>
