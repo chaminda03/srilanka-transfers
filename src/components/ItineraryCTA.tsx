@@ -69,6 +69,10 @@ export default function ItineraryCTA({
           </div>
 
           <div className="flex-shrink-0 flex items-center gap-3">
+            {/* ARCHITECT NOTE: 
+              We use <a> for external links (WhatsApp) and <Link> for internal routes.
+              This satisfies both the Next.js compiler and SEO best practices.
+            */}
             <a
               href={wa}
               target="_blank"
@@ -76,12 +80,12 @@ export default function ItineraryCTA({
               aria-label={`Chat on WhatsApp ${whatsappNumber}`}
               className="inline-flex items-center gap-3 rounded-full bg-amber-500 px-5 py-3 text-sm font-semibold text-black shadow hover:scale-[1.02] transition"
             >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M20.52 3.48A11.94 11.94 0 0012.04.5C6.02.5 1.21 5.3 1.21 11.32c0 1.99.52 3.92 1.5 5.62L.5 23.5l6.8-2.06a11.72 11.72 0 005.75 1.48c6.02 0 10.83-4.8 10.83-10.82 0-3.03-1.18-5.87-3.36-7.58z" fill="#fff" opacity=".08"/>
                 <path d="M17.53 14.7c-.37-.18-2.17-1.06-2.5-1.18-.34-.12-.59-.18-.84.18-.25.36-.98 1.18-1.2 1.42-.22.24-.43.27-.8.09-.37-.18-1.55-.57-2.95-1.83-1.09-.97-1.82-2.18-2.03-2.55-.22-.36-.02-.56.16-.74.16-.16.37-.43.55-.64.18-.22.24-.37.37-.62.12-.25.06-.46-.03-.64-.09-.18-.84-2.03-1.15-2.78-.3-.73-.61-.63-.84-.63-.22 0-.47-.01-.72-.01-.25 0-.64.09-.98.46-.34.36-1.29 1.26-1.29 3.07 0 1.81 1.32 3.56 1.5 3.81.18.25 2.59 3.95 6.27 5.36 3.23 1.24 3.23.83 3.81.78.06-.01 1.24-.5 1.42-.99.18-.49.18-.91.13-.99-.05-.08-.18-.12-.37-.21z" fill="#fff"/>
               </svg>
               WhatsApp
-            </Link>
+            </a>
 
             <Link
               href={bookingHref}
