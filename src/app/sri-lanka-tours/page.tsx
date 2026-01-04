@@ -33,7 +33,7 @@ export default function SriLankaToursPage() {
     },
     {
       title: "Kandy to Ella Train",
-      text: "Experience one of the world's most scenic train journeys.",
+      text: "Experience one of the world&apos;s most scenic train journeys.",
       href: "/tours/scenic-train-ride-kandy-to-ella/",
       img: "/images/sri-lanka-scenic-train-ride-kandy-to-ella-couple.webp",
       alt: "Couple hanging out of the iconic blue train on the scenic Kandy to Ella journey, a must-do Sri Lanka tour."

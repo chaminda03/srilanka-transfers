@@ -23,7 +23,7 @@ const faqs = [
     },
     {
         q: "Is it better to stay in one beach town or move around?",
-        a: "With a private driver, it's easy to do both! You can base yourself in one town like Unawatuna or Mirissa and take day trips to nearby beaches. Or, we can design a tour that has you staying in a few different coastal towns to experience their unique vibes."
+        a: "With a private driver, it&apos;s easy to do both! You can base yourself in one town like Unawatuna or Mirissa and take day trips to nearby beaches. Or, we can design a tour that has you staying in a few different coastal towns to experience their unique vibes."
     },
 ];
 

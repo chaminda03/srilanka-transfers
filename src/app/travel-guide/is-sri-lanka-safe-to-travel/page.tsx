@@ -19,7 +19,7 @@ const faqs = [
     },
     {
       q: "What about health and vaccinations?",
-      a: "Consult your doctor for recommended vaccinations. It's advisable to drink bottled water, eat from reputable restaurants, and protect yourself from mosquitoes to prevent dengue fever."
+      a: "Consult your doctor for recommended vaccinations. It&apos;s advisable to drink bottled water, eat from reputable restaurants, and protect yourself from mosquitoes to prevent dengue fever."
     },
     {
         q: "Are there any common scams to be aware of?",

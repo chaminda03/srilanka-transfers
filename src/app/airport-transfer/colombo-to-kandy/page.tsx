@@ -39,7 +39,7 @@ export default function AirportToKandyPage() {
           Travel to the Cultural Capital in Comfort
         </h2>
         <div className="max-w-3xl text-slate-600 space-y-6 text-lg">
-          <p>Start your journey to Sri Lanka's cultural heartland with a seamless private transfer from Colombo Airport (CMB) to Kandy. The scenic drive into the hill country is an experience in itself, made all the more enjoyable from the comfort of a private vehicle.</p>
+          <p>Start your journey to Sri Lanka&apos;s cultural heartland with a seamless private transfer from Colombo Airport (CMB) to Kandy. The scenic drive into the hill country is an experience in itself, made all the more enjoyable from the comfort of a private vehicle.</p>
           <p>Your professional driver will navigate the winding roads safely, allowing you to relax and anticipate the rich history and beauty of Kandy, home to the sacred Temple of the Tooth Relic.</p>
         </div>
       </section>

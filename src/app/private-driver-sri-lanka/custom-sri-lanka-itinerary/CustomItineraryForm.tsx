@@ -1,3 +1,4 @@
+import Link from 'next/link';
 "use client";
 
 import { useState } from "react";
@@ -183,7 +184,7 @@ Looking forward to your suggestions. Thank you!
           className="inline-flex w-full items-center justify-center rounded-md bg-foreground px-6 py-3 text-background font-medium hover:opacity-90"
         >
           Send My Trip Details on WhatsApp
-        </a>
+        </Link>
 
         <p className="text-xs text-muted-foreground text-center">
           Free planning • No obligation • Direct chat with a real person

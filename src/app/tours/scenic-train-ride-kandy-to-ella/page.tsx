@@ -37,11 +37,11 @@ export default function ScenicTrainRidePage() {
       
       <section>
         <h2 className="text-5xl md:text-6xl font-black tracking-tighter mb-8 leading-tight text-slate-900">
-          The World's Most Beautiful Train Journey
+          The World&apos;s Most Beautiful Train Journey
         </h2>
         <div className="max-w-3xl text-slate-600 space-y-6 text-lg">
           <p>The train ride from Kandy to Ella is consistently ranked among the most scenic in the world, and for good reason. The iconic blue train winds its way through lush, emerald-green tea plantations, misty mountains, and charming villages, offering breathtaking views at every turn.</p>
-          <p>However, securing tickets and managing luggage can be a challenge. That's where we come in. We handle the logistics, allowing you to simply sit back, relax, and soak in the unforgettable scenery from your window.</p>
+          <p>However, securing tickets and managing luggage can be a challenge. That&apos;s where we come in. We handle the logistics, allowing you to simply sit back, relax, and soak in the unforgettable scenery from your window.</p>
         </div>
       </section>
 

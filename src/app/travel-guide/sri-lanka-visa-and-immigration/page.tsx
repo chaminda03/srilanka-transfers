@@ -36,11 +36,11 @@ export default function VisaGuidePage() {
         <div className="space-y-8 text-lg text-slate-700">
             <div>
                 <h3 className="text-2xl font-bold text-slate-800 mb-2">1. Apply for an Electronic Travel Authorization (ETA)</h3>
-                <p>For most nationalities, a 30-day tourist visa is granted via the online ETA system. It's a simple application that you should complete at least a few days before your departure.</p>
+                <p>For most nationalities, a 30-day tourist visa is granted via the online ETA system. It&apos;s a simple application that you should complete at least a few days before your departure.</p>
                 <p className="mt-2">Apply only through the official government website: <Link href="https://www.immigration.gov.lk/" target="_blank" rel="noopener noreferrer" className="text-primary underline">https://www.immigration.gov.lk/</Link></p>
             </div>
             <div>
-                <h3 className="text-2xl font-bold text-slate-800 mb-2">2. What You'll Need</h3>
+                <h3 className="text-2xl font-bold text-slate-800 mb-2">2. What You&apos;ll Need</h3>
                 <ul className="list-disc list-inside ml-4 space-y-2">
                     <li>A passport valid for at least 6 months from your date of arrival.</li>
                     <li>A confirmed return ticket.</li>

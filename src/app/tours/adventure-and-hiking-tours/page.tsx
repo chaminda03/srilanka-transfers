@@ -15,7 +15,7 @@ export async function generateMetadata() {
 const faqs = [
     {
       q: "What is the difficulty level of the hikes?",
-      a: "We offer a range of hikes suitable for various fitness levels. Hikes like Little Adam's Peak are relatively easy, while trails in the Knuckles Mountain Range can be more challenging. We will tailor the adventure to your preference."
+      a: "We offer a range of hikes suitable for various fitness levels. Hikes like Little Adam&apos;s Peak are relatively easy, while trails in the Knuckles Mountain Range can be more challenging. We will tailor the adventure to your preference."
     },
     {
       q: "What should I wear for hiking in Sri Lanka?",
@@ -39,7 +39,7 @@ export default function AdventureToursPage() {
           Answer the Call of the Wild
         </h2>
         <div className="max-w-3xl text-slate-600 space-y-6 text-lg">
-          <p>For those who seek a thrill, Sri Lanka's diverse landscapes offer a natural adventure park. From misty mountains and cascading waterfalls to rushing rivers, there are endless opportunities to hike, climb, and explore the island's untamed beauty.</p>
+          <p>For those who seek a thrill, Sri Lanka&apos;s diverse landscapes offer a natural adventure park. From misty mountains and cascading waterfalls to rushing rivers, there are endless opportunities to hike, climb, and explore the island&apos;s untamed beauty.</p>
           <p>Our adventure tours are designed to get your heart pumping. With a private driver to manage all the travel and logistics, you can focus on the challenge and the stunning rewards of your chosen adventure.</p>
         </div>
       </section>
@@ -52,15 +52,15 @@ export default function AdventureToursPage() {
         <div className="space-y-12">
             <div>
                 <h3 className="text-3xl font-bold text-slate-800 mb-3">Hiking in Ella</h3>
-                <p className="text-lg text-slate-600 max-w-2xl">The charming town of Ella is a hiker's paradise. Climb to the top of Ella Rock for panoramic views, or take the easier but equally rewarding walk to Little Adam's Peak. The Nine Arch Bridge is another iconic photo spot.</p>
+                <p className="text-lg text-slate-600 max-w-2xl">The charming town of Ella is a hiker&apos;s paradise. Climb to the top of Ella Rock for panoramic views, or take the easier but equally rewarding walk to Little Adam&apos;s Peak. The Nine Arch Bridge is another iconic photo spot.</p>
             </div>
             <div>
                 <h3 className="text-3xl font-bold text-slate-800 mb-3">Knuckles Mountain Range</h3>
-                <p className="text-lg text-slate-600 max-w-2xl">A UNESCO World Heritage Site, the Knuckles Range offers some of Sri Lanka's most rugged and rewarding trekking routes. Explore diverse ecosystems, remote villages, and untouched forests.</p>
+                <p className="text-lg text-slate-600 max-w-2xl">A UNESCO World Heritage Site, the Knuckles Range offers some of Sri Lanka&apos;s most rugged and rewarding trekking routes. Explore diverse ecosystems, remote villages, and untouched forests.</p>
             </div>
              <div>
                 <h3 className="text-3xl font-bold text-slate-800 mb-3">White Water Rafting in Kitulgala</h3>
-                <p className="text-lg text-slate-600 max-w-2xl">Get your adrenaline fix on the Kelani River in Kitulgala, the location where 'The Bridge on the River Kwai' was filmed. It's the perfect spot for a thrilling white water rafting experience.</p>
+                <p className="text-lg text-slate-600 max-w-2xl">Get your adrenaline fix on the Kelani River in Kitulgala, the location where &apos;The Bridge on the River Kwai&apos; was filmed. It&apos;s the perfect spot for a thrilling white water rafting experience.</p>
             </div>
         </div>
       </section>

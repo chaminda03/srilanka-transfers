@@ -38,7 +38,7 @@ export default function FoodGuidePage() {
           </div>
           <div>
             <h3 className="text-2xl font-bold text-slate-800 mb-3">Kottu Roti</h3>
-            <p className="text-lg text-slate-600">You'll hear it before you see it. Kottu is a popular street food made from shredded godamba roti, vegetables, egg, and/or meat, all chopped and mixed on a hot griddle with metal blades. It's a noisy, theatrical, and delicious experience.</p>
+            <p className="text-lg text-slate-600">You&apos;ll hear it before you see it. Kottu is a popular street food made from shredded godamba roti, vegetables, egg, and/or meat, all chopped and mixed on a hot griddle with metal blades. It&apos;s a noisy, theatrical, and delicious experience.</p>
           </div>
           <div>
             <h3 className="text-2xl font-bold text-slate-800 mb-3">Hoppers (Appa)</h3>
@@ -46,7 +46,7 @@ export default function FoodGuidePage() {
           </div>
           <div>
             <h3 className="text-2xl font-bold text-slate-800 mb-3">Dhal Curry (Parippu)</h3>
-            <p className="text-lg text-slate-600">The most common curry in any Sri Lankan meal. Made from red lentils cooked in coconut milk with spices like turmeric, cumin, and fenugreek, it's a creamy, mild, and comforting dish that accompanies almost everything.</p>
+            <p className="text-lg text-slate-600">The most common curry in any Sri Lankan meal. Made from red lentils cooked in coconut milk with spices like turmeric, cumin, and fenugreek, it&apos;s a creamy, mild, and comforting dish that accompanies almost everything.</p>
           </div>
         </div>
       </section>

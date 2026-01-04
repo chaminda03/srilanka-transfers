@@ -23,7 +23,7 @@ export default function BookingProcessPage() {
           Book Your Transfer in 3 Simple Steps
         </h2>
         <div className="max-w-3xl text-slate-600 space-y-6 text-lg">
-          <p>We've made booking your private airport transfer in Sri Lanka as easy as possible. Our straightforward process ensures your travel plans are confirmed quickly, giving you peace of mind.</p>
+          <p>We&apos;ve made booking your private airport transfer in Sri Lanka as easy as possible. Our straightforward process ensures your travel plans are confirmed quickly, giving you peace of mind.</p>
         </div>
       </section>
 
@@ -42,7 +42,7 @@ export default function BookingProcessPage() {
             <div className="p-8 bg-slate-50 rounded-2xl border border-slate-100/80">
                 <div className="text-6xl font-black text-primary/50 mb-2">3</div>
                 <h3 className="text-xl font-bold text-slate-800 mb-2">Confirm Your Booking</h3>
-                <p className="text-slate-500">Simply reply to confirm your booking. We'll send you the driver's details, and you'll be all set. Payment can be made online or directly to the driver.</p>
+                <p className="text-slate-500">Simply reply to confirm your booking. We&apos;ll send you the driver&apos;s details, and you&apos;ll be all set. Payment can be made online or directly to the driver.</p>
             </div>
         </div>
       </section>

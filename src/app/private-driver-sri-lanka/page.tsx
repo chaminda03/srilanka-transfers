@@ -121,7 +121,7 @@ export default function PrivateDriverSriLankaPage() {
           <div>
             <h2 className="text-5xl font-black tracking-tighter mb-6">Ready to start?</h2>
             <p className="text-lg text-slate-400 leading-relaxed max-w-sm">
-              Tell us your dates and interests. We'll send a custom route and 
+              Tell us your dates and interests. We&apos;ll send a custom route and 
               fixed-price quote via WhatsApp.
             </p>
           </div>

@@ -49,7 +49,7 @@ export default function VehicleOptionsPage() {
           Travel in Comfort and Style
         </h2>
         <div className="max-w-3xl text-slate-600 space-y-6 text-lg">
-          <p>We maintain a modern, clean, and fully air-conditioned fleet to ensure your journey in Sri Lanka is as comfortable as possible. Whether you're traveling solo, as a couple, or with a large group, we have the perfect vehicle to suit your needs.</p>
+          <p>We maintain a modern, clean, and fully air-conditioned fleet to ensure your journey in Sri Lanka is as comfortable as possible. Whether you&apos;re traveling solo, as a couple, or with a large group, we have the perfect vehicle to suit your needs.</p>
           <p>All our vehicles are regularly serviced and inspected to meet the highest safety standards.</p>
         </div>
       </section>

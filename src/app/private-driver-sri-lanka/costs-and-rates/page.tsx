@@ -19,7 +19,7 @@ const faqs = [
     },
     {
       q: "Are there any hidden fees I should know about?",
-      a: "No, our pricing is all-inclusive and transparent. The daily rate covers the driver's accommodation, meals, highway tolls, and parking fees. You only need to cover your own accommodation, meals, and entrance fees to attractions."
+      a: "No, our pricing is all-inclusive and transparent. The daily rate covers the driver&apos;s accommodation, meals, highway tolls, and parking fees. You only need to cover your own accommodation, meals, and entrance fees to attractions."
     },
     {
       q: "How do I pay for the service?",
@@ -46,7 +46,7 @@ export default function PrivateDriverCostsPage() {
 
       <section>
         <div className="flex items-center gap-4 mb-12">
-          <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">What's Included</span>
+          <span className="text-xs font-bold uppercase tracking-[0.3em] text-primary">What&apos;s Included</span>
           <div className="h-px flex-1 bg-slate-100" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-slate-700">
@@ -57,7 +57,7 @@ export default function PrivateDriverCostsPage() {
                 <li className="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> All fuel costs</li>
             </ul>
             <ul className="space-y-4 text-lg">
-                <li className="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Driver's meals and accommodation</li>
+                <li className="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Driver&apos;s meals and accommodation</li>
                 <li className="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Highway tolls and parking fees</li>
                 <li className="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> 24/7 support via WhatsApp</li>
                 <li className="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Free SIM card on arrival</li>

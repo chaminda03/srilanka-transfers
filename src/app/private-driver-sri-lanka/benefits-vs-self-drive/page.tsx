@@ -39,7 +39,7 @@ export default function PrivateDriverBenefitsPage() {
           The Ultimate Freedom to Explore
         </h2>
         <div className="max-w-3xl text-slate-600 space-y-6 text-lg">
-          <p>Choosing between hiring a private driver and self-driving in Sri Lanka is a key decision for your trip. While renting a car offers a sense of independence, the reality of navigating Sri Lanka's roads can be more stressful than relaxing. A private driver provides the perfect blend of freedom and expert local guidance.</p>
+          <p>Choosing between hiring a private driver and self-driving in Sri Lanka is a key decision for your trip. While renting a car offers a sense of independence, the reality of navigating Sri Lanka&apos;s roads can be more stressful than relaxing. A private driver provides the perfect blend of freedom and expert local guidance.</p>
           <p>Let a professional handle the driving, so you can focus on the incredible scenery, immerse yourself in the culture, and truly enjoy every moment of your vacation.</p>
         </div>
       </section>

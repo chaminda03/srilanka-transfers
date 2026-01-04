@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/seo";
 import { getAllPages, getPageByPath, normalizePath } from "@/lib/site";
@@ -170,7 +171,7 @@ export default async function DynamicSpecPage({
               </div>
             </div>
 
-            {/* What's included */}
+            {/* What&apos;s included */}
             <div className="rounded-lg border p-5 space-y-3">
               <h2 className="text-xl font-semibold">What’s included</h2>
               <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
@@ -185,7 +186,7 @@ export default async function DynamicSpecPage({
                   className="inline-flex items-center justify-center rounded-md bg-foreground px-5 py-2 text-background text-sm font-medium hover:opacity-90"
                 >
                   Get a fixed quote
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -209,14 +210,14 @@ export default async function DynamicSpecPage({
                     className="inline-flex items-center justify-center rounded-md bg-foreground px-5 py-2 text-background text-sm font-medium hover:opacity-90"
                   >
                     Continue to Kandy / Sigiriya
-                  </a>
+                  </Link>
 
                   <a
                     href="/contact/"
                     className="inline-flex items-center justify-center rounded-md border px-5 py-2 text-sm font-medium hover:bg-muted"
                   >
                     Ask on WhatsApp
-                  </a>
+                  </Link>
                 </div>
               </div>
             )}

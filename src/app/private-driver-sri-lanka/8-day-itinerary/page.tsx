@@ -78,7 +78,7 @@ export default function EightDayItineraryPage() {
                   <span className="text-amber-500">★</span> What is included in your price:
                 </h3>
                 <ul className="grid sm:grid-cols-2 gap-3 text-sm text-slate-600">
-                   {["Private AC Vehicle (Car/Van)", "English-Speaking Driver Guide", "Gas, Tolls, & Parking Fees", "Driver's Food & Accommodation", "Airport Pick-up & Drop-off", "24/7 Support"].map((item, i) => (
+                   {["Private AC Vehicle (Car/Van)", "English-Speaking Driver Guide", "Gas, Tolls, & Parking Fees", "Driver&apos;s Food & Accommodation", "Airport Pick-up & Drop-off", "24/7 Support"].map((item, i) => (
                      <li key={i} className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" /> {item}</li>
                    ))}
                 </ul>
@@ -144,8 +144,8 @@ export default function EightDayItineraryPage() {
                {/* Day 6 */}
                <div className="relative">
                 <span className="absolute -left-[41px] top-1 h-6 w-6 rounded-full border-4 border-white bg-slate-300" />
-                <h3 className="text-xl font-bold text-slate-900">Day 6: Ella's Natural Wonders</h3>
-                <p className="text-slate-500 text-sm mb-2 font-medium">Activity: Nine Arch Bridge & Little Adam's Peak</p>
+                <h3 className="text-xl font-bold text-slate-900">Day 6: Ella&apos;s Natural Wonders</h3>
+                <p className="text-slate-500 text-sm mb-2 font-medium">Activity: Nine Arch Bridge & Little Adam&apos;s Peak</p>
                 <p className="text-slate-600 leading-relaxed">
                   An active day exploring the Instagram-famous <strong>Nine Arch Bridge</strong> and an easy hike up Little Adam&apos;s Peak for stunning panoramic views. Cool off with a visit to the majestic Ravana Falls.
                 </p>

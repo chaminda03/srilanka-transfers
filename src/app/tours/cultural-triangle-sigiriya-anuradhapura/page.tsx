@@ -39,8 +39,8 @@ export default function CulturalTrianglePage() {
           Journey to the Heart of Ancient Lanka
         </h2>
         <div className="max-w-3xl text-slate-600 space-y-6 text-lg">
-          <p>Step back in time and explore Sri Lanka's magnificent Cultural Triangle, a treasure trove of ancient cities, rock fortresses, and sacred temples. This region was the cradle of Sri Lankan civilization, and its well-preserved ruins tell the story of a rich and powerful history.</p>
-          <p>Let us guide you through these UNESCO World Heritage sites. We'll handle all the logistics, so you can immerse yourself in the awe-inspiring history and architectural marvels of the island's past.</p>
+          <p>Step back in time and explore Sri Lanka&apos;s magnificent Cultural Triangle, a treasure trove of ancient cities, rock fortresses, and sacred temples. This region was the cradle of Sri Lankan civilization, and its well-preserved ruins tell the story of a rich and powerful history.</p>
+          <p>Let us guide you through these UNESCO World Heritage sites. We&apos;ll handle all the logistics, so you can immerse yourself in the awe-inspiring history and architectural marvels of the island&apos;s past.</p>
         </div>
       </section>
 
@@ -52,11 +52,11 @@ export default function CulturalTrianglePage() {
         <div className="space-y-12">
             <div>
                 <h3 className="text-3xl font-bold text-slate-800 mb-3">Sigiriya Rock Fortress</h3>
-                <p className="text-lg text-slate-600 max-w-2xl">Climb the magnificent 'Lion Rock' to discover the ruins of a 5th-century palace on its summit. The stunning views and ancient frescoes of the 'Heavenly Maidens' make this an unmissable experience.</p>
+                <p className="text-lg text-slate-600 max-w-2xl">Climb the magnificent &apos;Lion Rock&apos; to discover the ruins of a 5th-century palace on its summit. The stunning views and ancient frescoes of the &apos;Heavenly Maidens&apos; make this an unmissable experience.</p>
             </div>
             <div>
                 <h3 className="text-3xl font-bold text-slate-800 mb-3">Ancient City of Polonnaruwa</h3>
-                <p className="text-lg text-slate-600 max-w-2xl">Explore the beautifully preserved ruins of Sri Lanka's second capital. Cycle through the archaeological park to see impressive stupas, statues of the Buddha, and the remains of a grand royal palace.</p>
+                <p className="text-lg text-slate-600 max-w-2xl">Explore the beautifully preserved ruins of Sri Lanka&apos;s second capital. Cycle through the archaeological park to see impressive stupas, statues of the Buddha, and the remains of a grand royal palace.</p>
             </div>
              <div>
                 <h3 className="text-3xl font-bold text-slate-800 mb-3">Dambulla Cave Temple</h3>

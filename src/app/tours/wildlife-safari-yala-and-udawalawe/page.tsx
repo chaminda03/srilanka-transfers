@@ -39,8 +39,8 @@ export default function WildlifeSafariPage() {
           Into the Wild Heart of Sri Lanka
         </h2>
         <div className="max-w-3xl text-slate-600 space-y-6 text-lg">
-          <p>Embark on an unforgettable journey into Sri Lanka's celebrated national parks. A wildlife safari is a must-do experience, offering the chance to see majestic elephants, elusive leopards, and a vibrant array of birdlife in their natural habitats.</p>
-          <p>We partner with the best local guides and jeep drivers to give you a safe, respectful, and thrilling safari experience. Whether it's the elephant herds of Udawalawe or the leopard territories of Yala, we'll get you to the heart of the action.</p>
+          <p>Embark on an unforgettable journey into Sri Lanka&apos;s celebrated national parks. A wildlife safari is a must-do experience, offering the chance to see majestic elephants, elusive leopards, and a vibrant array of birdlife in their natural habitats.</p>
+          <p>We partner with the best local guides and jeep drivers to give you a safe, respectful, and thrilling safari experience. Whether it&apos;s the elephant herds of Udawalawe or the leopard territories of Yala, we&apos;ll get you to the heart of the action.</p>
         </div>
       </section>
 
@@ -52,15 +52,15 @@ export default function WildlifeSafariPage() {
         <div className="space-y-12">
             <div>
                 <h3 className="text-3xl font-bold text-slate-800 mb-3">Yala National Park</h3>
-                <p className="text-lg text-slate-600 max-w-2xl">Famous for its high density of leopards, Yala offers a dramatic landscape of scrub jungle, rocky outcrops, and coastal lagoons. It's the premier destination for those hoping to spot the elusive Sri Lankan leopard.</p>
+                <p className="text-lg text-slate-600 max-w-2xl">Famous for its high density of leopards, Yala offers a dramatic landscape of scrub jungle, rocky outcrops, and coastal lagoons. It&apos;s the premier destination for those hoping to spot the elusive Sri Lankan leopard.</p>
             </div>
             <div>
                 <h3 className="text-3xl font-bold text-slate-800 mb-3">Udawalawe National Park</h3>
-                <p className="text-lg text-slate-600 max-w-2xl">If you love elephants, Udawalawe is paradise. Home to a large resident population, elephant sightings are virtually guaranteed. The park's open grasslands make for fantastic viewing and photography opportunities.</p>
+                <p className="text-lg text-slate-600 max-w-2xl">If you love elephants, Udawalawe is paradise. Home to a large resident population, elephant sightings are virtually guaranteed. The park&apos;s open grasslands make for fantastic viewing and photography opportunities.</p>
             </div>
              <div>
                 <h3 className="text-3xl font-bold text-slate-800 mb-3">Minneriya & Kaudulla National Parks</h3>
-                <p className="text-lg text-slate-600 max-w-2xl">Witness 'The Gathering,' an incredible natural spectacle where hundreds of elephants congregate around the Minneriya Tank during the dry season. It's one of Asia's great wildlife events.</p>
+                <p className="text-lg text-slate-600 max-w-2xl">Witness &apos;The Gathering,&apos; an incredible natural spectacle where hundreds of elephants congregate around the Minneriya Tank during the dry season. It&apos;s one of Asia&apos;s great wildlife events.</p>
             </div>
         </div>
       </section>

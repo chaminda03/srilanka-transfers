@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { buildMetadata } from "@/lib/seo";
 import { getPageById } from "@/lib/site";
@@ -62,12 +63,12 @@ export default async function ContactPage({ searchParams }: Props) {
   // SEO-optimised FAQ entries (mirrors visible content below)
   const faqs = [
     {
-      q: "What can I see in Kandy in one day, and what's the route from Sigiriya to Kandy?",
-      a: "In one day you can visit Kandy's highlights — the Temple of the Tooth, Kandy Lake, and the Royal Botanical Gardens (Peradeniya) plus an evening cultural dance. The typical driving route from Sigiriya is: Sigiriya → Dambulla → Matale → Kandy (about 2–3 hours depending on stops); we can arrange transfers and a guided itinerary."
+      q: "What can I see in Kandy in one day, and what&apos;s the route from Sigiriya to Kandy?",
+      a: "In one day you can visit Kandy&apos;s highlights — the Temple of the Tooth, Kandy Lake, and the Royal Botanical Gardens (Peradeniya) plus an evening cultural dance. The typical driving route from Sigiriya is: Sigiriya → Dambulla → Matale → Kandy (about 2–3 hours depending on stops); we can arrange transfers and a guided itinerary."
     },
     {
-      q: "Does 'This is permitted within 30 days from your initial arrival' mean I have to arrive within 30 days?",
-      a: "This means a standard tourist visa allows a stay of up to 30 days starting from your arrival date in Sri Lanka. If you're unsure about your dates, confirm with the issuing authority or immigration."
+      q: "Does &apos;This is permitted within 30 days from your initial arrival&apos; mean I have to arrive within 30 days?",
+      a: "This means a standard tourist visa allows a stay of up to 30 days starting from your arrival date in Sri Lanka. If you&apos;re unsure about your dates, confirm with the issuing authority or immigration."
     },
     {
       q: "What is the best mobile eSIM or SIM option for Sri Lanka?",
@@ -168,13 +169,13 @@ export default async function ContactPage({ searchParams }: Props) {
           </p>
           <div className="flex flex-wrap gap-3">
             <Button asChild size="lg" className="rounded-full bg-amber-500 text-black py-3 px-6 font-bold">
-              <a href={wa} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">Chat on WhatsApp</a>
+              <Link href={wa} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">Chat on WhatsApp</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="rounded-full py-3 px-6">
-              <a href={`tel:${(siteConfig.contact?.whatsappNumberE164 || "").replace(/[^\d+]/g, "")}`} aria-label="Call us">Call</a>
+              <Link href={`tel:${(siteConfig.contact?.whatsappNumberE164 || "").replace(/[^\d+]/g, "")}`} aria-label="Call us">Call</Link>
             </Button>
             <Button asChild size="lg" variant="ghost" className="rounded-full py-3 px-6">
-              <a href="#booking-form">Open booking form</a>
+              <Link href="#booking-form">Open booking form</Link>
             </Button>
           </div>
         </div>
@@ -225,7 +226,7 @@ export default async function ContactPage({ searchParams }: Props) {
               </Button>
 
               <Button asChild size="lg" variant="outline" className="w-full rounded-2xl py-3 font-semibold">
-                <a href={wa} target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+                <Link href={wa} target="_blank" rel="noopener noreferrer">Chat on WhatsApp</Link>
               </Button>
 
 
@@ -246,17 +247,17 @@ export default async function ContactPage({ searchParams }: Props) {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="col-span-1">
               <Button asChild size="sm" className="w-full h-10 rounded-full px-4 text-sm font-semibold bg-amber-500 text-black shadow-sm">
-                <a href={wa} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">WhatsApp</a>
+                <Link href={wa} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">WhatsApp</Link>
               </Button>
             </div>
             <div className="col-span-1">
               <Button asChild size="sm" className="w-full h-10 rounded-full px-4 text-sm font-semibold bg-white text-slate-900 shadow-sm">
-                <a href={`tel:${(siteConfig.contact?.whatsappNumberE164 || "").replace(/[^\d+]/g, "")}`} aria-label="Call us">Call</a>
+                <Link href={`tel:${(siteConfig.contact?.whatsappNumberE164 || "").replace(/[^\d+]/g, "")}`} aria-label="Call us">Call</Link>
               </Button>
             </div>
             <div className="col-span-1">
               <Button asChild size="sm" className="w-full h-10 rounded-full px-4 text-sm font-semibold bg-slate-700 text-white shadow-sm">
-                <a href="#booking-form" aria-label="Open booking form">Contact Form</a>
+                <Link href="#booking-form" aria-label="Open booking form">Contact Form</Link>
               </Button>
             </div>
           </div>
@@ -284,7 +285,7 @@ export default async function ContactPage({ searchParams }: Props) {
             <iframe src={siteConfig.contact.office.mapUrl} loading="lazy" className="w-full h-96" title="Office location"></iframe>
           </div>
         ) : (
-          <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteConfig.contact?.office?.addressLocality || "Colombo")}`} target="_blank" rel="noopener noreferrer" className="text-sm text-primary underline">Open in Google Maps</a>
+          <Link href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteConfig.contact?.office?.addressLocality || "Colombo")}`} target="_blank" rel="noopener noreferrer" className="text-sm text-primary underline">Open in Google Maps</Link>
         )}
       </div>
 
@@ -301,10 +302,10 @@ export default async function ContactPage({ searchParams }: Props) {
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold mb-4">Other Ways to Contact Us</h3>
         <p className="text-slate-600">
-          📧 Email: <a href="mailto:info@srilankaairporttransfer.com" className="text-primary underline">info@srilankaairporttransfer.com</a>
+          📧 Email: <Link href="mailto:info@srilankaairporttransfer.com" className="text-primary underline">info@srilankaairporttransfer.com</Link>
         </p>
         <p className="text-slate-600">
-          📞 Phone: <a href="tel:+94776392082" className="text-primary underline">+94 77 639 2082</a>
+          📞 Phone: <Link href="tel:+94776392082" className="text-primary underline">+94 77 639 2082</Link>
         </p>
       </div>
 

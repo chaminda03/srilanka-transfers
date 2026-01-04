@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { buildMetadata } from "@/lib/seo";
 import { getPageById } from "@/lib/site";
 import { siteConfig } from "@/site/config";
@@ -58,9 +59,9 @@ export default function ContactPage(props: {
             </p>
 
             <Button asChild size="lg">
-              <a href={wa} target="_blank" rel="noopener noreferrer">
+              <Link href={wa} target="_blank" rel="noopener noreferrer">
                 Chat on WhatsApp
-              </a>
+              </Link>
             </Button>
 
             <p className="text-xs text-muted-foreground">

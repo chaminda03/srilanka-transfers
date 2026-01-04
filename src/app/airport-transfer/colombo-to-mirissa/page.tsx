@@ -23,7 +23,7 @@ const faqs = [
     },
     {
         q: "Our flight is delayed. Will the driver wait?",
-        a: "Of course. We track your flight's arrival time, so your driver will be there to meet you whenever you land, at no extra charge for the waiting time."
+        a: "Of course. We track your flight&apos;s arrival time, so your driver will be there to meet you whenever you land, at no extra charge for the waiting time."
     },
 ];
 

@@ -77,7 +77,7 @@ export default function FourteenDayItineraryPage() {
                   <span className="text-amber-500">★</span> What is included in your price:
                 </h3>
                 <ul className="grid sm:grid-cols-2 gap-3 text-sm text-slate-600">
-                   {["Private AC Vehicle (Car/Van)", "English-Speaking Driver Guide", "Gas, Tolls, & Parking Fees", "Driver's Food & Accommodation", "Airport Pick-up & Drop-off", "Flexibility to Stop Anytime"].map((item, i) => (
+                   {["Private AC Vehicle (Car/Van)", "English-Speaking Driver Guide", "Gas, Tolls, & Parking Fees", "Driver&apos;s Food & Accommodation", "Airport Pick-up & Drop-off", "Flexibility to Stop Anytime"].map((item, i) => (
                      <li key={i} className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" /> {item}</li>
                    ))}
                 </ul>
@@ -136,7 +136,7 @@ export default function FourteenDayItineraryPage() {
                 <h3 className="text-xl font-bold text-slate-900">Days 8-9: Ella & The Scenic Train</h3>
                 <p className="text-slate-500 text-sm mb-2 font-medium">Activity: Train Ride, Nine Arch Bridge, Hiking</p>
                 <p className="text-slate-600 leading-relaxed">
-                  Take the world-famous <strong>blue train from Nanu Oya to Ella</strong> through the clouds. In Ella, we have plenty of time to hike Little Adam's Peak, walk the Nine Arch Bridge tracks, and swim in the Ravana Pool Club.
+                  Take the world-famous <strong>blue train from Nanu Oya to Ella</strong> through the clouds. In Ella, we have plenty of time to hike Little Adam&apos;s Peak, walk the Nine Arch Bridge tracks, and swim in the Ravana Pool Club.
                 </p>
               </div>
 
@@ -179,7 +179,7 @@ export default function FourteenDayItineraryPage() {
             {/* Header: Avatar + Name + Date */}
              <div className="flex items-center gap-3 mb-4">
                {/* FIX: Replaced text path with real Image component.
-                  Note: The parent div has 'relative', 'rounded-full', and 'overflow-hidden'.
+                  Note: The parent div has &apos;relative&apos;, &apos;rounded-full&apos;, and &apos;overflow-hidden&apos;.
                   This clips the image into a perfect circle.
                */}
                <div className="h-10 w-10 md:h-12 md:w-12 rounded-full overflow-hidden bg-slate-100 flex items-center justify-center relative">

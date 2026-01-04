@@ -34,7 +34,7 @@ export default function TravelGuidePage() {
         </h2>
         <div className="max-w-3xl">
           <p className="text-xl md:text-2xl text-slate-500 leading-relaxed font-light">
-            Planning a trip to a new country can be overwhelming. This guide is designed to answer all your questions, from the essentials of getting a visa to the fun of trying local food. We're here to help you prepare for an unforgettable journey.
+            Planning a trip to a new country can be overwhelming. This guide is designed to answer all your questions, from the essentials of getting a visa to the fun of trying local food. We&apos;re here to help you prepare for an unforgettable journey.
           </p>
         </div>
       </section>
@@ -47,7 +47,7 @@ export default function TravelGuidePage() {
               href={item.path} 
               className="block p-8 rounded-[32px] bg-slate-50 border border-slate-100/80 shadow-sm hover:bg-white hover:border-slate-200/60 hover:-translate-y-1 transition-all"
             >
-              <h3 className="text-xl font-bold text-slate-800 mb-2">{item.title.split('|')[0]}</h3>
+              <h3 className="text-xl font-bold text-slate-800 mb-2">{item.title.split(&apos;|&apos;)[0]}</h3>
               <p className="text-slate-500 text-sm">{item.description}</p>
               <span className="mt-4 block text-xs font-bold uppercase tracking-widest text-primary">Read Guide →</span>
             </Link>

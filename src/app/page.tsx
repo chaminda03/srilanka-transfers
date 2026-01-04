@@ -65,10 +65,10 @@ export default function Home() {
       />
       
       {/* ================= HERO SECTION ================= */}
-      {/* MOBILE FIX: 'min-h-[100dvh]' handles mobile address bars better than h-screen */}
+      {/* MOBILE FIX: &apos;min-h-[100dvh]&apos; handles mobile address bars better than h-screen */}
       <section className="relative w-full min-h-[100dvh] flex flex-col justify-end md:justify-center items-end overflow-hidden bg-slate-950 m-0 p-0">
         
-        {/* IMAGE FIX: 'top-0' ensures zero gap at the top */}
+        {/* IMAGE FIX: &apos;top-0&apos; ensures zero gap at the top */}
         <div className="absolute inset-0 top-0 left-0 z-0">
           <Image
             src="/images/sri-lanka-best_private-airport-transfer-driver.webp"
@@ -143,7 +143,7 @@ export default function Home() {
                 Your Stress-Free Sri Lanka Tour Starts Here
               </h2>
               <p className="text-lg text-slate-700 leading-relaxed">
-                Planning a trip to Sri Lanka can be exciting, but getting around shouldn't be a worry.
+                Planning a trip to Sri Lanka can be exciting, but getting around shouldn&apos;t be a worry.
                 Imagine exploring ancient temples, misty tea plantations, and stunning beaches
                 without the hassle of navigating busy roads or finding parking. That&apos;s what a
                 <strong>private driver in Sri Lanka</strong> offers – pure relaxation and adventure.

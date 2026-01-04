@@ -44,7 +44,7 @@ export default function PackingGuidePage() {
                 <ul className="space-y-3 text-lg text-slate-700 list-disc list-inside">
                     <li><strong>Comfortable walking shoes:</strong> For exploring cities and ancient sites.</li>
                     <li><strong>Sandals or flip-flops:</strong> For the beach and casual wear.</li>
-                    <li><strong>Hiking shoes:</strong> If you plan on trekking in places like Horton Plains or Adam's Peak.</li>
+                    <li><strong>Hiking shoes:</strong> If you plan on trekking in places like Horton Plains or Adam&apos;s Peak.</li>
                 </ul>
             </div>
             <div>

@@ -46,7 +46,7 @@ Please send me a customized itinerary with a private driver and vehicle.`;
       {/* THE TOPOGRAPHIC OVERLAY (SVG pattern) */}
       <div 
         className="absolute inset-0 z-0 opacity-10 pointer-events-none" 
-        style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 310c50-20 100 20 150 0s100-50 150-30 100 40 100 40V0H0v310z' fill='none' stroke='%23ffffff' stroke-width='1'/%3E%3C/svg%3E")` }} 
+        style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='400&apos; height='400&apos; viewBox='0 0 400 400&apos; xmlns='http://www.w3.org/2000/svg&apos;%3E%3Cpath d='M0 310c50-20 100 20 150 0s100-50 150-30 100 40 100 40V0H0v310z&apos; fill='none&apos; stroke='%23ffffff&apos; stroke-width='1&apos;/%3E%3C/svg%3E")` }} 
       />
 
       {/* THE GOLDEN GLOW BORDER EFFECT */}
@@ -55,7 +55,7 @@ Please send me a customized itinerary with a private driver and vehicle.`;
       <div className="relative z-10 space-y-8">
         <header>
           <h3 className="text-2xl font-bold tracking-tight">Plan Your Sri Lanka Trip</h3>
-          <p className="text-slate-400 text-sm mt-2">Tell us your style — we'll create a custom itinerary for you.</p>
+          <p className="text-slate-400 text-sm mt-2">Tell us your style — we&apos;ll create a custom itinerary for you.</p>
           <div className="h-px w-full bg-gradient-to-r from-amber-500/50 to-transparent mt-4" />
         </header>
 
@@ -120,7 +120,7 @@ Please send me a customized itinerary with a private driver and vehicle.`;
               value={arrival}
               onChange={(e) => setArrival(e.target.value)}
               className="w-full bg-white/5 border border-white/10 rounded-2xl pl-12 pr-6 py-4 outline-none focus:border-amber-500 transition-all text-sm appearance-none"
-              style={{ colorScheme: 'dark' }}
+              style={{ colorScheme: &apos;dark&apos; }}
             />
           </div>
           <p className="text-[10px] text-slate-500 italic">Approximate date is perfectly fine</p>

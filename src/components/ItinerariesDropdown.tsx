@@ -26,7 +26,7 @@ export default function ItinerariesDropdown() {
   // Focus first menuitem when opening and support arrow navigation
   useEffect(() => {
     if (!open) return;
-    const el = ref.current?.querySelectorAll('[role="menuitem"]') as NodeListOf<HTMLElement> | undefined;
+    const el = ref.current?.querySelectorAll(&apos;[role="menuitem"]&apos;) as NodeListOf<HTMLElement> | undefined;
     if (el && el.length > 0) {
       el[0].focus();
     }
@@ -36,19 +36,19 @@ export default function ItinerariesDropdown() {
       const active = document.activeElement as HTMLElement | null;
       const items = Array.from(el);
       const idx = items.indexOf(active as HTMLElement);
-      if (e.key === 'ArrowDown') {
+      if (e.key === &apos;ArrowDown&apos;) {
         e.preventDefault();
         const next = items[(idx + 1) % items.length];
         next.focus();
-      } else if (e.key === 'ArrowUp') {
+      } else if (e.key === &apos;ArrowUp&apos;) {
         e.preventDefault();
         const prev = items[(idx - 1 + items.length) % items.length];
         prev.focus();
       }
     }
 
-    document.addEventListener('keydown', onKey);
-    return () => document.removeEventListener('keydown', onKey);
+    document.addEventListener(&apos;keydown&apos;, onKey);
+    return () => document.removeEventListener(&apos;keydown&apos;, onKey);
   }, [open]);
 
   return (

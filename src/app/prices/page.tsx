@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { buildMetadata } from "@/lib/seo";
 import { getPageById } from "@/lib/site";
 import { SpecPage } from "@/components/SpecPage";
@@ -123,7 +124,7 @@ export default function PricesPage() {
     className="inline-flex items-center justify-center rounded-md bg-foreground px-6 py-3 text-background font-medium hover:opacity-90"
   >
     Get a Fixed Quote on WhatsApp ↗
-  </a>
+  </Link>
 </section>
 
     </SpecPage>

@@ -23,14 +23,14 @@ const drivers = [
     {
         name: "Rajith",
         specialty: "Wildlife & Nature Enthusiast",
-        bio: "Rajith grew up near Yala National Park and has a keen eye for spotting leopards and exotic birds. His passion for Sri Lanka's wildlife is infectious.",
+        bio: "Rajith grew up near Yala National Park and has a keen eye for spotting leopards and exotic birds. His passion for Sri Lanka&apos;s wildlife is infectious.",
         img: "/images/sri-lanka-wildlife-safari-jeep-tour-elephants_injeep.jpg",
         alt: "Rajith, a Sri Lankan wildlife tour guide, driving a safari jeep with elephants visible in the background."
     },
     {
         name: "Nishan",
         specialty: "Hill Country & Scenic Routes",
-        bio: "Nishan knows the winding roads of the tea country like the back of his hand. He's an expert at finding the most breathtaking viewpoints and the best cups of tea.",
+        bio: "Nishan knows the winding roads of the tea country like the back of his hand. He&apos;s an expert at finding the most breathtaking viewpoints and the best cups of tea.",
         img: "/images/colombo-airport-transfer-private-driver-name-board.webp",
         alt: "Nishan, a private driver for hill country tours, holding a name board at Colombo airport arrivals."
     }

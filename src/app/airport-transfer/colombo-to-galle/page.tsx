@@ -19,7 +19,7 @@ const faqs = [
     },
     {
       q: "Will the driver meet me inside the airport?",
-      a: "Yes, our driver will be waiting for you in the arrivals hall, holding a sign with your name on it for easy identification. It's a seamless meet-and-greet service."
+      a: "Yes, our driver will be waiting for you in the arrivals hall, holding a sign with your name on it for easy identification. It&apos;s a seamless meet-and-greet service."
     },
     {
         q: "Can we make a stop along the way?",
@@ -39,7 +39,7 @@ export default function AirportToGallePage() {
           Your Direct Connection to the South Coast
         </h2>
         <div className="max-w-3xl text-slate-600 space-y-6 text-lg">
-          <p>Begin your Sri Lankan beach holiday the moment you land. Our private transfer service from Colombo's Bandaranaike International Airport (CMB) to Galle is the most comfortable, efficient, and stress-free way to reach the stunning south coast.</p>
+          <p>Begin your Sri Lankan beach holiday the moment you land. Our private transfer service from Colombo&apos;s Bandaranaike International Airport (CMB) to Galle is the most comfortable, efficient, and stress-free way to reach the stunning south coast.</p>
           <p>Avoid the hassle of negotiating with taxi services or navigating public transport. Your professional driver will meet you at arrivals and take you directly to your hotel or villa in Galle in a modern, air-conditioned vehicle.</p>
         </div>
       </section>

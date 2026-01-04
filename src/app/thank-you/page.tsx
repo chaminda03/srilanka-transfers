@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Link from "next/link";
 
 export default function ThankYouPage() {
@@ -45,7 +46,7 @@ export default function ThankYouPage() {
             aria-label="Chat on WhatsApp"
           >
             Chat on WhatsApp
-          </a>
+          </Link>
 
           <a
             href="tel:+17038554561"
@@ -53,7 +54,7 @@ export default function ThankYouPage() {
             aria-label="Call us"
           >
             Call Us
-          </a>
+          </Link>
         </div>
       </section>
 

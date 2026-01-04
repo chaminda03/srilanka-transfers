@@ -77,7 +77,7 @@ export default function TenDayItineraryPage() {
                   <span className="text-amber-500">★</span> What is included in your price:
                 </h3>
                 <ul className="grid sm:grid-cols-2 gap-3 text-sm text-slate-600">
-                   {["Private AC Vehicle (Car/Van)", "English-Speaking Driver Guide", "Gas, Tolls, & Parking Fees", "Driver's Food & Accommodation", "Airport Pick-up & Drop-off", "Local Hidden Gem Recommendations"].map((item, i) => (
+                   {["Private AC Vehicle (Car/Van)", "English-Speaking Driver Guide", "Gas, Tolls, & Parking Fees", "Driver&apos;s Food & Accommodation", "Airport Pick-up & Drop-off", "Local Hidden Gem Recommendations"].map((item, i) => (
                      <li key={i} className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" /> {item}</li>
                    ))}
                 </ul>
@@ -133,7 +133,7 @@ export default function TenDayItineraryPage() {
               {/* Day 5 */}
               <div className="relative">
                 <span className="absolute -left-[41px] top-1 h-6 w-6 rounded-full border-4 border-white bg-slate-300" />
-                <h3 className="text-xl font-bold text-slate-900">Day 5: Ella's Peaks & Bridges</h3>
+                <h3 className="text-xl font-bold text-slate-900">Day 5: Ella&apos;s Peaks & Bridges</h3>
                 <p className="text-slate-500 text-sm mb-2 font-medium">Activity: Hiking & Sightseeing</p>
                 <p className="text-slate-600 leading-relaxed">
                   Start with a photo op at the famous <strong>Nine Arch Bridge</strong>. Then, an easy hike up Little Adam’s Peak for panoramic views. Optional: Visit the Ravana Pool Club or try the Flying Ravana zipline if you&apos;re feeling adventurous.
@@ -199,7 +199,7 @@ export default function TenDayItineraryPage() {
              {/* Header: Avatar + Name + Date */}
              <div className="flex items-center gap-3 mb-4">
                {/* FIX: Replaced text path with real Image component.
-                  Note: The parent div has 'relative', 'rounded-full', and 'overflow-hidden'.
+                  Note: The parent div has &apos;relative&apos;, &apos;rounded-full&apos;, and &apos;overflow-hidden&apos;.
                   This clips the image into a perfect circle.
                */}
                <div className="h-10 w-10 md:h-12 md:w-12 rounded-full overflow-hidden bg-slate-100 flex items-center justify-center relative">
