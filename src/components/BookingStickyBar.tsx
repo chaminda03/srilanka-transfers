@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from 'react';
+import { siteConfig } from "@/site/config"; // Import your config file
 
 interface BookingStickyBarProps {
   price?: string;
@@ -7,6 +8,9 @@ interface BookingStickyBarProps {
 }
 
 export function BookingStickyBar({ price = "Contact for Quote", label }: BookingStickyBarProps) {
+  // Helper to strip non-numeric characters for the WhatsApp URL
+  const whatsappNumber = siteConfig.contact.whatsappNumberE164.replace(/[^\d]/g, "");
+  
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 border-t bg-background/90 backdrop-blur-lg px-6 py-[calc(1rem+env(safe-area-inset-bottom))] shadow-[0_-10px_40px_rgba(0,0,0,0.1)] animate-in slide-in-from-bottom duration-500">
       <div className="mx-auto flex max-w-screen-xl items-center justify-between">
@@ -16,8 +20,20 @@ export function BookingStickyBar({ price = "Contact for Quote", label }: Booking
         </div>
         
         <div className="flex gap-3">
-          <Link href="https://wa.me/17038554561" aria-label="Chat on WhatsApp" className="inline-flex items-center gap-2 rounded-full border px-6 py-3 font-medium hover:bg-muted transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/40">💬 WhatsApp</Link>
-          <Link href="http://localhost:3000/contact#booking-form" aria-label="Book private driver" className="rounded-full bg-foreground px-8 py-3 font-bold text-background shadow-lg hover:scale-105 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/40">Book Private Driver</Link>
+          <Link 
+            href={`https://wa.me/${whatsappNumber}`} 
+            aria-label="Chat on WhatsApp" 
+            className="inline-flex items-center gap-2 rounded-full border px-6 py-3 font-medium hover:bg-muted transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/40"
+          >
+            💬 WhatsApp
+          </Link>
+          <Link 
+            href="/contact#booking-form" 
+            aria-label="Book private driver" 
+            className="rounded-full bg-foreground px-8 py-3 font-bold text-background shadow-lg hover:scale-105 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/40"
+          >
+            Book Private Driver
+          </Link>
         </div>
       </div>
     </div>

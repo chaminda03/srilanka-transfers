@@ -89,7 +89,7 @@ export default function Home() {
               <Button asChild size="lg" className="w-full h-14 bg-amber-500 text-slate-950 font-black uppercase tracking-widest rounded-xl hover:bg-white transition-all">
                 <Link href="/contact/">{siteConfig.contact.whatsappLabel}</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="w-full h-14 border-2 border-white/20 text-white font-black uppercase tracking-widest rounded-xl hover:bg-white hover:text-slate-950 transition-all">
+              <Button asChild size="lg" variant="outline" className="w-full h-14 border-2 border-slate-900/10 text-slate-900 font-black uppercase tracking-widest rounded-xl hover:bg-slate-900 hover:text-white transition-all shadow-sm">
                 <Link href="/prices/">View Fixed Prices</Link>
               </Button>
             </div>
@@ -284,17 +284,17 @@ const gridItems = [
     href: "/airport-to-ella-taxi/",
   },
 
-  {
-  title: "Scenic Train Routes", // Updated from 'Placeholder' for better SEO
-  description: "Breathtaking train views and misty mountain peaks through the tea country.",
+{
+  title: "Mirissa Beaches & Surfing", 
+  description: "Private transfers to Sri Lanka's best surf breaks and whale watching hubs.",
   header: (
     <BentoImage 
-      src="/images/Train ride through beautiful mountains in sri lanka.webp" 
-      alt="Scenic Kandy to Ella Train Journey Sri Lanka" 
+      src="/images/Sri lanka beach a heaven on earth.webp" 
+      alt="Surfing in Mirissa Sri Lanka - Private transfer to south coast beaches" 
     />
   ),
-  icon: <IconRoute className="h-4 w-4 text-indigo-500" />, // Standard icon classes
-  href: "/airport-to-ella-taxi/",
+  icon: <IconRoute className="h-4 w-4 text-indigo-500" />, 
+  href: "/airport-transfer/colombo-to-mirissa",
 },
   {
     title: "Yala Wildlife",

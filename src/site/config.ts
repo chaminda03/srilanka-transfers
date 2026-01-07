@@ -5,7 +5,7 @@ export const siteConfig = {
   locale: "en",
   market: "Global",
   contact: {
-    whatsappNumberE164: "+947XXXXXXXX", // IMPORTANT: Change this to your actual WhatsApp number (E.164 format, e.g., +17038554561)
+    whatsappNumberE164: "+94769789878", // IMPORTANT: Change this to your actual WhatsApp number (E.164 format, e.g., +17038554561)
     whatsappLabel: "Get a Fixed Quote on WhatsApp",
     // Optional office details used for the Contact page and LocalBusiness JSON-LD
     office: {
