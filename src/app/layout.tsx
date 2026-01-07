@@ -81,7 +81,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
           }`}
         >
-          {/* Header inside Menu for Home Link & Close Button */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-white/10">
             <Link
               href="/"
@@ -102,7 +101,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </button>
           </div>
 
-          {/* Navigation Links */}
           <nav className="flex flex-col items-center justify-center h-[calc(100%-80px)] gap-8 text-2xl font-black uppercase tracking-widest text-white">
             <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-amber-500">Home</Link>
             <Link href="/colombo-airport-transfer/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-amber-500">Airport Taxi</Link>
@@ -124,6 +122,33 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="relative w-full m-0 p-0 pt-20">
           {children}
         </main>
+
+        {/* --- GLOBAL MOBILE BOOKING BAR --- */}
+        {/* Visible only on small screens (md:hidden), positioned fixed at bottom */}
+        <div className="fixed bottom-0 left-0 right-0 z-50 border-t bg-white/90 backdrop-blur-lg px-6 py-[calc(1rem+env(safe-area-inset-bottom))] shadow-[0_-10px_40px_rgba(0,0,0,0.1)] animate-in slide-in-from-bottom duration-500 md:hidden">
+          <div className="mx-auto flex max-w-screen-xl items-center justify-between">
+            <div className="flex flex-col">
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">Private Service from</span>
+              <span className="text-xl font-bold text-slate-950">$55/day</span>
+            </div>
+            <div className="flex gap-3">
+              <a 
+                aria-label="Chat on WhatsApp" 
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-3 text-xs font-bold hover:bg-slate-50 transition-colors" 
+                href="https://wa.me/17038554561"
+              >
+                💬 WhatsApp
+              </a>
+              <a 
+                aria-label="Book private driver" 
+                className="rounded-full bg-slate-950 px-6 py-3 text-xs font-bold text-white shadow-lg active:scale-95 transition-transform" 
+                href="/contact#booking-form"
+              >
+                Book Now
+              </a>
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );
