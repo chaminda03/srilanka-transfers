@@ -5,15 +5,20 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
+        allow: [
+          '/', 
+          '/_next/static/', // ✅ CRITICAL: Allows CSS and JS to load
+          '/_next/image/',  // ✅ CRITICAL: Allows your optimized images to rank
+        ],
         disallow: [
-          '/api/',       // Protect your backend routes
-          '/_next/',     // No need to crawl internal Next.js files
-          '/thank-you',  // Prevent "Thank You" from appearing in search
+          '/api/',          // Protects your booking/lead endpoints
+          '/_next/data/',   // ✅ Safe to block (internal data fetching)
+          '/thank-you',     // Prevents conversion pages from appearing in search
+          '/admin/',        // Protects potential admin areas
         ],
       },
       {
-        userAgent: 'GPTBot', // Specific rule for OpenAI's crawler
+        userAgent: 'GPTBot',
         allow: '/',
       }
     ],

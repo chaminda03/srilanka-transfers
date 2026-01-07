@@ -6,16 +6,6 @@ import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/site/config";
 import { buildMetadata, buildLocalBusinessSchema } from "@/lib/seo";
 
-// NEW: Aceternity & Icon Imports
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { 
-  IconPlaneDeparture, 
-  IconMapPin, 
-  IconRoute, 
-  IconHistory,
-  IconPaw
-} from "@tabler/icons-react";
-
 export const metadata = {
   ...buildMetadata({
     title: "Sri Lanka Airport Transfer | Reliable Private Chauffeur Services",
@@ -42,8 +32,24 @@ export const metadata = {
   },
 };
 
+const routes = [
+  { label: "Airport → Colombo", href: "/airport-to-colombo-taxi/" },
+  { label: "Airport → Negombo", href: "/airport-to-negombo-taxi/" },
+  { label: "Airport → Kandy", href: "/airport-to-kandy-taxi/" },
+  { label: "Airport → Galle", href: "/airport-to-galle-taxi/" },
+  { label: "Airport → Ella", href: "/airport-to-ella-taxi/" },
+  { label: "Airport → Sigiriya", href: "/airport-to-sigiriya-taxi/" },
+];
+
 export default function Home() {
   const localBusinessSchema = buildLocalBusinessSchema();
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Airport Shuttle",
+    "areaServed": "Sri Lanka"
+  };
 
   return (
     <main className="w-full bg-white">
@@ -53,9 +59,16 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       
       {/* ================= HERO SECTION ================= */}
-      <section className="relative w-full min-h-[100dvh] flex flex-col justify-end md:justify-center items-end overflow-hidden bg-slate-950">
+      {/* MOBILE FIX: &apos;min-h-[100dvh]&apos; handles mobile address bars better than h-screen */}
+      <section className="relative w-full min-h-[100dvh] flex flex-col justify-end md:justify-center items-end overflow-hidden bg-slate-950 m-0 p-0">
+        
+        {/* IMAGE FIX: &apos;top-0&apos; ensures zero gap at the top */}
         <div className="absolute inset-0 top-0 left-0 z-0">
           <Image
             src="/images/sri-lanka-best_private-airport-transfer-driver.webp"
@@ -65,84 +78,136 @@ export default function Home() {
             className="object-cover object-left md:object-left"
           />
         </div>
+
+        {/* OVERLAYS */}
         <div className="absolute inset-0 bg-black/10 z-10" />
+        {/* Mobile Gradient: Dark at bottom to make text readable */}
         <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-10 md:hidden" />
+        {/* Desktop Gradient: Dark on right */}
         <div className="hidden md:block absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-black/80 to-transparent z-10" />
 
+        {/* CONTENT CARD */}
         <div className="relative z-20 w-full max-w-7xl mx-auto px-4 md:px-6 pb-20 md:pb-0 h-full flex flex-col justify-end md:justify-center items-center md:items-end">
+          
+          {/* MOBILE OPTIMIZATION:
+             - w-[95%]: Almost full width on mobile
+             - p-6: Smaller padding on mobile
+             - mb-4: Lifts it slightly off the bottom edge
+          */}
           <div className="w-[98%] md:max-w-xl bg-slate-950/80 backdrop-blur-md p-6 md:p-12 rounded-3xl border border-white/10 shadow-2xl md:mr-4">
+            
             <div className="flex flex-wrap gap-2 mb-4 md:mb-6">
-              <Badge className="bg-amber-500 text-slate-950 border-none font-bold uppercase tracking-widest text-[10px] px-2 py-1">
+              <Badge className="bg-amber-500 text-slate-950 border-none font-bold uppercase tracking-widest text-[9px] md:text-[10px] px-2 py-1">
                 Award-Winning Safety
               </Badge>
-              <Badge variant="outline" className="text-white border-white/30 bg-white/5 font-bold uppercase tracking-widest text-[10px] px-2 py-1">
+              <Badge variant="outline" className="text-white border-white/30 bg-white/5 font-bold uppercase tracking-widest text-[9px] md:text-[10px] px-2 py-1">
                 Local Guide Included
               </Badge>
             </div>
-            <h1 className="text-4xl md:text-6xl font-black tracking-tighter text-white mb-2">
-              Reliable Sri Lanka Airport Transfers
+
+            {/* RESPONSIVE TEXT: text-4xl on mobile, text-6xl on desktop */}
+            <h1 className="text-4xl md:text-6xl font-black tracking-tighter leading-[1.0] text-white mb-2 md:mb-3">
+              Reliable Sri Lanka Airport Transfers & <span className="text-amber-500">Private Chauffeur Services</span>
             </h1>
-            <p className="text-sm md:text-lg text-slate-200 mb-8 font-medium">
-              Don&apos;t just hire a car; gain a local partner. We know the ins and outs to keep you safe.
+
+            <h2 className="text-xl md:text-2xl font-bold text-slate-200 mb-4 md:mb-6">
+              Experience Sri Lanka with a Friend at the Wheel
+            </h2>
+
+            <p className="text-sm md:text-lg text-slate-200 leading-relaxed font-medium mb-6 md:mb-8">
+              Don&apos;t just hire a car; gain a local partner. Skip the stress of chaotic traffic and narrow roads. 
+              We know the ins and outs to keep you safe.
             </p>
-            <div className="flex flex-col gap-3">
-              <Button asChild size="lg" className="w-full h-14 bg-amber-500 text-slate-950 font-black uppercase tracking-widest rounded-xl hover:bg-white transition-all">
-                <Link href="/contact/">{siteConfig.contact.whatsappLabel}</Link>
+
+            <div className="flex flex-col gap-3 md:gap-4">
+              <Button asChild size="lg" className="w-full h-14 md:h-16 bg-amber-500 text-slate-950 hover:bg-white font-black uppercase tracking-widest rounded-xl md:rounded-2xl transition-all shadow-xl border-none text-xs md:text-base">
+                <Link href="/contact/">
+                  {siteConfig.contact.whatsappLabel}
+                </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="w-full h-14 border-2 border-white/20 text-white font-black uppercase tracking-widest rounded-xl hover:bg-white hover:text-slate-950 transition-all">
-                <Link href="/prices/">View Fixed Prices</Link>
+
+              <Button asChild size="lg" variant="outline" className="w-full h-14 md:h-16 border-2 border-white/20 text-white hover:bg-white hover:text-slate-950 font-black uppercase tracking-widest rounded-xl md:rounded-2xl transition-all bg-transparent text-xs md:text-base">
+                <Link href="/prices/">View All Fixed Prices</Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ================= UPDATED BENTO GRID SECTION ================= */}
+      {/* ================= NEW: WHY PRIVATE DRIVER SECTION ================= */}
       <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
         <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            <div className="md:w-1/2 space-y-6">
+              <h2 className="text-3xl md:text-4xl font-black tracking-tighter text-slate-900">
+                Your Stress-Free Sri Lanka Tour Starts Here
+              </h2>
+              <p className="text-lg text-slate-700 leading-relaxed">
+                Planning a trip to Sri Lanka can be exciting, but getting around shouldn&apos;t be a worry.
+                Imagine exploring ancient temples, misty tea plantations, and stunning beaches
+                without the hassle of navigating busy roads or finding parking. That&apos;s what a
+                <strong>private driver in Sri Lanka</strong> offers – pure relaxation and adventure.
+              </p>
+              <ul className="list-disc list-inside text-slate-600 text-base space-y-2">
+                <li><strong className="text-slate-900">Expert Local Guides:</strong> Our drivers are your personal local experts, ready to share hidden gems and stories.</li>
+                <li><strong className="text-slate-900">Ultimate Comfort:</strong> Travel in modern, air-conditioned cars or vans, always clean and well-maintained.</li>
+                <li><strong className="text-slate-900">Flexible Itineraries:</strong> Stop whenever you want for photos, snacks, or just to soak in the view. Your trip, your pace!</li>
+                <li><strong className="text-slate-900">Fixed Prices, No Surprises:</strong> Know your costs upfront with clear, all-inclusive rates for your Sri Lanka travel.</li>
+              </ul>
+              <Button asChild size="lg" className="h-12 md:h-14 bg-amber-500 text-slate-950 hover:bg-white font-black uppercase tracking-widest rounded-xl md:rounded-2xl transition-all shadow-xl border-none text-xs md:text-base">
+                <Link href="/private-driver-sri-lanka/custom-sri-lanka-itinerary/">
+                  Design Your Dream Sri Lanka Tour
+                </Link>
+              </Button>
+            </div>
+            <div className="md:w-1/2 relative h-80 w-full rounded-3xl overflow-hidden shadow-2xl">
+              <Image
+                src="/images/sri-lanka-scenic-train-ride-kandy-to-ella-couple.webp"
+                alt="Couple enjoying a scenic train ride in Sri Lanka during their private tour"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= POPULAR ROUTES ================= */}
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-16 gap-6">
             <div className="max-w-2xl">
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-slate-900">Featured Destinations</h2>
-              <p className="text-lg text-slate-500 mt-2">Premium private transfers to Sri Lanka&apos;s most iconic landmarks.</p>
+              <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-slate-900">Popular Destinations</h2>
+              <p className="text-lg text-slate-500 mt-2 md:mt-4">Transparent, fixed rates for private transfers.</p>
             </div>
             <Link href="/prices/" className="text-xs md:text-sm font-bold text-amber-600 uppercase tracking-widest border-b-2 border-amber-600 pb-1 hover:text-slate-900 transition-colors">
               View All Prices →
             </Link>
-          </div>bento
+          </div>
 
-          <BentoGrid>
-            {gridItems.map((item, i) => (
-              <Link href={item.href} key={i} className={i === 0 || i === 3 || i === 4 ? "md:col-span-2" : ""}>
-                <BentoGridItem
-                  title={item.title}
-                  description={item.description}
-                  header={item.header}
-                  icon={item.icon}
-                  className="h-full cursor-pointer hover:border-amber-500 transition-all border-slate-200"
-                />
-              </Link>
+          {/* GRID: 1 Column on Mobile, 3 on Desktop */}
+          <div className="grid gap-4 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {routes.map((r) => (
+              <Card key={r.href} className="group hover:shadow-2xl transition-all duration-500 border-slate-200 overflow-hidden bg-white rounded-2xl md:rounded-3xl">
+                <CardContent className="p-6 md:p-10 space-y-4 md:space-y-6">
+                  <div className="text-xl md:text-2xl font-black text-slate-900 group-hover:text-amber-600 transition-colors tracking-tight">
+                    {r.label}
+                  </div>
+                  <div className="text-[10px] md:text-[11px] font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+                    Licensed Driver • Private
+                  </div>
+                  <Button asChild variant="outline" className="w-full h-10 md:h-12 rounded-full border-slate-200 group-hover:bg-slate-950 group-hover:text-white group-hover:border-slate-950 transition-all font-bold text-xs">
+                    <Link href={r.href}>Route Details</Link>
+                  </Button>
+                </CardContent>
+              </Card>
             ))}
-          </BentoGrid>
-
-          {/* INTERNAL LINKING BLOCK FOR SEO */}
-          <div className="mt-16 pt-10 border-t border-slate-100">
-            <h3 className="text-xl font-bold text-slate-900 mb-6">Popular Transfer Routes</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-              {allRoutes.map((route) => (
-                <Link 
-                  key={route.href} 
-                  href={route.href} 
-                  className="text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-amber-600 p-3 bg-slate-50 border border-slate-100 rounded-xl transition-all"
-                >
-                  {route.label} →
-                </Link>
-              ))}
-            </div>
           </div>
         </div>
       </section>
 
-      {/* ================= ORIGINAL TRAVEL TIPS & FAQs SECTION ================= */}
+      {/* ================= NEW: SRI LANKA TRAVEL TIPS & FAQs ================= */}
       <section className="py-16 md:py-24 px-4 md:px-8 bg-slate-50">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-slate-900 text-center mb-10 md:mb-16">
@@ -236,80 +301,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
     </main>
   );
 }
-
-// ================= DATA & BENTO HELPERS =================
-
-const BentoImage = ({ src, alt }: { src: string; alt: string }) => (
-  <div className="relative w-full h-full min-h-[10rem] rounded-xl overflow-hidden bg-slate-200">
-    <Image 
-      src={src} 
-      alt={alt} 
-      fill 
-      className="object-cover group-hover/bento:scale-110 transition-transform duration-500" 
-    />
-    <div className="absolute inset-0 bg-black/10 group-hover/bento:bg-black/0 transition-colors" />
-  </div>
-);
-
-const gridItems = [
-  {
-    title: "Colombo Airport Transfer",
-    description: "Experience the best airport  transfer service.",
-    header: <BentoImage src="/images/Vehicle fleet Sri Lanka Private Driver.webp" alt="Colombo Airport Transfer Fleet" />,
-    icon: <IconPlaneDeparture className="h-4 w-4 text-amber-500" />,
-    href: "/airport-to-colombo-taxi/",
-  },
-  {
-    title: "Galle Fort",
-    description: "UNESCO history meets stunning southern coastline.",
-    header: <BentoImage src="/images/Galle_Fort_sri lanka.webp" alt="Galle Fort Sri Lanka" />,
-    icon: <IconMapPin className="h-4 w-4 text-blue-500" />,
-    href: "/airport-to-galle-taxi/",
-  },
-  {
-    title: "Kandy Temple",
-    description: "Sacred heritage at the Temple of the Tooth Relic.",
-    header: <BentoImage src="/images/temple of tooth relic Kandy Sri Lanka.webp" alt="Temple of Tooth Kandy" />,
-    icon: <IconHistory className="h-4 w-4 text-emerald-500" />,
-    href: "/airport-to-kandy-taxi/",
-  },
-  {
-    title: "Ella Mountains",
-    description: "Breathtaking train views and misty mountain peaks.",
-    header: <BentoImage src="/images/Train ride through beautiful mountains in sri lanka.webp" alt="Scenic Kandy to Ella Train Journey Sri Lanka" />,
-    icon: <IconRoute className="h-4 w-4 text-indigo-500" />,
-    href: "/airport-to-ella-taxi/",
-  },
-
-  {
-  title: "Scenic Train Routes", // Updated from 'Placeholder' for better SEO
-  description: "Breathtaking train views and misty mountain peaks through the tea country.",
-  header: (
-    <BentoImage 
-      src="/images/Train ride through beautiful mountains in sri lanka.webp" 
-      alt="Scenic Kandy to Ella Train Journey Sri Lanka" 
-    />
-  ),
-  icon: <IconRoute className="h-4 w-4 text-indigo-500" />, // Standard icon classes
-  href: "/airport-to-ella-taxi/",
-},
-  {
-    title: "Yala Wildlife",
-    description: "Epic leopard safaris and wild nature encounters.",
-    header: <BentoImage src="/images/Sri lankan wild life -tiger in Yala.webp" alt="Leopard Safari in Yala National Park Sri Lanka" />,
-    icon: <IconPaw className="h-4 w-4 text-orange-600" />,
-    href: "/tours/wildlife-safari-yala-and-udawalawe/",
-  }
-];
-
-const allRoutes = [
-  { label: "Airport → Colombo", href: "/airport-to-colombo-taxi/" },
-  { label: "Airport → Negombo", href: "/airport-to-negombo-taxi/" },
-  { label: "Airport → Kandy", href: "/airport-to-kandy-taxi/" },
-  { label: "Airport → Galle", href: "/airport-to-galle-taxi/" },
-  { label: "Airport → Ella", href: "/airport-to-ella-taxi/" },
-  { label: "Airport → Sigiriya", href: "/airport-to-sigiriya-taxi/" },
-];
