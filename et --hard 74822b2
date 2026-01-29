@@ -1,0 +1,48 @@
+[33m16bc2ef[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m comment out the force
+[33m97b9023[m comment out the force
+[33m9a9217e[m Add new spec file
+[33m977ab4d[m Add styled Tours page with Bento Grid
+[33m7e00162[m deleted HTML files
+[33m0fd48ee[m Force update private driver page content
+[33m8e9156e[m added debug
+[33m97520db[m performance metrics
+[33m3b6224c[m Fix blank travel guide content
+[33ma48d75e[m add redirect file
+[33m56f5b4f[m add Google Verification HTML file to root
+[33m9ffaee7[m fix UI issues
+[33m64c4965[m fix the below booking bar
+[33m211f82e[m fix the accordian
+[33ma2cec72[m robot.tsx= added
+[33m74e90bd[m fix: surgical repair 4_ custome itenery
+[33m57f0c67[m fix: surgical repair 3
+[33m79adf3c[m fix: surgical repair 2
+[33mdad9eed[m fix: surgical repair of logic syntax
+[33m74822b2[m  fix isses
+[33m4fe8451[m fix: automated seo and build error cleanup
+[33m06db096[m fix next 28 issues
+[33m043a9c9[m fix sitemap
+[33m9e64b27[m fix single error
+[33m1af33a3[m fix typescript eror 2
+[33m722ba81[m fix typescript eror
+[33m7eda20a[m fix vulnurabilities
+[33m5c63dbe[m  Node Js upgrade
+[33mb29a79f[m  fix SEO sitempa
+[33md61a80e[m  fix SEO h1 and sitemap
+[33m358e21a[m  fix SEO issues in the second run
+[33m97b33a7[m  fix SEO issues
+[33mf13074d[m  logo removed and icon  image added
+[33m52dc951[m  logo included next 2
+[33mf330e8c[m  logo included in the site
+[33m71feabf[m x out in mobile menu
+[33m95e0664[m mobile menu fix  spec and layout files
+[33m29bef5f[m mobile menu fix with Geminai Spec page update manual
+[33m84dd643[m mobile menu fix with home page broken links
+[33m2c6f012[m mobile menu fix
+[33m01fc6b6[m mobile menu fix
+[33m652f348[m feat: optimize mobile view and improve SEO with internal linking and anchor text
+[33mddc52c4[m fix page configuration
+[33m1409ed3[m fixing faq answer
+[33m394c62c[m faq issue resolved
+[33m6948550[m chore: update colombo-to-galle and site spec
+[33mc63d4c8[m fix(contact): polish layout, alignment, button visibility, accessibility, hero & FAQ schema
+[33mfeded3e[m Initial commit of Sri Lanka Transfers project
