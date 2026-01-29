@@ -16,10 +16,12 @@ export const metadata = buildMetadata({
   path: page.path,
 });
 
+// Helper to format the WhatsApp link specifically for the requested number
 function whatsappLink(message: string) {
-  const num = siteConfig.contact.whatsappNumberE164.replace(/[^\d+]/g, "");
+  // Hardcoded to ensure the requested number is used
+  const num = "94776392082"; 
   const text = encodeURIComponent(message);
-  return `https://wa.me/${num.replace("+", "")}?text=${text}`;
+  return `https://wa.me/${num}?text=${text}`;
 }
 
 // Next.js 15+ requires searchParams to be a Promise
@@ -92,11 +94,11 @@ export default async function ContactPage({ searchParams }: Props) {
         "@type": "Organization",
         name: siteConfig.brand,
         url: `https://${siteConfig.domain}`,
-        telephone: siteConfig.contact?.whatsappNumberE164 || "",
+        telephone: "+94776392082", // Updated phone number
         contactPoint: [
           {
             "@type": "ContactPoint",
-            telephone: siteConfig.contact?.whatsappNumberE164 || "",
+            telephone: "+94776392082", // Updated phone number
             contactType: "customer service",
             areaServed: "LK",
             availableLanguage: ["English"]
@@ -110,7 +112,7 @@ export default async function ContactPage({ searchParams }: Props) {
       "@type": "LocalBusiness",
       name: siteConfig.brand,
       url: `https://${siteConfig.domain}`,
-      telephone: siteConfig.contact?.whatsappNumberE164 || "",
+      telephone: "+94776392082", // Updated phone number
       address: {
         "@type": "PostalAddress",
         streetAddress: office.streetAddress || "Colombo",
@@ -171,7 +173,7 @@ export default async function ContactPage({ searchParams }: Props) {
               <a href={wa} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">Chat on WhatsApp</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="rounded-full py-3 px-6">
-              <a href={`tel:${(siteConfig.contact?.whatsappNumberE164 || "").replace(/[^\d+]/g, "")}`} aria-label="Call us">Call</a>
+              <a href="tel:+94776392082" aria-label="Call us">Call</a> 
             </Button>
             <Button asChild size="lg" variant="ghost" className="rounded-full py-3 px-6">
               <a href="#booking-form">Open booking form</a>
@@ -251,7 +253,7 @@ export default async function ContactPage({ searchParams }: Props) {
             </div>
             <div className="col-span-1">
               <Button asChild size="sm" className="w-full h-10 rounded-full px-4 text-sm font-semibold bg-white text-slate-900 shadow-sm">
-                <a href={`tel:${(siteConfig.contact?.whatsappNumberE164 || "").replace(/[^\d+]/g, "")}`} aria-label="Call us">Call</a>
+                <a href="tel:+94776392082" aria-label="Call us">Call</a>
               </Button>
             </div>
             <div className="col-span-1">

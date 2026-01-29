@@ -35,7 +35,7 @@ Interests: ${interests.join(", ") || "Open to suggestions"}
 
 Please send me a customized itinerary with a private driver and vehicle.`;
 
-    const whatsappNumber = "17038554561"; 
+    const whatsappNumber = "+94776392082"; 
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(url, "_blank");

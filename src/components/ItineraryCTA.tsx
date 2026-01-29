@@ -9,7 +9,7 @@ type ItineraryCTAProps = {
   bookingHref?: string;
 };
 
-const defaultNumber = "17038554561";
+const defaultNumber = "94776392082";
 const whatsappUrl = (n: string) => `https://wa.me/${n}`;
 
 export default function ItineraryCTA({

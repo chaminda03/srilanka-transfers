@@ -265,7 +265,7 @@ const gridItems = [
   {
     title: "Galle Fort",
     description: "UNESCO history meets stunning southern coastline.",
-    header: <BentoImage src="/images/Galle_Fort_sri lanka.webp" alt="Galle Fort Sri Lanka" />,
+    header: <BentoImage src="/images/traditional sri lanka fishing at Galle.webp" alt="Galle Fort traditional Fishing in Sri Lanka" />,
     icon: <IconMapPin className="h-4 w-4 text-blue-500" />,
     href: "/airport-to-galle-taxi/",
   },
