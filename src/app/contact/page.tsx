@@ -1,8 +1,7 @@
-// Force Update: Contact Page with Floating Labels
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { buildMetadata } from "@/lib/seo";
 import { getPageById } from "@/lib/site";
-import { siteConfig } from "@/site/config";
+import { siteConfig } from "@/site/config"; // ✅ Using Config for single source of truth
 import { SpecPage } from "@/components/SpecPage";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -17,10 +16,9 @@ export const metadata = buildMetadata({
   path: page.path,
 });
 
-// Helper to format the WhatsApp link specifically for the requested number
+// Helper to format the WhatsApp link using the Global Config
 function whatsappLink(message: string) {
-  // Hardcoded to ensure the requested number is used
-  const num = "94776392082"; 
+  const num = siteConfig.contact.whatsappNumber; // ✅ Auto-updates from config
   const text = encodeURIComponent(message);
   return `https://wa.me/${num}?text=${text}`;
 }
@@ -87,7 +85,6 @@ export default async function ContactPage({ searchParams }: Props) {
   ];
 
   const jsonLd = [
-    
     {
       "@context": "https://schema.org",
       "@type": "ContactPage",
@@ -95,11 +92,11 @@ export default async function ContactPage({ searchParams }: Props) {
         "@type": "Organization",
         name: siteConfig.brand,
         url: `https://${siteConfig.domain}`,
-        telephone: "+94776392082", 
+        telephone: siteConfig.contact.phoneLink, // ✅ Auto-updates
         contactPoint: [
           {
             "@type": "ContactPoint",
-            telephone: "+94776392082", 
+            telephone: siteConfig.contact.phoneLink, // ✅ Auto-updates
             contactType: "customer service",
             areaServed: "LK",
             availableLanguage: ["English"]
@@ -113,7 +110,7 @@ export default async function ContactPage({ searchParams }: Props) {
       "@type": "LocalBusiness",
       name: siteConfig.brand,
       url: `https://${siteConfig.domain}`,
-      telephone: "+94776392082", 
+      telephone: siteConfig.contact.phoneLink, // ✅ Auto-updates
       address: {
         "@type": "PostalAddress",
         streetAddress: office.streetAddress || "Colombo",
@@ -153,7 +150,6 @@ export default async function ContactPage({ searchParams }: Props) {
     jsonLd.push(faqSchema as any);
   }
 
-
   return (
     <SpecPage page={page}>
       <Script id="contact-page-ld" type="application/ld+json">
@@ -174,7 +170,7 @@ export default async function ContactPage({ searchParams }: Props) {
               <a href={wa} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">Chat on WhatsApp</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="rounded-full py-3 px-6">
-              <a href="tel:+94776392082" aria-label="Call us">Call</a> 
+              <a href={`tel:${siteConfig.contact.phoneLink}`} aria-label="Call us">Call</a> 
             </Button>
             <Button asChild size="lg" variant="ghost" className="rounded-full py-3 px-6">
               <a href="#booking-form">Open booking form</a>
@@ -182,7 +178,6 @@ export default async function ContactPage({ searchParams }: Props) {
           </div>
         </div>
       </header>
-
 
       {/* 2. Smart Inquiry Form (Enhanced with Floating Labels) */}
       <div id="booking-form" className="lg:col-span-12">
@@ -317,7 +312,7 @@ export default async function ContactPage({ searchParams }: Props) {
             </div>
             <div className="col-span-1">
               <Button asChild size="sm" className="w-full h-10 rounded-full px-4 text-sm font-semibold bg-white text-slate-900 shadow-sm">
-                <a href="tel:+94776392082" aria-label="Call us">Call</a>
+                <a href={`tel:${siteConfig.contact.phoneLink}`} aria-label="Call us">Call</a>
               </Button>
             </div>
             <div className="col-span-1">
@@ -370,7 +365,7 @@ export default async function ContactPage({ searchParams }: Props) {
           📧 Email: <a href="mailto:info@srilankaairporttransfer.com" className="text-primary underline">info@srilankaairporttransfer.com</a>
         </p>
         <p className="text-slate-600">
-          📞 Phone: <a href="tel:+94776392082" className="text-primary underline">+94 77 639 2082</a>
+          📞 Phone: <a href={`tel:${siteConfig.contact.phoneLink}`} className="text-primary underline">{siteConfig.contact.phoneDisplay}</a>
         </p>
       </div>
 

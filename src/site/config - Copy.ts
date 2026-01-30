@@ -1,24 +1,12 @@
 export const siteConfig = {
   brand: "Sri Lanka Airport Transfer",
-  domain: "srilankaairporttransfer.com", // Updated to your likely domain based on context
+  domain: "your-actual-domain.com", // CRITICAL: Change this to your actual production domain (e.g., "srilankatransfers.com")
 
   locale: "en",
   market: "Global",
   contact: {
-    // ✅ 1. Clean number for WhatsApp API (No plus, no spaces)
-    whatsappNumber: "94769789878",
-
-    // ✅ 2. Formatted number for Human Display (e.g. "+94 76 978 9878")
-    phoneDisplay: "+94 76 978 9878",
-
-    // ✅ 3. Number for Dialing (tel: links need the + but no spaces)
-    phoneLink: "+94769789878",
-
-    // Legacy field (kept to prevent breaking older parts of your code)
-    whatsappNumberE164: "+94769789878", 
-    
+    whatsappNumberE164: "+947XXXXXXXX", // IMPORTANT: Change this to your actual WhatsApp number (E.164 format, e.g., +17038554561)
     whatsappLabel: "Get a Fixed Quote on WhatsApp",
-    
     // Optional office details used for the Contact page and LocalBusiness JSON-LD
     office: {
       name: "Sri Lanka Airport Transfer (Kadawatha Office)",
@@ -32,7 +20,7 @@ export const siteConfig = {
       // Represent as 24/7 (open any time) for WhatsApp availability
       openingHours: ["Mo-Su 00:00-23:59"],
       // Quick Google Maps search link — replace with iframe link if you prefer
-      mapUrl: "https://www.google.com/maps?q=6.9984,79.963"
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31684.66215712147!2d79.9514903422652!3d7.000000000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f9a6002f0d4b%3A0x4f8ac9257e844575!2sKadawatha!5e0!3m2!1sen!2slk!4v1672320452504!5m2!1sen!2slk"
     },
   },
   defaultSeo: {
@@ -41,3 +29,4 @@ export const siteConfig = {
       "Pre-book private Sri Lanka airport transfers with fixed, all-inclusive pricing, comfortable vehicles, and professional English-speaking drivers for a smooth arrival.",
   },
 };
+

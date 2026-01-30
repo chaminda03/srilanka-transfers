@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Calendar } from "lucide-react";
+import { siteConfig } from "@/site/config"; // ✅ Import Config
 
 export default function TripPlannerForm() {
   const [days, setDays] = useState("7 days");
@@ -35,7 +36,8 @@ Interests: ${interests.join(", ") || "Open to suggestions"}
 
 Please send me a customized itinerary with a private driver and vehicle.`;
 
-    const whatsappNumber = "94776392082"; 
+    // ✅ UPDATED: Use the number from siteConfig (centralized control)
+    const whatsappNumber = siteConfig.contact.whatsappNumber; 
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(url, "_blank");

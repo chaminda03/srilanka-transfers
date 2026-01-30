@@ -1,4 +1,6 @@
+// Thank you Page 
 import Link from "next/link";
+import { siteConfig } from "@/site/config"; // ✅ Imported config
 
 export default function ThankYouPage() {
   return (
@@ -38,7 +40,7 @@ export default function ThankYouPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <a
-            href="https://wa.me/17038554561"
+            href={`https://wa.me/${siteConfig.contact.whatsappNumber}`} // ✅ Uses Config (No + sign)
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex w-full items-center justify-center rounded-md bg-amber-500 px-6 py-3 text-black font-medium hover:opacity-90"
@@ -48,7 +50,7 @@ export default function ThankYouPage() {
           </a>
 
           <a
-            href="tel:+17038554561"
+            href={`tel:${siteConfig.contact.phoneLink}`} // ✅ Uses Config (Has + sign)
             className="inline-flex w-full items-center justify-center rounded-md border px-6 py-3 text-sm font-medium"
             aria-label="Call us"
           >
@@ -88,7 +90,7 @@ export default function ThankYouPage() {
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "customer support",
-                telephone: "+1-703-855-4561",
+                telephone: siteConfig.contact.phoneLink, // ✅ Uses Config
                 availableLanguage: ["English"],
               },
             },

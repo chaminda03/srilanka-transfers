@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import CustomItineraryInternalLink from "@/components/CustomItineraryInternalLink";
 import ItineraryCTA from "@/components/ItineraryCTA";
 import { CheckCircle2, MapPin, Calendar } from "lucide-react";
+import { siteConfig } from "@/site/config"; // ✅ Import Config
 
 export const metadata = buildMetadata({
   title: "8-Day Sri Lanka Private Driver Itinerary | Culture & Wildlife",
@@ -16,6 +17,9 @@ export const metadata = buildMetadata({
 });
 
 export default function EightDayItineraryPage() {
+  // Construct the dynamic WhatsApp link for the sidebar button
+  const waLink = `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent("Hi! I'm interested in the 8-Day Sri Lanka Itinerary.")}`;
+
   return (
     <article className="min-h-screen bg-slate-50/50 pb-20">
       
@@ -175,12 +179,13 @@ export default function EightDayItineraryPage() {
           </div>
           {/* ITINERARY CTA */}
           <div className="pt-6">
-            <ItineraryCTA whatsappNumber="17038554561" />
+            {/* ✅ Updated: Uses config number automatically via component default or prop */}
+            <ItineraryCTA whatsappNumber={siteConfig.contact.whatsappNumber} />
           </div>
 
           {/* REVIEW CARD: TripAdvisor Style */}
           <div className="bg-white p-6 md:p-8 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.08)] border border-slate-100">
-             
+              
              {/* Header: Avatar + Name + Date */}
              <div className="flex items-center gap-3 mb-4">
                <div className="h-10 w-10 md:h-12 md:w-12 rounded-full overflow-hidden bg-slate-100 flex items-center justify-center relative">
@@ -239,8 +244,9 @@ export default function EightDayItineraryPage() {
                   <p className="text-sm text-slate-400 mb-6">Fixed daily rate • No hidden fees</p>
                   
                   <div className="space-y-3">
+                    {/* ✅ Updated: Sidebar button now uses Config number */}
                     <Button asChild className="w-full h-14 text-lg font-black bg-amber-500 text-slate-900 hover:bg-amber-600 rounded-xl shadow-lg shadow-amber-500/20">
-                        <Link href="/contact/">Get a Quote on WhatsApp</Link>
+                        <a href={waLink} target="_blank" rel="noopener noreferrer">Get a Quote on WhatsApp</a>
                     </Button>
                     <p className="text-xs text-slate-400 mt-2">Response typically within 15 mins</p>
                   </div>

@@ -1,5 +1,8 @@
+// Booking Sticky Bar
+
 import Link from "next/link";
 import React from 'react';
+import { siteConfig } from "@/site/config"; // ✅ Import Config
 
 interface BookingStickyBarProps {
   price?: string;
@@ -16,8 +19,23 @@ export function BookingStickyBar({ price = "Contact for Quote", label }: Booking
         </div>
         
         <div className="flex gap-3">
-          <a href="https://wa.me/94776392082" aria-label="Chat on WhatsApp" className="inline-flex items-center gap-2 rounded-full border px-6 py-3 font-medium hover:bg-muted transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/40">💬 WhatsApp</a>
-          <Link href="/contact#booking-form" aria-label="Book private driver" className="rounded-full bg-foreground px-8 py-3 font-bold text-background shadow-lg hover:scale-105 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/40">Book Private Driver</Link>
+          {/* ✅ UPDATED: Uses config for number (No + sign) */}
+          <a 
+            href={`https://wa.me/${siteConfig.contact.whatsappNumber}`} 
+            aria-label="Chat on WhatsApp" 
+            className="inline-flex items-center gap-2 rounded-full border px-6 py-3 font-medium hover:bg-muted transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/40"
+          >
+            💬 WhatsApp
+          </a>
+
+          {/* ✅ EXISTING: Direct link to contact form */}
+          <Link 
+            href="/contact#booking-form" 
+            aria-label="Book private driver" 
+            className="rounded-full bg-foreground px-8 py-3 font-bold text-background shadow-lg hover:scale-105 transition-transform active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/40"
+          >
+            Book Private Driver
+          </Link>
         </div>
       </div>
     </div>

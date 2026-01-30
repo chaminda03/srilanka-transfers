@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { siteConfig } from "@/site/config"; // ✅ Import Config
 
 const INTERESTS = [
   "Culture and temples",
@@ -63,7 +64,8 @@ Interests:
 Looking forward to your suggestions. Thank you!
 `;
 
-  const whatsappUrl = `https://wa.me/17038554561?text=${encodeURIComponent(
+  // ✅ UPDATED: Uses config number automatically
+  const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(
     message
   )}`;
 

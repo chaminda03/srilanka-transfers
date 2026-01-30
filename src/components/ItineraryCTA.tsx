@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Script from "next/script";
+import { siteConfig } from "@/site/config"; // ✅ Import Config
 
 type ItineraryCTAProps = {
   title?: string;
@@ -9,7 +10,8 @@ type ItineraryCTAProps = {
   bookingHref?: string;
 };
 
-const defaultNumber = "94776392082";
+// ✅ Use Config as default instead of hardcoded string
+const defaultNumber = siteConfig.contact.whatsappNumber; 
 const whatsappUrl = (n: string) => `https://wa.me/${n}`;
 
 export default function ItineraryCTA({

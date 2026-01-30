@@ -1,5 +1,6 @@
 import { buildMetadata } from "@/lib/seo";
 import { getPageById } from "@/lib/site";
+import { siteConfig } from "@/site/config"; // ✅ Import Config
 import { SpecPage } from "@/components/SpecPage";
 
 const page = getPageById("prices");
@@ -11,26 +12,30 @@ export const metadata = buildMetadata({
 });
 
 export default function PricesPage() {
+  // Construct the dynamic WhatsApp link
+  const waNumber = siteConfig.contact.whatsappNumber;
+  const waMessage = encodeURIComponent("Hi, I’d like to get a price quote for a Sri Lanka airport transfer or private driver.");
+  const waLink = `https://wa.me/${waNumber}?text=${waMessage}`;
+
   return (
     <SpecPage page={page}>
       {/* HERO */}
-  <section className="space-y-4">
-  <h2 className="text-2xl font-semibold">
-    Airport Transfer & Private Driver Pricing
-  </h2>
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold">
+          Airport Transfer & Private Driver Pricing
+        </h2>
 
-  <p className="text-muted-foreground text-lg leading-relaxed">
-    Transparent, fixed pricing for Sri Lanka airport transfers and private
-    driver services. No hidden fees, no bargaining — just clear rates and
-    professional service.
-  </p>
+        <p className="text-muted-foreground text-lg leading-relaxed">
+          Transparent, fixed pricing for Sri Lanka airport transfers and private
+          driver services. No hidden fees, no bargaining — just clear rates and
+          professional service.
+        </p>
 
-  <p className="text-muted-foreground">
-    Request an exact quote in minutes via WhatsApp based on your route,
-    vehicle type, and travel dates.
-  </p>
-</section>
-
+        <p className="text-muted-foreground">
+          Request an exact quote in minutes via WhatsApp based on your route,
+          vehicle type, and travel dates.
+        </p>
+      </section>
 
       {/* WHAT’S INCLUDED */}
       <section className="space-y-4">
@@ -110,21 +115,21 @@ export default function PricesPage() {
         </p>
       </section>
 
-    {/* CTA */}
-<section className="rounded-lg border p-6 space-y-4">
-  <h2 className="text-xl font-semibold">
-    Get Your Exact Price on WhatsApp
-  </h2>
+      {/* CTA */}
+      <section className="rounded-lg border p-6 space-y-4">
+        <h2 className="text-xl font-semibold">
+          Get Your Exact Price on WhatsApp
+        </h2>
 
-  <a
-    href="https://wa.me/17038554561?text=Hi%2C%20I%E2%80%99d%20like%20to%20get%20a%20price%20quote%20for%20a%20Sri%20Lanka%20airport%20transfer%20or%20private%20driver."
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center justify-center rounded-md bg-foreground px-6 py-3 text-background font-medium hover:opacity-90"
-  >
-    Get a Fixed Quote on WhatsApp ↗
-  </a>
-</section>
+        <a
+          href={waLink} // ✅ Uses the dynamic config link
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center rounded-md bg-foreground px-6 py-3 text-background font-medium hover:opacity-90"
+        >
+          Get a Fixed Quote on WhatsApp ↗
+        </a>
+      </section>
 
     </SpecPage>
   );
