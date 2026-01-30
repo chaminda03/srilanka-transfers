@@ -1,4 +1,3 @@
-// Force Update: Contact Page with Floating Labels
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { buildMetadata } from "@/lib/seo";
 import { getPageById } from "@/lib/site";
@@ -95,11 +94,11 @@ export default async function ContactPage({ searchParams }: Props) {
         "@type": "Organization",
         name: siteConfig.brand,
         url: `https://${siteConfig.domain}`,
-        telephone: "+94776392082", 
+        telephone: "+94776392082", // Updated phone number
         contactPoint: [
           {
             "@type": "ContactPoint",
-            telephone: "+94776392082", 
+            telephone: "+94776392082", // Updated phone number
             contactType: "customer service",
             areaServed: "LK",
             availableLanguage: ["English"]
@@ -113,7 +112,7 @@ export default async function ContactPage({ searchParams }: Props) {
       "@type": "LocalBusiness",
       name: siteConfig.brand,
       url: `https://${siteConfig.domain}`,
-      telephone: "+94776392082", 
+      telephone: "+94776392082", // Updated phone number
       address: {
         "@type": "PostalAddress",
         streetAddress: office.streetAddress || "Colombo",
@@ -184,7 +183,7 @@ export default async function ContactPage({ searchParams }: Props) {
       </header>
 
 
-      {/* 2. Smart Inquiry Form (Enhanced with Floating Labels) */}
+      {/* 2. Smart Inquiry Form */}
       <div id="booking-form" className="lg:col-span-12">
         <div className="bg-white border-2 border-slate-50 rounded-2xl p-10 md:p-16 shadow-lg shadow-slate-200/50">
           <h3 id="booking-form-title" className="text-2xl font-bold mb-8 tracking-tight">Booking Request Form</h3>
@@ -192,99 +191,34 @@ export default async function ContactPage({ searchParams }: Props) {
           <form className="space-y-4" action="/api/lead" method="post" aria-labelledby="booking-form-title">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="relative">
-                <input 
-                  id="name" 
-                  name="name" 
-                  required 
-                  placeholder=" " 
-                  className="peer w-full rounded-2xl border-slate-200 bg-slate-50 px-5 py-4 pt-6 focus:ring-2 focus:ring-primary outline-none transition-all" 
-                />
-                <label 
-                  htmlFor="name" 
-                  className="absolute text-slate-400 left-5 top-4 origin-[0] transition-all transform 
-                             scale-75 -translate-y-3 
-                             peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 
-                             peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary"
-                >
-                  Full Name
-                </label>
+                <input id="name" name="name" required placeholder=" " className="w-full rounded-2xl border-slate-200 bg-slate-50 px-5 py-4 focus:ring-2 focus:ring-primary outline-none transition-all peer" />
+                <label htmlFor="name" className="absolute text-slate-400 left-5 top-4 transition-all transform peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary">Full Name</label>
               </div>
               <div className="relative">
-                <input 
-                  id="email" 
-                  name="email" 
-                  type="email" 
-                  required 
-                  placeholder=" " 
-                  className="peer w-full rounded-2xl border-slate-200 bg-slate-50 px-5 py-4 pt-6 focus:ring-2 focus:ring-primary outline-none transition-all" 
-                />
-                <label 
-                  htmlFor="email" 
-                  className="absolute text-slate-400 left-5 top-4 origin-[0] transition-all transform 
-                             scale-75 -translate-y-3 
-                             peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 
-                             peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary"
-                >
-                  Email Address
-                </label>
+              <input id="email" name="email" type="email" required placeholder=" " className="w-full rounded-2xl border-slate-200 bg-slate-50 px-5 py-4 focus:ring-2 focus:ring-primary outline-none transition-all peer" />
+              <label htmlFor="email" className="absolute text-slate-400 left-5 top-4 transition-all transform peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary">Email Address</label>
               </div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="relative">
-                <input 
-                  id="pickup" 
-                  name="pickup" 
-                  required 
-                  placeholder=" " 
-                  className="peer w-full rounded-2xl border-slate-200 bg-slate-50 px-5 py-4 pt-6 focus:ring-2 focus:ring-primary outline-none transition-all" 
-                />
-                <label 
-                  htmlFor="pickup" 
-                  className="absolute text-slate-400 left-5 top-4 origin-[0] transition-all transform 
-                             scale-75 -translate-y-3 
-                             peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 
-                             peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary"
-                >
-                  Travel Dates
-                </label>
+            <div className="relative">
+              <input id="pickup" name="pickup" required placeholder=" " className="w-full rounded-2xl border-slate-200 bg-slate-50 px-5 py-4 focus:ring-2 focus:ring-primary outline-none transition-all peer" />
+              <label htmlFor="pickup" className="absolute text-slate-400 left-5 top-4 transition-all transform peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary">Travel Dates</label>
               </div>
               <div className="relative">
-                <input 
-                  id="destination" 
-                  name="destination" 
-                  required 
-                  placeholder=" " 
-                  className="peer w-full rounded-2xl border-slate-200 bg-slate-50 px-5 py-4 pt-6 focus:ring-2 focus:ring-primary outline-none transition-all" 
-                />
-                <label 
-                  htmlFor="destination" 
-                  className="absolute text-slate-400 left-5 top-4 origin-[0] transition-all transform 
-                             scale-75 -translate-y-3 
-                             peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 
-                             peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary"
-                >
-                  Number of Persons
-                </label>
+              <input id="destination" name="destination" required placeholder=" " className="w-full rounded-2xl border-slate-200 bg-slate-50 px-5 py-4 focus:ring-2 focus:ring-primary outline-none transition-all peer" />
+              <label htmlFor="destination" className="absolute text-slate-400 left-5 top-4 transition-all transform peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary">Number of Persons</label>
               </div>
             </div>
 
             <div className="relative">
-              <textarea 
-                id="notes"
-                name="notes" 
-                placeholder=" " 
-                className="peer w-full rounded-2xl border-slate-200 bg-slate-50 px-5 py-4 pt-6 min-h-[150px] focus:ring-2 focus:ring-primary outline-none transition-all" 
-              ></textarea>
-              <label 
-                htmlFor="notes" 
-                className="absolute text-slate-400 left-5 top-4 origin-[0] transition-all transform 
-                           scale-75 -translate-y-3 
-                           peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 
-                           peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary"
-              >
-                Tell us about your trip...
-              </label>
+            <textarea 
+              id="notes"
+              name="notes" 
+              placeholder=" " 
+              className="w-full rounded-2xl border-slate-200 bg-slate-50 px-5 py-4 min-h-[150px] focus:ring-2 focus:ring-primary outline-none transition-all peer" 
+            ></textarea>
+            <label htmlFor="notes" className="absolute text-slate-400 left-5 top-4 transition-all transform peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-primary">Tell us about your trip...</label>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -295,6 +229,8 @@ export default async function ContactPage({ searchParams }: Props) {
               <Button asChild size="lg" variant="outline" className="w-full rounded-2xl py-3 font-semibold">
                 <a href={wa} target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
               </Button>
+
+
             </div>
             
             <p className="text-center text-xs text-slate-400 mt-4">
