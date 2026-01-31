@@ -46,11 +46,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         return null;
       }
 
-      // 🎯 SEO PRIORITY LOGIC (The "Guru" Part)
-      // We assign importance based on the folder name.
+      // 🎯 SEO PRIORITY LOGIC
+      let priority = 0.7;
       
-      let priority = 0.7; // Default for standard pages (About, Contact)
-      let changeFreq = "monthly" as const;
+      // ✅ FIXED: Explicitly allow these 3 specific strings
+      let changeFreq: "weekly" | "monthly" | "yearly" = "monthly"; 
 
       // MONEY PAGES: Itineraries & Tours (High Priority)
       if (
@@ -71,7 +71,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       // BLOG/GUIDES: Good for traffic (Medium Priority)
       else if (path.includes("/travel-guide")) {
         priority = 0.8;
-        changeFreq = "monthly"; // Guides don't change often
+        changeFreq = "monthly"; 
       }
 
       // LEGAL/UTILITY: Terms, Privacy (Low Priority)
