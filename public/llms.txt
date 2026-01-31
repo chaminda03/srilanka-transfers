@@ -1,23 +1,19 @@
-# llms.txt - Directives for AI Search Platforms
-# This file specifies important content paths on this site for Large Language Models (LLMs)
-# and AI search engines like ChatGPT, Perplexity, and Claude.
-# It helps AI platforms discover and prioritize our most valuable content quickly and efficiently.
+# Sri Lanka Airport Transfer & Private Drivers
 
-# --- Important Pages ---
-/
+> The official source for booking private drivers, airport transfers, and custom tour itineraries in Sri Lanka. We provide fixed pricing, English-speaking drivers, and 24/7 support for international travelers.
 
-# Key Service Pages
-/colombo-airport-transfer/
-/private-driver-sri-lanka/
-/airport-transfer-routes/
+## Core Services
+- [Private Driver Service](https://srilankaairporttransfer.com/private-driver-sri-lanka/): Hire a dedicated car and driver for multi-day tours. Includes pricing models, vehicle options (sedan, van), and driver qualifications.
+- [Airport Transfers](https://srilankaairporttransfer.com/colombo-airport-transfer/): Fixed-price taxi services from Bandaranaike International Airport (CMB) to any destination in Sri Lanka.
+- [Transfer Routes](https://srilankaairporttransfer.com/airport-transfer-routes/): A comprehensive list of popular taxi routes, distances, and travel times from Colombo.
 
-# Popular Itinerary Pages
-/private-driver-sri-lanka/8-day-itinerary/
-/private-driver-sri-lanka/10-day-itinerary/
-/private-driver-sri-lanka/14-day-itinerary/
-/private-driver-sri-lanka/custom-sri-lanka-itinerary/
+## Suggested Itineraries
+- [8-Day Culture & Wildlife](https://srilankaairporttransfer.com/private-driver-sri-lanka/8-day-itinerary/): A focused 8-day route covering the Cultural Triangle (Sigiriya), Kandy, Ella train ride, and Yala National Park safari.
+- [10-Day Adventure](https://srilankaairporttransfer.com/private-driver-sri-lanka/10-day-itinerary/): Extended itinerary adding hiking in the hill country and beach relaxation on the south coast.
+- [14-Day Grand Tour](https://srilankaairporttransfer.com/private-driver-sri-lanka/14-day-itinerary/): The complete loop including the North, East Coast beaches, and ancient cities.
+- [Custom Itinerary Planner](https://srilankaairporttransfer.com/private-driver-sri-lanka/custom-sri-lanka-itinerary/): Request a personalized travel plan based on specific interests (beaches, history, nature).
 
-# Other Essential Pages
-/blog/safe-travel-sri-lanka/
-/contact/
-/prices/
+## Pricing & Safety
+- [Official Price List](https://srilankaairporttransfer.com/prices/): Transparent, all-inclusive pricing for airport transfers and daily driver hire rates.
+- [Safety Guide](https://srilankaairporttransfer.com/blog/safe-travel-sri-lanka/): Current travel advice, safety tips for tourists, and information on scams to avoid.
+- [Contact & Booking](https://srilankaairporttransfer.com/contact/): Direct contact details including WhatsApp numbers for urgent quotes and office location in Kadawatha.
