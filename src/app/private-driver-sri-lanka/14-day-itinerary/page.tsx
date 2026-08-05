@@ -24,6 +24,7 @@ export default function FourteenDayItineraryPage() {
           src="/images/sri-lanka-beach-traditional-fishing-boats-aerial-view.webp" 
           alt="Aerial view of tropical beaches in Sri Lanka"
           fill
+          sizes="100vw"
           className="object-cover object-center"
           priority
         />
@@ -187,6 +188,7 @@ export default function FourteenDayItineraryPage() {
                     src="/images/Happy-German-Lady-travelled-to-unuwatana-Sri Lanka.webp"
                     alt="Alexandra - Traveler Review"
                     fill
+                    sizes="48px"
                     className="object-cover"
                   />
                </div>
@@ -240,7 +242,7 @@ export default function FourteenDayItineraryPage() {
                   
                   <div className="space-y-3">
                     <Button asChild className="w-full h-14 text-lg font-black bg-amber-500 text-slate-900 hover:bg-amber-600 rounded-xl shadow-lg shadow-amber-500/20">
-                        <Link href="/contact/">Get a Quote on WhatsApp</Link>
+                        <Link href="/contact">Get a Quote on WhatsApp</Link>
                     </Button>
                     <p className="text-xs text-slate-400 mt-2">Response typically within 15 mins</p>
                   </div>
@@ -253,14 +255,14 @@ export default function FourteenDayItineraryPage() {
               <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200">
                  <h3 className="font-bold text-slate-900 mb-4">Other Popular Routes</h3>
                  <div className="space-y-3">
-                    <Link href="/private-driver-sri-lanka/8-day-itinerary/" className="flex items-center gap-3 p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-transparent hover:border-amber-500 group">
+                    <Link href="/private-driver-sri-lanka/8-day-itinerary" className="flex items-center gap-3 p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-transparent hover:border-amber-500 group">
                         <div className="h-10 w-10 bg-slate-100 rounded-lg flex items-center justify-center font-bold text-slate-500 group-hover:text-amber-600 group-hover:bg-amber-100">8</div>
                         <div>
                             <p className="font-bold text-sm group-hover:text-amber-600">Essentials Route</p>
                             <p className="text-xs text-slate-500">Perfect for 1 Week</p>
                         </div>
                     </Link>
-                    <Link href="/private-driver-sri-lanka/10-day-itinerary/" className="flex items-center gap-3 p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-transparent hover:border-amber-500 group">
+                    <Link href="/private-driver-sri-lanka/10-day-itinerary" className="flex items-center gap-3 p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-transparent hover:border-amber-500 group">
                         <div className="h-10 w-10 bg-slate-100 rounded-lg flex items-center justify-center font-bold text-slate-500 group-hover:text-amber-600 group-hover:bg-amber-100">10</div>
                         <div>
                             <p className="font-bold text-sm group-hover:text-amber-600">Adventure Route</p>

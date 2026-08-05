@@ -30,14 +30,14 @@ export default function PrivateDriverSriLankaPage() {
     {
       title: "10-Day Culture & Coast",
       text: "From ancient ruins to the pristine southern beaches.",
-      href: "/private-driver-sri-lanka/10-day-itinerary/",
+      href: "/private-driver-sri-lanka/10-day-itinerary",
       img: "/images/sri-lanka-beach-traditional-fishing-boats-aerial-view.webp",
       alt: "Aerial view of colorful fishing boats on a turquoise beach, featured in the 10-day Sri Lanka culture and coast tour.",
     },
     {
       title: "14-Day Grand Exploration",
       text: "The complete journey covering the north and east.",
-      href: "/private-driver-sri-lanka/14-day-itinerary/",
+      href: "/private-driver-sri-lanka/14-day-itinerary",
       img: "/images/sri-lanka-scenic-train-ride-kandy-to-ella-couple.webp",
       alt: "A couple enjoying the view from the famous blue train during a 14-day grand exploration tour of Sri Lanka.",
     },
@@ -78,6 +78,7 @@ export default function PrivateDriverSriLankaPage() {
               <Image 
                 src={item.img} 
                 fill 
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" 
                 alt={item.alt} 
               />
@@ -100,15 +101,15 @@ export default function PrivateDriverSriLankaPage() {
           <div className="h-px flex-1 bg-slate-100" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Link href="/private-driver-sri-lanka/costs-and-rates/" className="block p-8 rounded-[32px] bg-slate-50 border border-slate-100/80 shadow-sm hover:bg-white hover:border-slate-200/60 hover:-translate-y-1 transition-all">
+          <Link href="/private-driver-sri-lanka/costs-and-rates" className="block p-8 rounded-[32px] bg-slate-50 border border-slate-100/80 shadow-sm hover:bg-white hover:border-slate-200/60 hover:-translate-y-1 transition-all">
             <h3 className="text-xl font-bold text-slate-800 mb-2">Costs & Rates</h3>
             <p className="text-slate-500">Understand our simple, all-inclusive daily pricing.</p>
           </Link>
-          <Link href="/private-driver-sri-lanka/benefits-vs-self-drive/" className="block p-8 rounded-[32px] bg-slate-50 border border-slate-100/80 shadow-sm hover:bg-white hover:border-slate-200/60 hover:-translate-y-1 transition-all">
+          <Link href="/private-driver-sri-lanka/benefits-vs-self-drive" className="block p-8 rounded-[32px] bg-slate-50 border border-slate-100/80 shadow-sm hover:bg-white hover:border-slate-200/60 hover:-translate-y-1 transition-all">
             <h3 className="text-xl font-bold text-slate-800 mb-2">Benefits vs Self-Drive</h3>
             <p className="text-slate-500">Why a private driver is the best way to experience Sri Lanka.</p>
           </Link>
-          <Link href="/private-driver-sri-lanka/meet-our-drivers/" className="block p-8 rounded-[32px] bg-slate-50 border border-slate-100/80 shadow-sm hover:bg-white hover:border-slate-200/60 hover:-translate-y-1 transition-all">
+          <Link href="/private-driver-sri-lanka/meet-our-drivers" className="block p-8 rounded-[32px] bg-slate-50 border border-slate-100/80 shadow-sm hover:bg-white hover:border-slate-200/60 hover:-translate-y-1 transition-all">
             <h3 className="text-xl font-bold text-slate-800 mb-2">Meet Our Drivers</h3>
             <p className="text-slate-500">Get to know our friendly and professional local experts.</p>
           </Link>

@@ -62,7 +62,7 @@ export default function ThankYouPage() {
       {/* NAVIGATION */}
       <div className="flex flex-col sm:flex-row gap-3">
         <Link
-          href="/private-driver-sri-lanka/"
+          href="/private-driver-sri-lanka"
           className="inline-flex w-full items-center justify-center rounded-md border px-6 py-3 text-sm font-medium"
         >
           View Private Driver Services

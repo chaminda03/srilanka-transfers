@@ -35,6 +35,7 @@ export default function SafeTravelBlog() {
             src="/images/sri-lanka-best_private-airport-transfer-driver.webp" 
             alt="Safe travel with a private driver in Sri Lanka" 
             fill 
+            sizes="(max-width: 1024px) 100vw, 1024px"
             className="object-cover"
           />
         </div>
@@ -108,7 +109,7 @@ export default function SafeTravelBlog() {
             Don&apos;t spend your holiday staring at a GPS. Let a local professional take the wheel while you enjoy the scenery.
           </p>
           <Button asChild size="lg" className="bg-slate-950 text-white rounded-full px-12 h-16 text-lg font-bold hover:bg-white hover:text-slate-950 transition-all">
-            <Link href="/contact/">Book Your Safe Trip on WhatsApp</Link>
+            <Link href="/contact">Book Your Safe Trip on WhatsApp</Link>
           </Button>
         </div>
 

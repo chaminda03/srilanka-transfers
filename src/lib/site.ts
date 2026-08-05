@@ -1,4 +1,5 @@
 import { pages, type PageSpec } from "@/site/spec";
+import { siteConfig } from "@/site/config";
 
 /**
  * Normalizes paths to ensure consistency (trailing slashes, etc.)
@@ -6,8 +7,34 @@ import { pages, type PageSpec } from "@/site/spec";
 export function normalizePath(input: string) {
   if (input === "/") return "/";
   let p = input.startsWith("/") ? input : `/${input}`;
-  p = p.replace(/\/+$/, ""); 
-  return `${p}/`; 
+  p = p.replace(/\/+$/, "");
+  return `${p}/`;
+}
+
+/**
+ * The path form actually SERVED in production.
+ *
+ * next.config has no `trailingSlash`, so Next serves `/prices` and 308-redirects
+ * `/prices/` → `/prices`. spec.ts stores paths WITH a trailing slash (they're used
+ * as lookup keys), so anything that becomes a real URL — canonical, og:url, sitemap
+ * entry, href — must go through this first, or it points at a redirect.
+ *
+ *   "/prices/" -> "/prices"      "/" -> "/"
+ */
+export function toUrlPath(input: string) {
+  if (!input || input === "/") return "/";
+  const p = input.startsWith("/") ? input : `/${input}`;
+  return p.replace(/\/+$/, "") || "/";
+}
+
+/**
+ * Absolute, canonical-safe URL for a spec path.
+ * Uses the www host from siteConfig and the served (no-trailing-slash) path form.
+ */
+export function absoluteUrl(path: string) {
+  const base = `https://${siteConfig.domain}`;
+  const p = toUrlPath(path);
+  return p === "/" ? base : `${base}${p}`;
 }
 
 /**

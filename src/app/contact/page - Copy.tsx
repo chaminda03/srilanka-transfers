@@ -158,7 +158,7 @@ export default function ContactPage(props: {
             </p>
 
             <Button asChild size="lg" variant="outline">
-              <Link href="/private-driver-sri-lanka/custom-sri-lanka-itinerary/">
+              <Link href="/private-driver-sri-lanka/custom-sri-lanka-itinerary">
                 Build My Custom Sri Lanka Itinerary
               </Link>
             </Button>

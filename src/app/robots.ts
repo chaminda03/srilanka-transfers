@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { siteConfig } from "@/site/config";
+import { absoluteUrl } from "@/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -13,6 +13,7 @@ export default function robots(): MetadataRoute.Robots {
         "/private/",
       ],
     },
-    sitemap: `https://${siteConfig.domain}/sitemap.xml`,
+    sitemap: absoluteUrl("/sitemap.xml"),
+    host: absoluteUrl("/"),
   };
 }

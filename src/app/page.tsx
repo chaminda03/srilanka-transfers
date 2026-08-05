@@ -18,31 +18,20 @@ import {
   IconPaw
 } from "@tabler/icons-react";
 
-export const metadata = {
-  ...buildMetadata({
-    title: "Sri Lanka Airport Transfer | Reliable Private Chauffeur Services",
-    description:
-      "#1 Private Driver in Sri Lanka: Safe, stress-free travel with a licensed local guide. Fixed prices, no hidden costs & expert advice. Book your tour today!",
-    path: "/",
-  }),
-  metadataBase: new URL(`https://${siteConfig.domain}`),
-  openGraph: {
-    title: "Private Driver Sri Lanka | Safe Airport Transfers & Local Guides",
-    description: "#1 Private Driver in Sri Lanka: Safe, stress-free travel with a licensed local guide. Fixed prices, no hidden costs & expert advice. Book your tour today!",
-    url: "/",
-    siteName: siteConfig.brand,
-    images: [
-      {
-        url: "/images/sri-lanka-best_private-airport-transfer-driver.webp",
-        width: 1200,
-        height: 630,
-        alt: "Private Driver Sri Lanka",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
+// metadataBase, siteName, og:locale and the default share image now come from
+// the root layout — this only needs to override what's page-specific.
+export const metadata = buildMetadata({
+  title: "Sri Lanka Airport Transfer | Reliable Private Chauffeur Services",
+  description:
+    "#1 Private Driver in Sri Lanka: Safe, stress-free travel with a licensed local guide. Fixed prices, no hidden costs & expert advice. Book your tour today!",
+  path: "/",
+  image: {
+    url: "/images/sri-lanka-best_private-airport-transfer-driver.webp",
+    width: 1200,
+    height: 630,
+    alt: "Private Driver Sri Lanka",
   },
-};
+});
 
 export default function Home() {
   const localBusinessSchema = buildLocalBusinessSchema();
@@ -63,6 +52,7 @@ export default function Home() {
             src="/images/sri-lanka-best_private-airport-transfer-driver.webp"
             alt="Professional private driver in Sri Lanka"
             fill
+            sizes="100vw"
             priority
             className="object-cover object-left md:object-left"
           />
@@ -89,10 +79,10 @@ export default function Home() {
             </p>
             <div className="flex flex-col gap-3">
               <Button asChild size="lg" className="w-full h-14 bg-amber-500 text-slate-950 font-black uppercase tracking-widest rounded-xl hover:bg-white transition-all">
-                <Link href="/contact/">{siteConfig.contact.whatsappLabel}</Link>
+                <Link href="/contact">{siteConfig.contact.whatsappLabel}</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="w-full h-14 border-2 border-slate-900/10 text-slate-900 font-black uppercase tracking-widest rounded-xl hover:bg-slate-900 hover:text-white transition-all shadow-sm">
-                <Link href="/prices/">View Fixed Prices</Link>
+                <Link href="/prices">View Fixed Prices</Link>
               </Button>
             </div>
           </div>
@@ -107,7 +97,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-slate-900">Featured Destinations</h2>
               <p className="text-lg text-slate-500 mt-2">Premium private transfers to Sri Lanka&apos;s most iconic landmarks.</p>
             </div>
-            <Link href="/prices/" className="text-xs md:text-sm font-bold text-amber-600 uppercase tracking-widest border-b-2 border-amber-600 pb-1 hover:text-slate-900 transition-colors">
+            <Link href="/prices" className="text-xs md:text-sm font-bold text-amber-600 uppercase tracking-widest border-b-2 border-amber-600 pb-1 hover:text-slate-900 transition-colors">
               View All Prices →
             </Link>
           </div>
@@ -199,7 +189,7 @@ export default function Home() {
                   and incredibly safe. Imagine exploring the island at your own pace, stopping whenever you like,
                   and having a local expert guide the way. Our team ensures a relaxed and memorable <strong>Sri Lanka travel</strong> experience.
                 </p>
-                <Link href="/private-driver-sri-lanka/" className="text-amber-600 hover:underline text-sm font-bold">
+                <Link href="/private-driver-sri-lanka" className="text-amber-600 hover:underline text-sm font-bold">
                   Learn About Our Private Driver Service →
                 </Link>
               </CardContent>
@@ -250,6 +240,7 @@ const BentoImage = ({ src, alt }: { src: string; alt: string }) => (
       src={src} 
       alt={alt} 
       fill 
+      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
       className="object-cover group-hover/bento:scale-110 transition-transform duration-500" 
     />
     <div className="absolute inset-0 bg-black/10 group-hover/bento:bg-black/0 transition-colors" />
@@ -262,28 +253,28 @@ const gridItems = [
     description: "Experience the best airport  transfer service.",
     header: <BentoImage src="/images/Vehicle fleet Sri Lanka Private Driver.webp" alt="Colombo Airport Transfer Fleet" />,
     icon: <IconPlaneDeparture className="h-4 w-4 text-amber-500" />,
-    href: "/airport-to-colombo-taxi/",
+    href: "/airport-to-colombo-taxi",
   },
   {
     title: "Galle Fort",
     description: "UNESCO history meets stunning southern coastline.",
     header: <BentoImage src="/images/traditional sri lanka fishing at Galle.webp" alt="Galle Fort traditional Fishing in Sri Lanka" />,
     icon: <IconMapPin className="h-4 w-4 text-blue-500" />,
-    href: "/airport-to-galle-taxi/",
+    href: "/airport-to-galle-taxi",
   },
   {
     title: "Kandy Temple",
     description: "Sacred heritage at the Temple of the Tooth Relic.",
     header: <BentoImage src="/images/temple of tooth relic Kandy Sri Lanka.webp" alt="Temple of Tooth Kandy" />,
     icon: <IconHistory className="h-4 w-4 text-emerald-500" />,
-    href: "/airport-to-kandy-taxi/",
+    href: "/airport-to-kandy-taxi",
   },
   {
     title: "Ella Mountains",
     description: "Breathtaking train views and misty mountain peaks.",
     header: <BentoImage src="/images/Train ride through beautiful mountains in sri lanka.webp" alt="Scenic Kandy to Ella Train Journey Sri Lanka" />,
     icon: <IconRoute className="h-4 w-4 text-indigo-500" />,
-    href: "/airport-to-ella-taxi/",
+    href: "/airport-to-ella-taxi",
   },
   {
     title: "Mirissa Beaches & Surfing", 
@@ -302,15 +293,15 @@ const gridItems = [
     description: "Epic leopard safaris and wild nature encounters.",
     header: <BentoImage src="/images/Sri lankan wild life -tiger in Yala.webp" alt="Leopard Safari in Yala National Park Sri Lanka" />,
     icon: <IconPaw className="h-4 w-4 text-orange-600" />,
-    href: "/tours/wildlife-safari-yala-and-udawalawe/",
+    href: "/tours/wildlife-safari-yala-and-udawalawe",
   }
 ];
 
 const allRoutes = [
-  { label: "Airport → Colombo", href: "/airport-to-colombo-taxi/" },
-  { label: "Airport → Negombo", href: "/airport-to-negombo-taxi/" },
-  { label: "Airport → Kandy", href: "/airport-to-kandy-taxi/" },
-  { label: "Airport → Galle", href: "/airport-to-galle-taxi/" },
-  { label: "Airport → Ella", href: "/airport-to-ella-taxi/" },
-  { label: "Airport → Sigiriya", href: "/airport-to-sigiriya-taxi/" },
+  { label: "Airport → Colombo", href: "/airport-to-colombo-taxi" },
+  { label: "Airport → Negombo", href: "/airport-to-negombo-taxi" },
+  { label: "Airport → Kandy", href: "/airport-to-kandy-taxi" },
+  { label: "Airport → Galle", href: "/airport-to-galle-taxi" },
+  { label: "Airport → Ella", href: "/airport-to-ella-taxi" },
+  { label: "Airport → Sigiriya", href: "/airport-to-sigiriya-taxi" },
 ];

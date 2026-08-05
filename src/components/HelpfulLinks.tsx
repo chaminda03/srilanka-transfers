@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { PageSpec } from "@/site/spec";
-import { getLinkedPages } from "@/lib/site";
+import { getLinkedPages, toUrlPath } from "@/lib/site";
 
 export function HelpfulLinks({ page }: { page: PageSpec }) {
   const linked = getLinkedPages(page);
@@ -12,7 +12,7 @@ export function HelpfulLinks({ page }: { page: PageSpec }) {
       <ul className="mt-3 grid gap-2 sm:grid-cols-2">
         {linked.map((p) => (
           <li key={p.id}>
-            <Link className="text-sm text-muted-foreground hover:text-foreground" href={p.path}>
+            <Link className="text-sm text-muted-foreground hover:text-foreground" href={toUrlPath(p.path)}>
               {p.title}
             </Link>
           </li>

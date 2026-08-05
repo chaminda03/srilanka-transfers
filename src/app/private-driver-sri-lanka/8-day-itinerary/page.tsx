@@ -29,6 +29,7 @@ export default function EightDayItineraryPage() {
           src="/images/sri-lanka-scenic-train-ride-kandy-to-ella-couple.webp"
           alt="Couple enjoying the scenic train ride in Sri Lanka"
           fill
+          sizes="100vw"
           className="object-cover object-top"
           priority
         />
@@ -193,6 +194,7 @@ export default function EightDayItineraryPage() {
                     src="/images/Gentleman-from-UK-at-Yala National Park, Sri Lanka.webp" // Please ensure this file name matches
                     alt="Arnold - Verified Reviewer"
                     fill
+                    sizes="48px"
                     className="object-cover"
                   />
                </div>
@@ -259,14 +261,14 @@ export default function EightDayItineraryPage() {
               <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200">
                  <h3 className="font-bold text-slate-900 mb-4">Other Popular Routes</h3>
                  <div className="space-y-3">
-                    <Link href="/private-driver-sri-lanka/10-day-itinerary/" className="flex items-center gap-3 p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-transparent hover:border-amber-500 group">
+                    <Link href="/private-driver-sri-lanka/10-day-itinerary" className="flex items-center gap-3 p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-transparent hover:border-amber-500 group">
                         <div className="h-10 w-10 bg-slate-100 rounded-lg flex items-center justify-center font-bold text-slate-500 group-hover:text-amber-600 group-hover:bg-amber-100">10</div>
                         <div>
                             <p className="font-bold text-sm group-hover:text-amber-600">Adventure Route</p>
                             <p className="text-xs text-slate-500">Adds Hiking & Beach</p>
                         </div>
                     </Link>
-                    <Link href="/private-driver-sri-lanka/14-day-itinerary/" className="flex items-center gap-3 p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-transparent hover:border-amber-500 group">
+                    <Link href="/private-driver-sri-lanka/14-day-itinerary" className="flex items-center gap-3 p-3 bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-transparent hover:border-amber-500 group">
                         <div className="h-10 w-10 bg-slate-100 rounded-lg flex items-center justify-center font-bold text-slate-500 group-hover:text-amber-600 group-hover:bg-amber-100">14</div>
                         <div>
                             <p className="font-bold text-sm group-hover:text-amber-600">Grand Tour</p>

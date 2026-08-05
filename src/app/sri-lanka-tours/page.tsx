@@ -20,42 +20,42 @@ export default function SriLankaToursPage() {
     {
       title: "Wildlife Safaris",
       text: "Spot leopards in Yala and elephants in Udawalawe.",
-      href: "/tours/wildlife-safari-yala-and-udawalawe/",
+      href: "/tours/wildlife-safari-yala-and-udawalawe",
       img: "/images/sri-lanka-wildlife-safari-jeep-tour-elephants.webp",
       alt: "Safari jeep watching a large elephant herd during a Sri Lanka wildlife tour in Udawalawe National Park."
     },
     {
       title: "Cultural Triangle",
       text: "Explore ancient cities like Sigiriya and Kandy.",
-      href: "/tours/cultural-triangle-sigiriya-anuradhapura/",
+      href: "/tours/cultural-triangle-sigiriya-anuradhapura",
       img: "/images/Kandiand-dancer-at-lion-rock-sigiriya.webp",
       alt: "Traditional Kandyan dancer in full costume performing with Sigiriya Lion Rock in the background, representing a cultural triangle tour."
     },
     {
       title: "Kandy to Ella Train",
       text: "Experience one of the world's most scenic train journeys.",
-      href: "/tours/scenic-train-ride-kandy-to-ella/",
+      href: "/tours/scenic-train-ride-kandy-to-ella",
       img: "/images/sri-lanka-scenic-train-ride-kandy-to-ella-couple.webp",
       alt: "Couple hanging out of the iconic blue train on the scenic Kandy to Ella journey, a must-do Sri Lanka tour."
     },
     {
       title: "South Coast Beaches",
       text: "Relax on the golden beaches of Galle and Mirissa.",
-      href: "/tours/beach-holiday-south-coast/",
+      href: "/tours/beach-holiday-south-coast",
       img: "/images/sri-lanka-beach-traditional-fishing-boats-aerial-view.webp",
       alt: "Drone view of colorful fishing boats on the golden sand of a south coast beach in Sri Lanka during a beach holiday tour."
     },
     {
         title: "Adventure & Hiking",
         text: "Hike epic trails in Ella and the Knuckles Range.",
-        href: "/tours/adventure-and-hiking-tours/",
+        href: "/tours/adventure-and-hiking-tours",
         img: "/images/sigiriya-lion-rock-fortress-tourist-view-sri-lanka.webp",
         alt: "Hiker looking over a lush green valley from the peak of Ella Rock during an adventure and hiking tour in Sri Lanka."
     },
     {
         title: "Custom Tours",
         text: "Let us design a personalized itinerary just for you.",
-        href: "/private-driver-sri-lanka/custom-sri-lanka-itinerary/",
+        href: "/private-driver-sri-lanka/custom-sri-lanka-itinerary",
         img: "/images/femele traveler at vibrant tea plantations of Nuwara Eliya, Sri Lanka.webp",
         alt: "Female traveler overlooking vibrant green tea plantations in Nuwara Eliya, part of a custom Sri Lanka tour."
     }
@@ -86,6 +86,7 @@ export default function SriLankaToursPage() {
               <Image 
                 src={item.img} 
                 fill 
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" 
                 alt={item.alt} 
               />

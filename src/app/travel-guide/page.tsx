@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
-import { getPageById, getPagesByIds } from "@/lib/site";
+import { getPageById, getPagesByIds, toUrlPath } from "@/lib/site";
 import { SpecPage } from "@/components/SpecPage";
 
 export async function generateMetadata() {
@@ -44,7 +44,7 @@ export default function TravelGuidePage() {
           {guides.map((item) => (
             <Link 
               key={item.id} 
-              href={item.path} 
+              href={toUrlPath(item.path)}
               className="block p-8 rounded-[32px] bg-slate-50 border border-slate-100/80 shadow-sm hover:bg-white hover:border-slate-200/60 hover:-translate-y-1 transition-all"
             >
               <h3 className="text-xl font-bold text-slate-800 mb-2">{item.title.split('|')[0]}</h3>

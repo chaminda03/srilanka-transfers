@@ -38,27 +38,11 @@ export default async function ContactPage({ searchParams }: Props) {
 
   const office = siteConfig.contact?.office ?? null;
 
-  // Minimal set of reviews for JSON-LD (keeps structured data aligned with visible testimonials)
-  const reviews = [
-    {
-      "@type": "Review",
-      author: "Lukas, Germany",
-      reviewBody: "Excellent service — on-time pickup and friendly driver. Highly recommended.",
-      reviewRating: { "@type": "Rating", ratingValue: 5 }
-    },
-    {
-      "@type": "Review",
-      author: "Valeria, Spain",
-      reviewBody: "Fixed pricing made our arrival stress-free. Smooth and reliable.",
-      reviewRating: { "@type": "Rating", ratingValue: 5 }
-    },
-    {
-      "@type": "Review",
-      author: "Ekaterina, Russia",
-      reviewBody: "Driver was courteous and the car was clean. Great value for money.",
-      reviewRating: { "@type": "Rating", ratingValue: 4 }
-    }
-  ];
+  // NOTE: No `review` / `aggregateRating` markup here on purpose.
+  // Google disallows self-serving review markup on LocalBusiness/Organization
+  // (reviews you collect and publish about yourself). Star ratings must come from
+  // Google Business Profile, or a third-party review platform emitting its own markup.
+  // https://developers.google.com/search/docs/appearance/structured-data/review-snippet
 
   // SEO-optimised FAQ entries (mirrors visible content below)
   const faqs = [
@@ -125,13 +109,10 @@ export default async function ContactPage({ searchParams }: Props) {
         longitude: office.longitude
       } : undefined,
       openingHours: (office as any).openingHours || undefined,
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        reviewCount: 248
-      },
-      review: reviews,
-      sameAs: office.mapUrl ? [office.mapUrl] : undefined
+      // `sameAs` must be authoritative profiles for this business (Google Business
+      // Profile, Facebook, TripAdvisor...) — not a Maps *embed* URL. Populate
+      // siteConfig.social once those exist.
+      sameAs: siteConfig.social?.length ? siteConfig.social : undefined
     } : undefined
   ].filter(Boolean) as any[];
 

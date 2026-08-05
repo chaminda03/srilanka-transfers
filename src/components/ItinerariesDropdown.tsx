@@ -74,10 +74,10 @@ export default function ItinerariesDropdown() {
         <div className="bg-white text-slate-900 rounded-xl shadow-2xl p-4 w-64 border border-slate-100 flex flex-col gap-2">
           <div className="text-[10px] text-slate-400 font-bold uppercase tracking-widest px-3 pb-1 border-b border-slate-100 mb-1">Popular Tours</div>
 
-          <Link role="menuitem" href="/private-driver-sri-lanka/8-day-itinerary/" tabIndex={-1} className="block px-3 py-2 rounded-lg hover:bg-amber-50 text-xs font-bold hover:text-amber-600 transition-colors">8 Days: Essentials</Link>
-          <Link role="menuitem" href="/private-driver-sri-lanka/10-day-itinerary/" tabIndex={-1} className="block px-3 py-2 rounded-lg hover:bg-amber-50 text-xs font-bold hover:text-amber-600 transition-colors">10 Days: Adventure</Link>
-          <Link role="menuitem" href="/private-driver-sri-lanka/14-day-itinerary/" tabIndex={-1} className="block px-3 py-2 rounded-lg hover:bg-amber-50 text-xs font-bold hover:text-amber-600 transition-colors">14 Days: Grand Tour</Link>
-          <Link role="menuitem" href="/private-driver-sri-lanka/custom-sri-lanka-itinerary/" tabIndex={-1} className="block px-3 py-2 rounded-lg hover:bg-amber-50 text-xs font-bold hover:text-amber-600 transition-colors text-amber-600">Build Custom Plan →</Link>
+          <Link role="menuitem" href="/private-driver-sri-lanka/8-day-itinerary" tabIndex={-1} className="block px-3 py-2 rounded-lg hover:bg-amber-50 text-xs font-bold hover:text-amber-600 transition-colors">8 Days: Essentials</Link>
+          <Link role="menuitem" href="/private-driver-sri-lanka/10-day-itinerary" tabIndex={-1} className="block px-3 py-2 rounded-lg hover:bg-amber-50 text-xs font-bold hover:text-amber-600 transition-colors">10 Days: Adventure</Link>
+          <Link role="menuitem" href="/private-driver-sri-lanka/14-day-itinerary" tabIndex={-1} className="block px-3 py-2 rounded-lg hover:bg-amber-50 text-xs font-bold hover:text-amber-600 transition-colors">14 Days: Grand Tour</Link>
+          <Link role="menuitem" href="/private-driver-sri-lanka/custom-sri-lanka-itinerary" tabIndex={-1} className="block px-3 py-2 rounded-lg hover:bg-amber-50 text-xs font-bold hover:text-amber-600 transition-colors text-amber-600">Build Custom Plan →</Link>
         </div>
       </div>
     </div>

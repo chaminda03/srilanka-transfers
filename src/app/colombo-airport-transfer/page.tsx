@@ -96,12 +96,12 @@ export default function ColomboAirportTransferPage() {
 
         <div className="grid gap-4 sm:grid-cols-2">
           {[
-             { label: "Airport → Galle", href: "/airport-transfer/colombo-to-galle/" },
-             { label: "Airport → Kandy", href: "/airport-transfer/colombo-to-kandy/" },
-             { label: "Airport → Mirissa", href: "/airport-transfer/colombo-to-mirissa/" },
-             { label: "Our Vehicle Options", href: "/airport-transfer/vehicle-options/" },
-             { label: "How to Book", href: "/airport-transfer/booking-process/" },
-             { label: "All Prices", href: "/prices/" },
+             { label: "Airport → Galle", href: "/airport-transfer/colombo-to-galle" },
+             { label: "Airport → Kandy", href: "/airport-transfer/colombo-to-kandy" },
+             { label: "Airport → Mirissa", href: "/airport-transfer/colombo-to-mirissa" },
+             { label: "Our Vehicle Options", href: "/airport-transfer/vehicle-options" },
+             { label: "How to Book", href: "/airport-transfer/booking-process" },
+             { label: "All Prices", href: "/prices" },
           ].map((route) => (
              <Button key={route.href} asChild variant="outline" className="h-14 justify-between px-6 border-slate-200 hover:border-amber-500 hover:text-amber-600 text-base font-bold text-slate-800 group bg-white shadow-sm">
                 <Link href={route.href}>
@@ -129,7 +129,7 @@ export default function ColomboAirportTransferPage() {
             </p>
 
             <Button asChild size="lg" className="bg-amber-500 hover:bg-white hover:text-slate-900 text-slate-900 font-black h-14 px-8 rounded-full text-base shadow-lg transition-all relative z-10 uppercase tracking-wide">
-              <Link href="/contact/">Get a Fixed Price on WhatsApp</Link>
+              <Link href="/contact">Get a Fixed Price on WhatsApp</Link>
             </Button>
         </div>
       </section>

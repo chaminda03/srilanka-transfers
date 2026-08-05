@@ -31,42 +31,21 @@ export async function generateMetadata({
   const page = getPageByPath(path);
   if (!page) return {};
 
-  // Base metadata you already had
+  // buildMetadata already produces the canonical (www + no trailing slash),
+  // og:locale, and a default share image. Only add what it can't know.
   const base = buildMetadata({
     title: page.title,
     description: page.description,
     path: page.path,
+    image: page.heroImage,
   });
 
-  // Build absolute canonical
-  const siteUrl = siteConfig.domain
-    ? `https://${siteConfig.domain}`
-    : undefined;
-
-  const canonical = siteUrl ? `${siteUrl}${page.path}` : undefined;
-
-  // Add OG/Twitter/canonical/robots (safe defaults)
   return {
     ...base,
-    alternates: {
-      canonical,
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
+    robots: { index: true, follow: true },
     openGraph: {
-      type: "website",
-      url: canonical,
-      title: page.title,
-      description: page.description,
+      ...base.openGraph,
       siteName: siteConfig.brand,
-      locale: "en_US",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: page.title,
-      description: page.description,
     },
   };
 }
@@ -181,7 +160,7 @@ export default async function DynamicSpecPage({
 
               <div className="pt-2">
                 <a
-                  href="/contact/"
+                  href="/contact"
                   className="inline-flex items-center justify-center rounded-md bg-foreground px-5 py-2 text-background text-sm font-medium hover:opacity-90"
                 >
                   Get a fixed quote
@@ -205,14 +184,14 @@ export default async function DynamicSpecPage({
 
                 <div className="flex flex-col sm:flex-row gap-3 pt-2">
                   <a
-                    href="/colombo-airport-transfer/"
+                    href="/colombo-airport-transfer"
                     className="inline-flex items-center justify-center rounded-md bg-foreground px-5 py-2 text-background text-sm font-medium hover:opacity-90"
                   >
                     Continue to Kandy / Sigiriya
                   </a>
 
                   <a
-                    href="/contact/"
+                    href="/contact"
                     className="inline-flex items-center justify-center rounded-md border px-5 py-2 text-sm font-medium hover:bg-muted"
                   >
                     Ask on WhatsApp

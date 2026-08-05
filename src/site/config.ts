@@ -1,9 +1,25 @@
 export const siteConfig = {
   brand: "Sri Lanka Airport Transfer",
-  domain: "srilankaairporttransfer.com", 
 
-  locale: "en",
+  // ⚠️ Must match the canonical host EXACTLY as served in production.
+  // srilankaairporttransfer.com 307-redirects to www.srilankaairporttransfer.com,
+  // so canonicals/OG URLs must use the www form or every one of them points at a redirect.
+  domain: "www.srilankaairporttransfer.com",
+
+  /** <html lang> — a bare language tag */
+  lang: "en",
+  /** og:locale — must be language_TERRITORY, NOT a bare "en" */
+  locale: "en_US",
   market: "Global",
+
+  /**
+   * Authoritative profiles for schema.org `sameAs`.
+   * Add Google Business Profile, Facebook, Instagram, TripAdvisor URLs here.
+   */
+  social: [] as string[],
+
+  /** Default social share image (1200x630). Used when a page sets none. */
+  defaultOgImage: "/images/sri-lanka-best_private-airport-transfer-driver.webp",
   contact: {
     // ✅ 1. WhatsApp (No + sign)
     whatsappNumber: "94769789878",

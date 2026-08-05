@@ -71,7 +71,7 @@ export function SpecPage({ page, children }: { page: PageSpec; children?: React.
                   <p className="text-amber-500 font-bold text-xs uppercase tracking-widest">Ask a Local Expert</p>
                   <h3 className="text-2xl font-black mt-4 leading-tight">Need a custom itinerary?</h3>
                   <Link 
-                    href="/private-driver-sri-lanka/custom-sri-lanka-itinerary/" 
+                    href="/private-driver-sri-lanka/custom-sri-lanka-itinerary" 
                     className="mt-8 w-full rounded-lg bg-white py-3 text-slate-950 font-black hover:bg-amber-500 transition-colors text-center block text-xs tracking-widest uppercase"
                   >
                     Start Planning

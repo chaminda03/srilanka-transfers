@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/site/config";
+import { absoluteUrl } from "@/lib/site";
+
+type OgImage = { url: string; width?: number; height?: number; alt?: string };
 
 type SeoInput = {
   title?: string;
   description?: string;
   path?: string;
   noIndex?: boolean;
-  image?: string | { url: string } | Array<string | { url: string }>;
+  image?: string | OgImage | Array<string | OgImage>;
   robots?: Metadata["robots"] | any;
 };
 
@@ -14,20 +17,28 @@ export function buildMetadata(input: SeoInput = {}): Metadata {
   const title = input.title ?? siteConfig.defaultSeo.title;
   const description = input.description ?? siteConfig.defaultSeo.description;
 
+  // Canonical must use the served URL form (www host, no trailing slash) —
+  // see toUrlPath() in lib/site.ts for why.
   const canonical =
-    input.path && siteConfig.domain
-      ? `https://${siteConfig.domain}${input.path}`
-      : undefined;
+    input.path && siteConfig.domain ? absoluteUrl(input.path) : undefined;
 
   const images = (() => {
-    if (!input.image) return undefined;
+    if (!input.image) {
+      // Never leave a page with no share image — blank cards on WhatsApp/FB/X.
+      return [{ url: siteConfig.defaultOgImage, width: 1200, height: 630 }];
+    }
     if (typeof input.image === "string") return [{ url: input.image }];
     if (Array.isArray(input.image)) return input.image.map((i) => (typeof i === "string" ? { url: i } : i));
-    return [{ url: (input.image as { url: string }).url }];
+    // Spread, don't pluck .url — dropping width/height/alt makes crawlers
+    // fetch the image just to learn its dimensions.
+    return [{ ...(input.image as OgImage) }];
   })();
 
   return {
-    title,
+    // `absolute` bypasses the root layout's `%s | brand` title template.
+    // Every title in spec.ts is already a complete SEO title with the brand
+    // baked in, so letting the template apply would double the brand name.
+    title: { absolute: title },
     description,
     alternates: canonical ? { canonical } : undefined,
     robots: input.robots ?? (input.noIndex ? { index: false, follow: false } : undefined),

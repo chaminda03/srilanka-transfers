@@ -27,7 +27,7 @@ export default function CustomItineraryInternalLink({ days }: Props) {
 
           <p className="text-sm">
             <Link
-              href="/private-driver-sri-lanka/custom-sri-lanka-itinerary/"
+              href="/private-driver-sri-lanka/custom-sri-lanka-itinerary"
               className="inline-flex items-center gap-1 font-medium underline underline-offset-4 hover:no-underline"
             >
               Build your custom Sri Lanka itinerary

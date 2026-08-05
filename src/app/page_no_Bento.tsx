@@ -14,12 +14,12 @@ export const metadata = buildMetadata({
 });
 
 const routes = [
-  { label: "Airport → Colombo", href: "/airport-to-colombo-taxi/" },
-  { label: "Airport → Negombo", href: "/airport-to-negombo-taxi/" },
-  { label: "Airport → Kandy", href: "/airport-to-kandy-taxi/" },
-  { label: "Airport → Galle", href: "/airport-to-galle-taxi/" },
-  { label: "Airport → Ella", href: "/airport-to-ella-taxi/" },
-  { label: "Airport → Sigiriya", href: "/airport-to-sigiriya-taxi/" },
+  { label: "Airport → Colombo", href: "/airport-to-colombo-taxi" },
+  { label: "Airport → Negombo", href: "/airport-to-negombo-taxi" },
+  { label: "Airport → Kandy", href: "/airport-to-kandy-taxi" },
+  { label: "Airport → Galle", href: "/airport-to-galle-taxi" },
+  { label: "Airport → Ella", href: "/airport-to-ella-taxi" },
+  { label: "Airport → Sigiriya", href: "/airport-to-sigiriya-taxi" },
 ];
 
 export default function Home() {
@@ -87,13 +87,13 @@ export default function Home() {
 
             <div className="flex flex-col gap-3 md:gap-4">
               <Button asChild size="lg" className="w-full h-14 md:h-16 bg-amber-500 text-slate-950 hover:bg-white font-black uppercase tracking-widest rounded-xl md:rounded-2xl transition-all shadow-xl border-none text-xs md:text-base">
-                <Link href="/contact/">
+                <Link href="/contact">
                   {siteConfig.contact.whatsappLabel}
                 </Link>
               </Button>
 
               <Button asChild size="lg" variant="outline" className="w-full h-14 md:h-16 border-2 border-white/20 text-white hover:bg-white hover:text-slate-950 font-black uppercase tracking-widest rounded-xl md:rounded-2xl transition-all bg-transparent text-xs md:text-base">
-                <Link href="/prices/">View All Fixed Prices</Link>
+                <Link href="/prices">View All Fixed Prices</Link>
               </Button>
             </div>
           </div>
@@ -121,7 +121,7 @@ export default function Home() {
                 <li><strong className="text-slate-900">Fixed Prices, No Surprises:</strong> Know your costs upfront with clear, all-inclusive rates for your Sri Lanka travel.</li>
               </ul>
               <Button asChild size="lg" className="h-12 md:h-14 bg-amber-500 text-slate-950 hover:bg-white font-black uppercase tracking-widest rounded-xl md:rounded-2xl transition-all shadow-xl border-none text-xs md:text-base">
-                <Link href="/private-driver-sri-lanka/custom-sri-lanka-itinerary/">
+                <Link href="/private-driver-sri-lanka/custom-sri-lanka-itinerary">
                   Design Your Dream Sri Lanka Tour
                 </Link>
               </Button>
@@ -146,7 +146,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-slate-900">Popular Destinations</h2>
               <p className="text-lg text-slate-500 mt-2 md:mt-4">Transparent, fixed rates for private transfers.</p>
             </div>
-            <Link href="/prices/" className="text-xs md:text-sm font-bold text-amber-600 uppercase tracking-widest border-b-2 border-amber-600 pb-1 hover:text-slate-900 transition-colors">
+            <Link href="/prices" className="text-xs md:text-sm font-bold text-amber-600 uppercase tracking-widest border-b-2 border-amber-600 pb-1 hover:text-slate-900 transition-colors">
               View All Prices →
             </Link>
           </div>
@@ -228,7 +228,7 @@ export default function Home() {
                   and incredibly safe. Imagine exploring the island at your own pace, stopping whenever you like,
                   and having a local expert guide the way. Our team ensures a relaxed and memorable <strong>Sri Lanka travel</strong> experience.
                 </p>
-                <Link href="/private-driver-sri-lanka/" className="text-amber-600 hover:underline text-sm font-bold">
+                <Link href="/private-driver-sri-lanka" className="text-amber-600 hover:underline text-sm font-bold">
                   Learn About Our Private Driver Service →
                 </Link>
               </CardContent>
