@@ -8,6 +8,8 @@ type SeoInput = {
   title?: string;
   description?: string;
   path?: string;
+  /** Content last-updated date (YYYY-MM-DD) -> og:updated_time */
+  updated?: string;
   noIndex?: boolean;
   image?: string | OgImage | Array<string | OgImage>;
   robots?: Metadata["robots"] | any;
@@ -41,7 +43,17 @@ export function buildMetadata(input: SeoInput = {}): Metadata {
     return [{ ...(input.image as OgImage) }];
   })();
 
+  const updatedIso = new Date(
+    input.updated ?? siteConfig.contentUpdated
+  ).toISOString();
+
   return {
+    // Content-freshness signal. Next only emits openGraph.modifiedTime for
+    // og:type=article, and these are service pages, so it goes through
+    // `other`. The primary signal is still sitemap <lastmod>, which is what
+    // Google actually reads — this just satisfies parsers that look for it.
+    other: { "og:updated_time": updatedIso },
+
     // `absolute` bypasses the root layout's `%s | brand` title template.
     // Every title in spec.ts is already a complete SEO title with the brand
     // baked in, so letting the template apply would double the brand name.

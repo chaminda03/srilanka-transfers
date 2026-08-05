@@ -42,6 +42,7 @@ export async function generateMetadata({
     title: page.title,
     description: page.description,
     path: page.path,
+    updated: page.updated,
   });
 
   return {

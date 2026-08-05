@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { glob } from "glob";
 import { getAllPages, toUrlPath, absoluteUrl } from "@/lib/site";
+import { siteConfig } from "@/site/config";
 
 /**
  * WHY THIS IS NOT A FILESYSTEM GLOB ANYMORE
@@ -68,8 +69,14 @@ async function physicalRoutes(): Promise<string[]> {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const specPaths = getAllPages().map((p) => toUrlPath(p.path));
+  const pages = getAllPages();
+  const specPaths = pages.map((p) => toUrlPath(p.path));
   const filePaths = (await physicalRoutes()).map(toUrlPath);
+
+  // path -> authored content date, for pages that declare one
+  const updatedByPath = new Map(
+    pages.map((p) => [toUrlPath(p.path), p.updated ?? siteConfig.contentUpdated])
+  );
 
   const paths = Array.from(new Set([...specPaths, ...filePaths]))
     .filter((p) => !isExcluded(p))
@@ -77,10 +84,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return paths.map((path) => ({
     url: absoluteUrl(path),
-    // NOTE: deliberately no `lastModified`. The old version stamped every URL
-    // with `new Date()` on each build, telling Google the entire site changed
-    // on every deploy. Google discounts lastmod it finds unreliable, so an
-    // absent value beats a false one. Wire it to real content dates if added.
+    // A REAL content date, not the build time. The previous version stamped
+    // every URL with `new Date()` on each deploy, which claims the whole site
+    // changed every time you push a CSS tweak — Google learns to ignore that.
+    // Bump `updated` in spec.ts when a page is actually revised.
+    lastModified: new Date(updatedByPath.get(path) ?? siteConfig.contentUpdated),
     changeFrequency: changeFrequencyFor(path),
     priority: priorityFor(path),
   }));

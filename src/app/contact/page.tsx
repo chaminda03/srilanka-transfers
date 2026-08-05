@@ -23,15 +23,18 @@ function whatsappLink(message: string) {
   return `https://wa.me/${num}?text=${text}`;
 }
 
-// Next.js 15+ requires searchParams to be a Promise
-type Props = {
-  searchParams: Promise<{ success?: string; error?: string }>;
-};
-
-export default async function ContactPage({ searchParams }: Props) {
-  // MUST await searchParams to avoid the "source map / internal error"
-  const params = await searchParams;
-
+// NOTE: this page deliberately takes no `searchParams`.
+//
+// It used to accept and await them, which opts the route out of static
+// generation — Next rendered it on demand (ƒ) and Vercel returned
+// X-Vercel-Cache: MISS on every request, cold starts included. The awaited
+// value was then never read. Since it's the highest-intent page on the site,
+// it is now prerendered and served from the edge cache.
+//
+// If the ?error=1 flag from /api/lead needs surfacing, read it in a small
+// client component with useSearchParams() rather than making the whole
+// route dynamic again.
+export default function ContactPage() {
   const wa = whatsappLink(
     "Hi! I’d like to book a Sri Lanka airport transfer or private driver."
   );

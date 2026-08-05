@@ -27,6 +27,16 @@ export type PageSpec = {
 
   /** Luxury UI: Display price in conversion sticky bars */
   startPrice?: string;
+
+  /**
+   * Date this page's CONTENT was last meaningfully changed (YYYY-MM-DD).
+   * Feeds sitemap <lastmod> and og:updated_time.
+   *
+   * Bump it when you actually rewrite the page — not on every deploy.
+   * Google discounts lastmod it finds unreliable, so a stale-but-true date
+   * is worth more than a fresh lie. Falls back to siteConfig.contentUpdated.
+   */
+  updated?: string;
 };
 
 // =====================

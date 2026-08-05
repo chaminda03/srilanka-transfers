@@ -26,6 +26,16 @@ export const siteConfig = {
   defaultOgImage: "/images/og-default.webp",
   defaultOgImageWidth: 1200,
   defaultOgImageHeight: 630,
+
+  /**
+   * Fallback "content last updated" date (YYYY-MM-DD) for pages with no
+   * `updated` of their own. Set to the commit where the site content was
+   * last authored. Override per page in spec.ts as you revise them.
+   *
+   * Do NOT wire this to the build date — stamping every URL as fresh on
+   * each deploy is what makes Google stop trusting lastmod altogether.
+   */
+  contentUpdated: "2026-01-30",
   contact: {
     // ✅ 1. WhatsApp (No + sign)
     whatsappNumber: "94769789878",
