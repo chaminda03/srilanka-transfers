@@ -25,7 +25,14 @@ export function buildMetadata(input: SeoInput = {}): Metadata {
   const images = (() => {
     if (!input.image) {
       // Never leave a page with no share image — blank cards on WhatsApp/FB/X.
-      return [{ url: siteConfig.defaultOgImage, width: 1200, height: 630 }];
+      return [
+        {
+          url: siteConfig.defaultOgImage,
+          width: siteConfig.defaultOgImageWidth,
+          height: siteConfig.defaultOgImageHeight,
+          alt: siteConfig.brand,
+        },
+      ];
     }
     if (typeof input.image === "string") return [{ url: input.image }];
     if (Array.isArray(input.image)) return input.image.map((i) => (typeof i === "string" ? { url: i } : i));

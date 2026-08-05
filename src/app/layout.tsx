@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: siteConfig.defaultOgImage,
-        width: 1200,
-        height: 630,
+        width: siteConfig.defaultOgImageWidth,
+        height: siteConfig.defaultOgImageHeight,
         alt: siteConfig.brand,
       },
     ],

@@ -25,12 +25,9 @@ export const metadata = buildMetadata({
   description:
     "#1 Private Driver in Sri Lanka: Safe, stress-free travel with a licensed local guide. Fixed prices, no hidden costs & expert advice. Book your tour today!",
   path: "/",
-  image: {
-    url: "/images/sri-lanka-best_private-airport-transfer-driver.webp",
-    width: 1200,
-    height: 630,
-    alt: "Private Driver Sri Lanka",
-  },
+  // Share image inherits siteConfig.defaultOgImage — a true 1200x630 crop.
+  // The hero file is 1248x832 (3:2) and was previously declared as 1200x630,
+  // which is simply not its size.
 });
 
 export default function Home() {

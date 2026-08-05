@@ -18,8 +18,14 @@ export const siteConfig = {
    */
   social: [] as string[],
 
-  /** Default social share image (1200x630). Used when a page sets none. */
-  defaultOgImage: "/images/sri-lanka-best_private-airport-transfer-driver.webp",
+  /**
+   * Default social share image. MUST be a true 1200x630 (1.91:1) asset —
+   * this is a dedicated crop, not the hero, because the hero is 3:2 and
+   * WhatsApp/Facebook centre-crop anything that isn't 1.91:1.
+   */
+  defaultOgImage: "/images/og-default.webp",
+  defaultOgImageWidth: 1200,
+  defaultOgImageHeight: 630,
   contact: {
     // ✅ 1. WhatsApp (No + sign)
     whatsappNumber: "94769789878",

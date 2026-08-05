@@ -33,11 +33,15 @@ export async function generateMetadata({
 
   // buildMetadata already produces the canonical (www + no trailing slash),
   // og:locale, and a default share image. Only add what it can't know.
+  // Deliberately NOT passing page.heroImage as the share image. Heroes are
+  // arbitrary aspect ratios — several are portrait (one is 4672x7008) — and
+  // og:image wants 1.91:1. A portrait og:image renders as a cropped thumbnail
+  // on WhatsApp instead of a large card. Falls back to the correct 1200x630
+  // default; add a dedicated `ogImage` to PageSpec if per-page art is wanted.
   const base = buildMetadata({
     title: page.title,
     description: page.description,
     path: page.path,
-    image: page.heroImage,
   });
 
   return {
