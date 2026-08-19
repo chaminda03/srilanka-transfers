@@ -81,39 +81,10 @@ export function buildMetadata(input: SeoInput = {}): Metadata {
 }
 
 /**
- * Builds a LocalBusiness Schema.org JSON-LD object from siteConfig.
+ * The LocalBusiness builder that used to live here has moved to
+ * lib/schema.ts as `localBusinessJsonLd()`. It was a second, divergent
+ * description of the same company — different name, no logo, no priceRange —
+ * and having two of them is how the homepage ended up describing the
+ * business differently from every other page. There is now exactly one.
  */
-export function buildLocalBusinessSchema() {
-  const office = siteConfig.contact.office;
-  if (!office) return null;
-
-  return {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: office.name,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: office.streetAddress,
-      addressLocality: office.addressLocality,
-      addressRegion: office.addressRegion,
-      postalCode: office.postalCode,
-      addressCountry: office.addressCountry,
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: office.latitude,
-      longitude: office.longitude,
-    },
-    url: `https://${siteConfig.domain}`, // Use the configured domain for the URL
-    telephone: siteConfig.contact.whatsappNumberE164, // Using WhatsApp number as primary contact
-    openingHours: office.openingHours,
-    // image: `https://${siteConfig.domain}/your-local-business-logo.webp`, // Consider adding a logo specific to the local business
-    // priceRange: "$$$", // Example: Replace with actual price range
-    // SameAs: [
-    //   "https://www.facebook.com/yourpage",
-    //   "https://twitter.com/yourpage",
-    //   // Add other social profiles here
-    // ]
-  };
-}
 

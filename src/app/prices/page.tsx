@@ -9,6 +9,7 @@ export const metadata = buildMetadata({
   title: page.title,
   description: page.description,
   path: page.path,
+  updated: page.updated,
 });
 
 export default function PricesPage() {
@@ -111,7 +112,10 @@ export default function PricesPage() {
         </ul>
 
         <p className="text-sm text-muted-foreground">
-          Accommodation, meals, and entrance tickets are not included.
+          Rates are per vehicle, not per person, and include fuel, unlimited
+          mileage for your itinerary, tolls, parking, and the driver&rsquo;s own
+          meals and accommodation. Your own accommodation, meals, and entrance
+          tickets are not included.
         </p>
       </section>
 

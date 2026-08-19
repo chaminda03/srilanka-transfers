@@ -1,6 +1,7 @@
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { buildMetadata } from "@/lib/seo";
-import { getPageById } from "@/lib/site";
+import { getPageById, absoluteUrl } from "@/lib/site";
+import { localBusinessJsonLd, BUSINESS_ID } from "@/lib/schema";
 import { siteConfig } from "@/site/config"; // ✅ Using Config for single source of truth
 import { SpecPage } from "@/components/SpecPage";
 import { Button } from "@/components/ui/button";
@@ -71,68 +72,34 @@ export default function ContactPage() {
     }
   ];
 
+  // The business is described ONCE, by localBusinessJsonLd() in lib/schema.ts.
+  // This page used to carry its own divergent copy (different phone field,
+  // different address fallbacks, `openingHours` as a bare string). The
+  // ContactPage node now just points at that entity by @id.
   const jsonLd = [
+    localBusinessJsonLd(),
     {
       "@context": "https://schema.org",
       "@type": "ContactPage",
-      "mainEntity": {
-        "@type": "Organization",
-        name: siteConfig.brand,
-        url: `https://${siteConfig.domain}`,
-        telephone: siteConfig.contact.phoneLink, // ✅ Auto-updates
+      url: absoluteUrl(page.path),
+      mainEntity: {
+        "@id": BUSINESS_ID,
         contactPoint: [
           {
             "@type": "ContactPoint",
-            telephone: siteConfig.contact.phoneLink, // ✅ Auto-updates
+            telephone: siteConfig.contact.phoneLink,
             contactType: "customer service",
             areaServed: "LK",
-            availableLanguage: ["English"]
-          }
+            availableLanguage: ["English"],
+          },
         ],
-        sameAs: []
-      }
-    },
-    office ? {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      name: siteConfig.brand,
-      url: `https://${siteConfig.domain}`,
-      telephone: siteConfig.contact.phoneLink, // ✅ Auto-updates
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: office.streetAddress || "Colombo",
-        addressLocality: office.addressLocality || "Colombo",
-        addressRegion: office.addressRegion || "",
-        postalCode: office.postalCode || "",
-        addressCountry: office.addressCountry || "LK"
       },
-      geo: office.latitude && office.longitude ? {
-        "@type": "GeoCoordinates",
-        latitude: office.latitude,
-        longitude: office.longitude
-      } : undefined,
-      openingHours: (office as any).openingHours || undefined,
-      // `sameAs` must be authoritative profiles for this business (Google Business
-      // Profile, Facebook, TripAdvisor...) — not a Maps *embed* URL. Populate
-      // siteConfig.social once those exist.
-      sameAs: siteConfig.social?.length ? siteConfig.social : undefined
-    } : undefined
-  ].filter(Boolean) as any[];
+    },
+  ];
 
-  // Append FAQPage schema if we have FAQs
-  if (faqs && faqs.length) {
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faqs.map((x) => ({
-        "@type": "Question",
-        name: x.q,
-        acceptedAnswer: { "@type": "Answer", text: x.a }
-      }))
-    } as const;
-
-    jsonLd.push(faqSchema as any);
-  }
+  // NOTE: no FAQPage node here on purpose. <FaqAccordion> emits it from the
+  // same array it renders, so the markup can't drift from the visible answers.
+  // Two FAQPage nodes on one URL is invalid and Google may discard both.
 
   return (
     <SpecPage page={page}>

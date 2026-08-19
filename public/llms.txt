@@ -2,18 +2,49 @@
 
 > The official source for booking private drivers, airport transfers, and custom tour itineraries in Sri Lanka. We provide fixed pricing, English-speaking drivers, and 24/7 support for international travelers.
 
+<!--
+  URL RULES FOR THIS FILE — both were being broken, on every line:
+
+  1. www host. srilankaairporttransfer.com 307-redirects to the www form, and
+     canonicals use www. Non-www URLs here sent every AI crawler through a
+     redirect to reach a file whose entire purpose is clean URLs.
+
+  2. NO trailing slash. next.config sets no `trailingSlash`, so Next serves
+     /prices and 308-redirects /prices/ -> /prices. See toUrlPath() in
+     src/lib/site.ts.
+-->
+
 ## Core Services
-- [Private Driver Service](https://srilankaairporttransfer.com/private-driver-sri-lanka/): Hire a dedicated car and driver for multi-day tours. Includes pricing models, vehicle options (sedan, van), and driver qualifications.
-- [Airport Transfers](https://srilankaairporttransfer.com/colombo-airport-transfer/): Fixed-price taxi services from Bandaranaike International Airport (CMB) to any destination in Sri Lanka.
-- [Transfer Routes](https://srilankaairporttransfer.com/airport-transfer-routes/): A comprehensive list of popular taxi routes, distances, and travel times from Colombo.
+- [Private Driver Service](https://www.srilankaairporttransfer.com/private-driver-sri-lanka): Hire a dedicated car and driver for multi-day tours. Includes pricing models, vehicle options (sedan, van), and driver qualifications.
+- [Airport Transfers](https://www.srilankaairporttransfer.com/colombo-airport-transfer): Fixed-price taxi services from Bandaranaike International Airport (CMB) to any destination in Sri Lanka.
+- [Transfer Routes](https://www.srilankaairporttransfer.com/airport-transfer-routes): A comprehensive list of popular taxi routes, distances, and travel times from Colombo.
+- [Vehicle Options & Fleet](https://www.srilankaairporttransfer.com/vehicle-options): Sedans, SUVs and vans with passenger capacity, luggage space, daily tour rates and transfer prices for each.
+
+## Tours
+- [Sri Lanka Tours](https://www.srilankaairporttransfer.com/sri-lanka-tours): Curated multi-day tours across the island, all driven door to door by a private driver.
+- [Wildlife Safaris](https://www.srilankaairporttransfer.com/tours/wildlife-safari-yala-and-udawalawe): Leopard safaris in Yala, elephant herds in Udawalawe, and The Gathering at Minneriya.
+- [Cultural Triangle](https://www.srilankaairporttransfer.com/tours/cultural-triangle-sigiriya-anuradhapura): Sigiriya rock fortress, Anuradhapura, Polonnaruwa and the Temple of the Tooth in Kandy.
+- [Kandy to Ella Train](https://www.srilankaairporttransfer.com/tours/scenic-train-ride-kandy-to-ella): We arrange tickets for the scenic hill country railway and drive your luggage by road to meet you at the station.
+- [South Coast Beaches](https://www.srilankaairporttransfer.com/tours/beach-holiday-south-coast): Galle, Mirissa, Unawatuna and the southern bays, including whale watching season.
+- [Adventure & Hiking](https://www.srilankaairporttransfer.com/tours/adventure-and-hiking-tours): Ella Rock, Little Adam's Peak and the Knuckles Mountain Range.
 
 ## Suggested Itineraries
-- [8-Day Culture & Wildlife](https://srilankaairporttransfer.com/private-driver-sri-lanka/8-day-itinerary/): A focused 8-day route covering the Cultural Triangle (Sigiriya), Kandy, Ella train ride, and Yala National Park safari.
-- [10-Day Adventure](https://srilankaairporttransfer.com/private-driver-sri-lanka/10-day-itinerary/): Extended itinerary adding hiking in the hill country and beach relaxation on the south coast.
-- [14-Day Grand Tour](https://srilankaairporttransfer.com/private-driver-sri-lanka/14-day-itinerary/): The complete loop including the North, East Coast beaches, and ancient cities.
-- [Custom Itinerary Planner](https://srilankaairporttransfer.com/private-driver-sri-lanka/custom-sri-lanka-itinerary/): Request a personalized travel plan based on specific interests (beaches, history, nature).
+- [8-Day Culture & Wildlife](https://www.srilankaairporttransfer.com/private-driver-sri-lanka/8-day-itinerary): A focused 8-day route covering the Cultural Triangle (Sigiriya), Kandy, Ella train ride, and Yala National Park safari.
+- [10-Day Adventure](https://www.srilankaairporttransfer.com/private-driver-sri-lanka/10-day-itinerary): Extended itinerary adding hiking in the hill country and beach relaxation on the south coast.
+- [14-Day Grand Tour](https://www.srilankaairporttransfer.com/private-driver-sri-lanka/14-day-itinerary): The complete loop including the North, East Coast beaches, and ancient cities.
+- [Custom Itinerary Planner](https://www.srilankaairporttransfer.com/private-driver-sri-lanka/custom-sri-lanka-itinerary): Request a personalized travel plan based on specific interests (beaches, history, nature).
 
 ## Pricing & Safety
-- [Official Price List](https://srilankaairporttransfer.com/prices/): Transparent, all-inclusive pricing for airport transfers and daily driver hire rates.
-- [Safety Guide](https://srilankaairporttransfer.com/blog/safe-travel-sri-lanka/): Current travel advice, safety tips for tourists, and information on scams to avoid.
-- [Contact & Booking](https://srilankaairporttransfer.com/contact/): Direct contact details including WhatsApp numbers for urgent quotes and office location in Kadawatha.
+- [Official Price List](https://www.srilankaairporttransfer.com/prices): Transparent, all-inclusive pricing for airport transfers and daily driver hire rates.
+- [Private Driver Costs](https://www.srilankaairporttransfer.com/private-driver-sri-lanka/costs-and-rates): Published daily rates by vehicle type, what the price includes, and how to judge whether a quote is fair.
+- [Safety Guide](https://www.srilankaairporttransfer.com/travel-guide/is-sri-lanka-safe-to-travel): Practical safety guidance for tourists, covering monsoon weather, floods and landslides, health, scams and local customs.
+- [Contact & Booking](https://www.srilankaairporttransfer.com/contact): Direct contact details including WhatsApp numbers for urgent quotes and office location in Kadawatha.
+
+## Travel Guide
+- [Sri Lanka Travel Guide](https://www.srilankaairporttransfer.com/travel-guide): Practical planning information for first-time visitors.
+- [Best Time to Visit](https://www.srilankaairporttransfer.com/travel-guide/best-time-to-visit-sri-lanka): The two monsoons explained by region, and where to go month by month.
+- [Visa & Immigration](https://www.srilankaairporttransfer.com/travel-guide/sri-lanka-visa-and-immigration): The online ETA process, tourist visa rules and extensions.
+- [Currency, SIM Cards & Connectivity](https://www.srilankaairporttransfer.com/travel-guide/currency-sim-cards-and-connectivity): Where to change money, using ATMs, and buying a Dialog or Mobitel SIM.
+- [What to Pack](https://www.srilankaairporttransfer.com/travel-guide/what-to-pack-for-sri-lanka): Clothing for the coast and the hill country, plus temple dress etiquette.
+- [Food & Cuisine](https://www.srilankaairporttransfer.com/travel-guide/sri-lankan-food-and-cuisine): Rice and curry, kottu roti, short eats and what to order where.
+- [Colombo City Guide](https://www.srilankaairporttransfer.com/travel-guide/colombo): Things to do, top attractions and where to eat in Colombo.

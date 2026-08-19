@@ -90,7 +90,7 @@ export default async function DynamicSpecPage({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqJsonLd(page.title, route.faqs)),
+            __html: JSON.stringify(faqJsonLd(route.faqs, page.title)),
           }}
         />
       ) : null}

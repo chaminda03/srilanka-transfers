@@ -10,6 +10,7 @@ export async function generateMetadata() {
     title: pageData.title,
     description: pageData.description,
     path: pageData.path,
+    updated: pageData.updated,
   });
 }
 
@@ -25,6 +26,14 @@ const faqs = [
     {
         q: "Which side of the train has the best views?",
         a: "For the Kandy to Ella journey, the right side of the train generally offers the most spectacular views of the tea plantations and valleys."
+    },
+    {
+        q: "Can we join the train at Nanu Oya instead of Kandy?",
+        a: "Yes, and if you are staying in Nuwara Eliya this is usually the better choice. Nanu Oya is the station serving Nuwara Eliya, about 20 to 30 minutes away by road, and it sits on the same line. Boarding there gives you the most celebrated stretch of the route - the tea country between Nanu Oya and Ella - in roughly three to four hours rather than a full day on the train. Your driver takes you to the station, carries your luggage on by road, and meets you at Ella."
+    },
+    {
+        q: "How long does the train take, and can we do a shorter section?",
+        a: "The full Kandy to Ella run takes around six to seven hours. Many travellers prefer a shorter leg: Nanu Oya to Ella is about three to four hours and covers the most scenic section, including the tea estates and the approach into Ella. Because your driver is travelling by road with your bags, you can pick whichever section suits your schedule without any luggage complications."
     },
 ];
 

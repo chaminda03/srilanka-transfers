@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/site/config";
-import { buildMetadata, buildLocalBusinessSchema } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
+import { localBusinessJsonLd } from "@/lib/schema";
 
 // Aceternity & Icon Imports
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
@@ -31,16 +32,13 @@ export const metadata = buildMetadata({
 });
 
 export default function Home() {
-  const localBusinessSchema = buildLocalBusinessSchema();
-
   return (
     <main className="w-full bg-white">
-      {localBusinessSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-        />
-      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd()) }}
+      />
+
       
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full min-h-[100dvh] flex flex-col justify-end md:justify-center items-end overflow-hidden bg-slate-950">

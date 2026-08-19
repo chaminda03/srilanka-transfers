@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { siteConfig } from "@/site/config";
 import { absoluteUrl } from "@/lib/site";
 import { SiteNav } from "@/components/SiteNav";
+import { SiteFooter } from "@/components/SiteFooter";
 import { Analytics } from "@/components/Analytics";
 import "./globals.css";
 
@@ -99,6 +100,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div id="main-content" className="relative w-full m-0 p-0 pt-20">
           {children}
         </div>
+
+        <SiteFooter />
 
         <Analytics />
       </body>

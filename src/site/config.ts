@@ -27,6 +27,16 @@ export const siteConfig = {
   defaultOgImageWidth: 1200,
   defaultOgImageHeight: 630,
 
+  /** Brand mark for schema.org `logo`. Must be a real, crawlable file. */
+  logo: "/images/sri-lanka-private-airport-transfer-driver-logo.webp",
+
+  /**
+   * schema.org `priceRange`. Google shows this in local results. Keep it in
+   * step with /prices — the cheapest transfer is $15 and the top vehicle is
+   * $90/day.
+   */
+  priceRange: "$15–$120",
+
   /**
    * Fallback "content last updated" date (YYYY-MM-DD) for pages with no
    * `updated` of their own. Set to the commit where the site content was

@@ -78,3 +78,70 @@ export function getPageByPath(path: string): PageSpec | undefined {
 export function getAllPages(): PageSpec[] {
   return pages;
 }
+
+/** "cultural-triangle-sigiriya-anuradhapura" -> "Cultural Triangle Sigiriya Anuradhapura" */
+function deslugify(segment: string) {
+  return segment
+    .split("-")
+    .map((w) => (w.length <= 2 ? w : w[0].toUpperCase() + w.slice(1)))
+    .join(" ");
+}
+
+export type Crumb = { name: string; path: string };
+
+/**
+ * Some URL segments are organisational rather than navigable — /tours/ has no
+ * page of its own; the hub lives at /sri-lanka-tours. Map those so the trail
+ * points somewhere real instead of at a 404.
+ */
+const SEGMENT_ALIASES: Record<string, Crumb> = {
+  "/tours": { name: "Sri Lanka Tours", path: "/sri-lanka-tours" },
+  "/airport-transfer": {
+    name: "Airport Transfers",
+    path: "/colombo-airport-transfer",
+  },
+};
+
+/**
+ * The real breadcrumb trail for a page, derived from its URL segments.
+ *
+ * /tours/wildlife-safari-yala-and-udawalawe
+ *   -> Home / Sri Lanka Tours / Wildlife Safari Tours
+ *
+ * Intermediate levels are looked up in spec.ts so they get the page's own
+ * short label; segments with no spec entry fall back to a de-slugified
+ * version rather than being skipped, because a BreadcrumbList with a gap in
+ * it describes a hierarchy that doesn't exist.
+ *
+ * `crumbLabel` on a PageSpec overrides the label — page titles are written
+ * for the SERP ("Sri Lanka Wildlife Safari Tours | Yala & Udawalawe") and are
+ * far too long to sit in a breadcrumb.
+ */
+export function getBreadcrumbTrail(page: PageSpec): Crumb[] {
+  const trail: Crumb[] = [{ name: "Home", path: "/" }];
+
+  const segments = toUrlPath(page.path).split("/").filter(Boolean);
+  let acc = "";
+
+  for (const segment of segments) {
+    acc += `/${segment}`;
+
+    const alias = SEGMENT_ALIASES[acc];
+    if (alias) {
+      trail.push(alias);
+      continue;
+    }
+
+    const match = getPageByPath(acc);
+    trail.push({
+      name:
+        match?.crumbLabel ??
+        // Never let a raw title with a pipe into a breadcrumb.
+        match?.title.split("|")[0].trim() ??
+        deslugify(segment),
+      path: acc,
+    });
+  }
+
+  return trail;
+}

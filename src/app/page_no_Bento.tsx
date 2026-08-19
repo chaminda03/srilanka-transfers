@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/site/config";
-import { buildMetadata, buildLocalBusinessSchema } from "@/lib/seo";
+import { buildMetadata } from "@/lib/seo";
+import { localBusinessJsonLd } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Private Driver Sri Lanka | Safe Airport Transfers & Local Guides",
@@ -23,7 +24,7 @@ const routes = [
 ];
 
 export default function Home() {
-  const localBusinessSchema = buildLocalBusinessSchema();
+  const localBusinessSchema = localBusinessJsonLd();
 
   return (
     <main className="w-full bg-white">
